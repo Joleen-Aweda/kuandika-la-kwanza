@@ -1,0 +1,597 @@
+[
+  {
+    "section_id": "pg001_sec001",
+    "href": "index.html",
+    "title": "Kuandika",
+    "chapter_id": "pg001_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg003_sec001",
+    "href": "pg003_sec001.html",
+    "title": "Yaliyomo",
+    "chapter_id": "pg003_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg004_sec001",
+    "href": "pg004_sec001.html",
+    "title": "Sura ya Nane",
+    "chapter_id": "pg004_n0004",
+    "level": 1
+  },
+  {
+    "section_id": "pg006_sec001",
+    "href": "pg006_sec001.html",
+    "title": "Utangulizi",
+    "chapter_id": "pg006_n0003",
+    "level": 1
+  },
+  {
+    "section_id": "pg007_sec001",
+    "href": "pg007_sec001.html",
+    "title": "Sura ya Kwanza",
+    "chapter_id": "pg007_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg008_sec001",
+    "href": "pg008_sec001.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg008_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg010_sec001",
+    "href": "pg010_sec001.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg010_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg011_sec001",
+    "href": "pg011_sec001.html",
+    "title": "Sura ya Pili",
+    "chapter_id": "pg011_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg012_sec001",
+    "href": "pg012_sec001.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg012_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg012_sec002",
+    "href": "pg012_sec002.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg012_n0032",
+    "level": 2
+  },
+  {
+    "section_id": "pg013_sec002",
+    "href": "pg013_sec002.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg013_n0026",
+    "level": 2
+  },
+  {
+    "section_id": "pg014_sec001",
+    "href": "pg014_sec001.html",
+    "title": "Somo la tano",
+    "chapter_id": "pg014_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg014_sec002",
+    "href": "pg014_sec002.html",
+    "title": "Somo la sita",
+    "chapter_id": "pg014_n0031",
+    "level": 2
+  },
+  {
+    "section_id": "pg016_sec001",
+    "href": "pg016_sec001.html",
+    "title": "Zoezi la tatu",
+    "chapter_id": "pg016_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg017_sec001",
+    "href": "pg017_sec001.html",
+    "title": "Sura ya Tatu",
+    "chapter_id": "pg017_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg019_sec001",
+    "href": "pg019_sec001.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg019_n0006",
+    "level": 2
+  },
+  {
+    "section_id": "pg020_sec003",
+    "href": "pg020_sec003.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg020_n0027",
+    "level": 2
+  },
+  {
+    "section_id": "pg022_sec002",
+    "href": "pg022_sec002.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg022_n0016",
+    "level": 2
+  },
+  {
+    "section_id": "pg024_sec001",
+    "href": "pg024_sec001.html",
+    "title": "Zoezi la tano",
+    "chapter_id": "pg024_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg024_sec002",
+    "href": "pg024_sec002.html",
+    "title": "Somo la tano",
+    "chapter_id": "pg024_n0011",
+    "level": 2
+  },
+  {
+    "section_id": "pg025_sec002",
+    "href": "pg025_sec002.html",
+    "title": "Zoezi la sita",
+    "chapter_id": "pg025_n0029",
+    "level": 2
+  },
+  {
+    "section_id": "pg027_sec001",
+    "href": "pg027_sec001.html",
+    "title": "Sura ya Nne",
+    "chapter_id": "pg027_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg029_sec001",
+    "href": "pg029_sec001.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg029_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg030_sec002",
+    "href": "pg030_sec002.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg030_n0024",
+    "level": 2
+  },
+  {
+    "section_id": "pg032_sec002",
+    "href": "pg032_sec002.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg032_n0023",
+    "level": 2
+  },
+  {
+    "section_id": "pg034_sec002",
+    "href": "pg034_sec002.html",
+    "title": "Somo la tano",
+    "chapter_id": "pg034_n0017",
+    "level": 2
+  },
+  {
+    "section_id": "pg036_sec001",
+    "href": "pg036_sec001.html",
+    "title": "Zoezi la sita",
+    "chapter_id": "pg036_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg036_sec002",
+    "href": "pg036_sec002.html",
+    "title": "Zoezi la saba",
+    "chapter_id": "pg036_n0055",
+    "level": 2
+  },
+  {
+    "section_id": "pg037_sec001",
+    "href": "pg037_sec001.html",
+    "title": "Sura ya Tano",
+    "chapter_id": "pg037_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg039_sec001",
+    "href": "pg039_sec001.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg039_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg040_sec001",
+    "href": "pg040_sec001.html",
+    "title": "Zoezi la pili",
+    "chapter_id": "pg040_n0008",
+    "level": 2
+  },
+  {
+    "section_id": "pg040_sec002",
+    "href": "pg040_sec002.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg040_n0028",
+    "level": 2
+  },
+  {
+    "section_id": "pg042_sec002",
+    "href": "pg042_sec002.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg042_n0012",
+    "level": 2
+  },
+  {
+    "section_id": "pg044_sec001",
+    "href": "pg044_sec001.html",
+    "title": "Somo la tano",
+    "chapter_id": "pg044_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg047_sec001",
+    "href": "pg047_sec001.html",
+    "title": "Sura ya Sita",
+    "chapter_id": "pg047_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg048_sec002",
+    "href": "pg048_sec002.html",
+    "title": "Zoezi la kwanza",
+    "chapter_id": "pg048_n0022",
+    "level": 2
+  },
+  {
+    "section_id": "pg049_sec001",
+    "href": "pg049_sec001.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg049_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg050_sec002",
+    "href": "pg050_sec002.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg050_n0010",
+    "level": 2
+  },
+  {
+    "section_id": "pg051_sec002",
+    "href": "pg051_sec002.html",
+    "title": "Zoezi la tatu",
+    "chapter_id": "pg051_n0022",
+    "level": 2
+  },
+  {
+    "section_id": "pg052_sec001",
+    "href": "pg052_sec001.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg052_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg053_sec001",
+    "href": "pg053_sec001.html",
+    "title": "Zoezi la nne",
+    "chapter_id": "pg053_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg053_sec002",
+    "href": "pg053_sec002.html",
+    "title": "Zoezi la tano",
+    "chapter_id": "pg053_n0019",
+    "level": 2
+  },
+  {
+    "section_id": "pg054_sec001",
+    "href": "pg054_sec001.html",
+    "title": "Zoezi la sita",
+    "chapter_id": "pg054_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg055_sec001",
+    "href": "pg055_sec001.html",
+    "title": "Sura ya Saba",
+    "chapter_id": "pg055_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg056_sec001",
+    "href": "pg056_sec001.html",
+    "title": "Andika majina haya:",
+    "chapter_id": "pg056_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg057_sec001",
+    "href": "pg057_sec001.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg057_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg058_sec003",
+    "href": "pg058_sec003.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg058_n0015",
+    "level": 2
+  },
+  {
+    "section_id": "pg060_sec001",
+    "href": "pg060_sec001.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg060_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg061_sec001",
+    "href": "pg061_sec001.html",
+    "title": "Zoezi la nne",
+    "chapter_id": "pg061_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg061_sec002",
+    "href": "pg061_sec002.html",
+    "title": "Somo la tano",
+    "chapter_id": "pg061_n0020",
+    "level": 2
+  },
+  {
+    "section_id": "pg062_sec001",
+    "href": "pg062_sec001.html",
+    "title": "Andika majina haya:",
+    "chapter_id": "pg062_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg063_sec001",
+    "href": "pg063_sec001.html",
+    "title": "Sura ya nane",
+    "chapter_id": "pg063_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg065_sec001",
+    "href": "pg065_sec001.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg065_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg066_sec003",
+    "href": "pg066_sec003.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg066_n0030",
+    "level": 2
+  },
+  {
+    "section_id": "pg068_sec001",
+    "href": "pg068_sec001.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg068_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg069_sec003",
+    "href": "pg069_sec003.html",
+    "title": "Somo la tano",
+    "chapter_id": "pg069_n0016",
+    "level": 2
+  },
+  {
+    "section_id": "pg072_sec001",
+    "href": "pg072_sec001.html",
+    "title": "Sura ya Tisa",
+    "chapter_id": "pg072_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg074_sec001",
+    "href": "pg074_sec001.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg074_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg075_sec003",
+    "href": "pg075_sec003.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg075_n0020",
+    "level": 2
+  },
+  {
+    "section_id": "pg077_sec002",
+    "href": "pg077_sec002.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg077_n0010",
+    "level": 2
+  },
+  {
+    "section_id": "pg079_sec001",
+    "href": "pg079_sec001.html",
+    "title": "Somo la tano",
+    "chapter_id": "pg079_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg081_sec001",
+    "href": "pg081_sec001.html",
+    "title": "Sura ya Kumi",
+    "chapter_id": "pg081_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg084_sec002",
+    "href": "pg084_sec002.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg084_n0020",
+    "level": 2
+  },
+  {
+    "section_id": "pg086_sec001",
+    "href": "pg086_sec001.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg086_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg087_sec003",
+    "href": "pg087_sec003.html",
+    "title": "Somo la tano",
+    "chapter_id": "pg087_n0014",
+    "level": 2
+  },
+  {
+    "section_id": "pg089_sec001",
+    "href": "pg089_sec001.html",
+    "title": "Zoezi la tano",
+    "chapter_id": "pg089_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg089_sec002",
+    "href": "pg089_sec002.html",
+    "title": "Zoezi la sita",
+    "chapter_id": "pg089_n0026",
+    "level": 2
+  },
+  {
+    "section_id": "pg090_sec001",
+    "href": "pg090_sec001.html",
+    "title": "Sura ya Kumi na Moja",
+    "chapter_id": "pg090_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg091_sec001",
+    "href": "pg091_sec001.html",
+    "title": "Andika sentensi hizi:",
+    "chapter_id": "pg091_n0010",
+    "level": 2
+  },
+  {
+    "section_id": "pg092_sec001",
+    "href": "pg092_sec001.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg092_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg095_sec002",
+    "href": "pg095_sec002.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg095_n0018",
+    "level": 2
+  },
+  {
+    "section_id": "pg098_sec001",
+    "href": "pg098_sec001.html",
+    "title": "Sura ya Kumi na Mbili",
+    "chapter_id": "pg098_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg100_sec003",
+    "href": "pg100_sec003.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg100_n0019",
+    "level": 2
+  },
+  {
+    "section_id": "pg102_sec002",
+    "href": "pg102_sec002.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg102_n0010",
+    "level": 2
+  },
+  {
+    "section_id": "pg104_sec002",
+    "href": "pg104_sec002.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg104_n0024",
+    "level": 2
+  },
+  {
+    "section_id": "pg106_sec002",
+    "href": "pg106_sec002.html",
+    "title": "Somo la tano",
+    "chapter_id": "pg106_n0027",
+    "level": 2
+  },
+  {
+    "section_id": "pg109_sec001",
+    "href": "pg109_sec001.html",
+    "title": "Somo la sita",
+    "chapter_id": "pg109_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg111_sec001",
+    "href": "pg111_sec001.html",
+    "title": "Somo la saba",
+    "chapter_id": "pg111_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg113_sec001",
+    "href": "pg113_sec001.html",
+    "title": "Somo la nane",
+    "chapter_id": "pg113_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg116_sec001",
+    "href": "pg116_sec001.html",
+    "title": "Sura ya Kumi na Tatu",
+    "chapter_id": "pg116_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg117_sec001",
+    "href": "pg117_sec001.html",
+    "title": "Zoezi la kwanza",
+    "chapter_id": "pg117_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg117_sec002",
+    "href": "pg117_sec002.html",
+    "title": "Somo la pili",
+    "chapter_id": "pg117_n0022",
+    "level": 2
+  },
+  {
+    "section_id": "pg118_sec001",
+    "href": "pg118_sec001.html",
+    "title": "Zoezi la pili",
+    "chapter_id": "pg118_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg118_sec002",
+    "href": "pg118_sec002.html",
+    "title": "Somo la tatu",
+    "chapter_id": "pg118_n0022",
+    "level": 2
+  },
+  {
+    "section_id": "pg119_sec002",
+    "href": "pg119_sec002.html",
+    "title": "Somo la nne",
+    "chapter_id": "pg119_n0016",
+    "level": 2
+  }
+]
