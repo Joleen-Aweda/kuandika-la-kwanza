@@ -4,6 +4,11 @@
   height: auto;
   margin: 0 auto;
   background: #fff;
+  /* The source artwork is authoritative, but its production footer is not
+     part of the accessible lesson. The lower 10% contains only the green
+     folio strip, page number, crop marks, and timestamp. */
+  clip-path: inset(0 0 10% 0);
+  margin-bottom: -10%;
 }
 
 .source-semantic-copy {
@@ -20,7 +25,9 @@
 
 /* The original exercises are preserved only as semantic/read-aloud content.
    Their generated answer bar must not cover the faithful textbook page. */
-div[aria-label="Reader controls"]:has(button[title="Submit"]) {
+div[aria-label="Reader controls"]:has(button[title="Submit"]),
+div[aria-label="dock-label"]:has(button[title="Submit"]),
+div[aria-label="dock-label"]:has(button[title="Tuma"]) {
   display: none !important;
 }
 
