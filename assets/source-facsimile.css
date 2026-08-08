@@ -1,0 +1,32 @@
+.source-facsimile-page {
+  display: block;
+  width: min(100%, 930px);
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.source-semantic-copy {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* The original exercises are preserved only as semantic/read-aloud content.
+   Their generated answer bar must not cover the faithful textbook page. */
+div[aria-label="Reader controls"]:has(button[title="Submit"]) {
+  display: none !important;
+}
+
+@media print {
+  .source-facsimile-page {
+    width: 100%;
+    max-width: none;
+  }
+}
