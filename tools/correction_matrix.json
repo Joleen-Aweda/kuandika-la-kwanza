@@ -1,0 +1,1641 @@
+{
+  "source": "KUANDIKA STD 1  YA MWISHO XXXYY.docx",
+  "review_rows": 102,
+  "unresolved": 0,
+  "records": [
+    {
+      "review_row": 1,
+      "reported_issue": "Kukosekana saini",
+      "reported_reference": "Cheti cha Ithibati",
+      "resolved_files": [
+        "index.html"
+      ],
+      "requirements": "*Cheti cha Ithibati: Pawekwe saini kama ilivyo katika kitabu halisi",
+      "categories": [
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 2,
+      "reported_issue": "Mpangilio, matamshi",
+      "reported_reference": "pg003_sec001.html",
+      "resolved_files": [
+        "pg003_sec001.html"
+      ],
+      "requirements": "UK 2\n*Yaliyomo: Utamkaji wa konsonanti katika sura ya3,4, 5 na 6 yanapaswa kutamkwa kwa kuongeza irabu e mbele ya konsonati katika utamkaji. Mfano be pg070_sec002.html, me, ke, de, nk ila uandishi wake ni sahihi ila utamkaji wake lazima uwe na e.\n*Sura ya kumi na kumi na mbili katika sauti mwambatano utamkaji wake uwe mfano shii (sh) matamshi yatamkwe vizuri kwa Kiswahili.\n* Katika sura ya kumi na tatu alama za uandishi zinapaswa kutajwa kwa kusema nukta, koma/mkato, kiulizo na mshangao.\n* Baada ya ukurasa huu uwekwe ukurasa wa shukurani.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 3,
+      "reported_issue": "Matatizo ya matamshi",
+      "reported_reference": "pg006_sec001.html",
+      "resolved_files": [
+        "pg006_sec001.html"
+      ],
+      "requirements": "UK 4\n*Utangulizi: Matamshi ya kutaja mwaka 2018 yana makosa yaboreshwe yawe, mwaka elfu mbili na kumi na nane (2018) na Mwaka 2016 iwe mwaka elfu mbili na kumi na sita.\n*Kwenye lengo la kitabu atumie namba kwa Lugha Kiswahili yaani namba moja namba mbili na namba tatu.\n* Kwenye matamshi ya kutaja https://ol.tie. go…… matamshi yaboreshwe.\n\nN.B. kuna mapumziko marefu anapoongea neno moja hadi jingine au sentensi moja hadi nyingine katika maeneo mengi. Maboresho yafanyike",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 4,
+      "reported_issue": "Michoro iboreshwe uk 5",
+      "reported_reference": "pg007_sec001.html",
+      "resolved_files": [
+        "pg007_sec001.html"
+      ],
+      "requirements": "UK 5\nKwenye michoro, mchoro wa kwanza haukuwekwa, uwekwe, mchoro wa pili hakumalizika umaliziwe.",
+      "categories": [
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 5,
+      "reported_issue": "Michoro ikamiishwe,Kutumia Lugha ya kingereza uk 6",
+      "reported_reference": "pg008_sec001.html",
+      "resolved_files": [
+        "pg008_sec001.html"
+      ],
+      "requirements": "UK 6\n*Fuatisha michoro hii: maelezo ya yawe: Fuatisha michoro hii /kwa kutumia spa willi fuatisha michoro hii\n*Mchoro wa sketi haujakamilika, ukamilishwe.\n* Maelezo ya kutaja namba za picha yatamkwe kwa Lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 6,
+      "reported_issue": "Makosa ya sauti uk 7",
+      "reported_reference": "pg009_sec001.html",
+      "resolved_files": [
+        "pg009_sec001.html"
+      ],
+      "requirements": "UK 7\n* Iwekwe sauti katika kutaja picha za vitu hivyo mfano namba moja  kaptura,namba mbili sketi nk uk 7",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 7,
+      "reported_issue": "Makosa ya kimatamshi,Maboresho ya michoro uk 8",
+      "reported_reference": "pg010_sec001.html",
+      "resolved_files": [
+        "pg010_sec001.html"
+      ],
+      "requirements": "UK 8\n*Michoro itamkwe kwa Lugha ya Kiswahili fasaha Mfano;nane,nane,nane\n* Michoro ya herufi ichukuliwe kama ilivyo katika kitabu halisi\n*Matamshi yenye lugha ya kingereza yawe kwa lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 8,
+      "reported_issue": "Makosa ya kimatamshi,Utamkaji uboreshwe uk 9",
+      "reported_reference": "pg011_sec001.html",
+      "resolved_files": [
+        "pg011_sec001.html"
+      ],
+      "requirements": "UK 9\n*Matamshi ya herufi ndogo za irabu a, e, i, o, u yatamkwe kwa usahihi.  \n*Somo la kwanza: anaposoma maelekezo ya somo hili, kwenye ninaandika herufi ya irabu ataje irabu a.\n* Utamkaji wa irabu a sauti iwe a a a a sio ei\n*Mistari ya kuandikia ichorwe mikubwa na midogo kama ilivyo katika kitabu halisi. Maelezo; Andika herufi ya irabu a, Andika doti ya kwanza kwa kurudiarudia na ujaze mstari.\n*Herufi ya irabu a, iandikwe katika mstari midogo na ijae katika mstari.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 9,
+      "reported_issue": "Makosa ya kimatamshi, michoro iboreshwe uk 10",
+      "reported_reference": "pg012_sec001.html",
+      "resolved_files": [
+        "pg012_sec001.html",
+        "pg012_sec002.html"
+      ],
+      "requirements": "UK 10\n*Matamshi yawe chora mchoro sio muchoro huu na utamkaji wa e iwe e sio iiiii \n*Mchoro wa herufi irabu e uwe kama ulivyo katika kitabu halisi. \n* Hatua za uandishi wa herufi irabu e ziwe kama za kwenye kitabu halisi. Maelezo: Andika herufi ya irabu e, Andika doti ya kwanza na ya tano kwa nafasi na ujaze mstari.\n  *Mistari ya kuandikia ichorwe mikubwa na midogo kama ilivyo kwenye kitabu halisi.\n*Herufi ya irabu e, iandikwe katika mstari midogo na ijae katika mstari.\n* Somo la tatu limejirudia. Isiyo nasauti iondolewe",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 10,
+      "reported_issue": "Makosa ya kiuandishi, michoro iboreshwe uk 11",
+      "reported_reference": "pg012_sec002.html",
+      "resolved_files": [
+        "pg012_sec001.html",
+        "pg012_sec002.html"
+      ],
+      "requirements": "UK 11\n*Herufi i iandikwe kama ilivyoandikwa kwenye kitabu halisi ijae kwenye mstari mdogo.Maelezo ;Andika herufi ya irabu i, Andika doti ya pili na ya nne kwa nafasi na ujaze mstari\n*Herufi ya irabu i itamkwe i, i, i, ……na sio iiiiiiiiiii\n*Mistari iliyopo chini katika ukurasa huu iondolewe.\n*Mistari ya kuandikia ichorwe mikubwa na midogo kama ilivyo katika kitabu halisi.\n*Mchoro wa herufi ya irabu uwe kama ilivyo katika kitabu halisi na iwe katika mstari midogo na ijae katika mstari.",
+      "categories": [
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 11,
+      "reported_issue": "Hatua za kufuatisha ziboreshwe uk 12",
+      "reported_reference": "pg013_sec001.html",
+      "resolved_files": [
+        "pg013_sec001.html",
+        "pg013_sec002.html"
+      ],
+      "requirements": "UK 12\n*Irabu i ya kufuatisha iwe kama ilivyo katika kitabu halisi.\n*Hatua za kuandika irabu i ziwe kama kwenye kitabu halisi. Maelezo; Andika herufi ya irabu i, Andika doti ya pili na ya nne kwa nafasi na ujaze mstari.\n* Mistari ya kuandikia ichorwe mikubwa na midogo kama ilivyo katika kitabu halisi.\n*Chini ya somo hili kuna somo la nne lisilo na sauti liondolewe",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 12,
+      "reported_issue": "Michoro iboreshwe, herufi O iboreshwe uk 13",
+      "reported_reference": "pg013_sec002.html",
+      "resolved_files": [
+        "pg013_sec001.html",
+        "pg013_sec002.html"
+      ],
+      "requirements": "UK 13\n*Mtamshi yawe chora mchoro huu: \n* Mchoro wa herufi ya irabu o uwe kama wa kwenye kitabu halisi.\n*Mistari ya kuandikia ichorwe mikubwa na midogo kama ilivyo katika kitabu halisi.Andika herufi ya irabu o; Andika doti ya kwanza, ya tatu na ya tano kwa nafasi na ujaze mstari.\n*Kufuatisha herufi ya irabu O na kuandika herufi o haipo iwekwe kama ilivyo katika kitabu halisi.",
+      "categories": [
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 13,
+      "reported_issue": "Maboresho ya matamshi, hatua za kufuatisha ziboreshwe uk 14",
+      "reported_reference": "pg014_sec001.html",
+      "resolved_files": [
+        "pg014_sec001.html",
+        "pg014_sec002.html"
+      ],
+      "requirements": "UK 14\n*Utamkaji wa irabu U uboreshwe.\n*mchoro wa irabu U uwe kama katika kitabu halisi.\n* Herufi ya irabu u ya kufuatisha iwe kama katika kitabu halisi\n* Mistari ya kuandikia ichorwe mikubwa na midogo kama ilivyo katika kitabu halisi.\n*Herufi u iandikwe katika mistari midogo na ijae katika mistari.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 14,
+      "reported_issue": "Makosa ya utamkaji uboreshwe uk 15",
+      "reported_reference": "pg014_sec002.html",
+      "resolved_files": [
+        "pg014_sec001.html",
+        "pg014_sec002.html"
+      ],
+      "requirements": "UK 15\n*Utamkaji wa irabu a,e,i,o,u uboreshwe \n*Mistari ya kuandikia ichorwe mikubwa na midogo kama ilivyo katika kitabu halisi. \n*Herufi za irabu a, e, i, o, u ziandikwe katika mistari midogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 15,
+      "reported_issue": "Makosa ya kimatamshi,Makosa ya kiuandishi uk 16",
+      "reported_reference": "pg015_sec001.html",
+      "resolved_files": [
+        "pg015_sec001.html",
+        "pg015_sec002.html",
+        "pg015_sec003.html"
+      ],
+      "requirements": "UK 16\n*Matamshi ya maneno ua,ou,au yaboreshwe\n*Maneno yaandikwe katika mstari mdogo na yajae.\n*Mistari ya kuandikia ichorwe mikubwa na midogo kama ilivyo kwenye kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 16,
+      "reported_issue": "Maboresho ya mpangilio uk 17",
+      "reported_reference": "pg015_sec002.html",
+      "resolved_files": [
+        "pg015_sec001.html",
+        "pg015_sec002.html",
+        "pg015_sec003.html"
+      ],
+      "requirements": "UK 17\n*Kiboksi cha majibu katika zoezi la kwanza kimoja kiondolewe.",
+      "categories": [
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 17,
+      "reported_issue": "Makosa ya utamkaji uk 18",
+      "reported_reference": "pg015_se003.html",
+      "resolved_files": [
+        "pg015_sec001.html",
+        "pg015_sec002.html",
+        "pg015_sec003.html"
+      ],
+      "requirements": "UK 18\n*Zoezi la pili utamkaji wa herufi uboreshwe kwa lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 18,
+      "reported_issue": "",
+      "reported_reference": "pg016_sec001.html",
+      "resolved_files": [
+        "pg016_sec001.html"
+      ],
+      "requirements": "UK 19\n*Mshale katika kiboksi uwekwe kama ulivyowekwa katika kitabu halisi.",
+      "categories": [
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 19,
+      "reported_issue": "Makosa ya kimatamshi uk 20",
+      "reported_reference": "pg017_sec001.html",
+      "resolved_files": [
+        "pg017_sec001.html"
+      ],
+      "requirements": "UK 20\n*Matamshi ya herufi ndogo za konsonanti be, me, ke, de, ne yaboreshwe.\n*Herufi ya konsonanti  b ya kufatisha iwe kama ilivyo katika kitabu halisi.\n*Herufi b iandikwe katika mstari midogo na ijae katika mstari. Maelezo; Andika herufi ya konsonanti b, Andika doti ya kwanza na ya pili kwa nafasi na ujaze mstari.\n*Mistari ya kuandikia ichorwe mikubwa na midogo kama ilivyo katika kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 20,
+      "reported_issue": "Makosa ya kiuandishi, Makosa ya utamkaji uk 21",
+      "reported_reference": "pg018_sec001.html",
+      "resolved_files": [
+        "pg018_sec001.html",
+        "pg018_sec002.html"
+      ],
+      "requirements": "UK 21\n*Uandishi wa silabi ba, be, bi, bo, bu uzingatie mistari mikubwa na midogo.\n*Maneno yaandikwe kwenye mstari mdogo na yajae.\n*Uandishi wa silabi be, urekebishwe kama kwenye kitabu halisi.\n*Matamshi ya maneno beba, bao, bei, buu   yaborehswe.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 21,
+      "reported_issue": "Ondoa neno PAH uk 22",
+      "reported_reference": "pg018_sec002.html",
+      "resolved_files": [
+        "pg018_sec001.html",
+        "pg018_sec002.html"
+      ],
+      "requirements": "UK 22\n*Zoezi la kwanza neno PAH anavyotamka liondolewe.\n*Utamkaji wa namba utumie lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 22,
+      "reported_issue": "Makosa ya utamkaji,Kutumia Lugha ya kingereza uk 23",
+      "reported_reference": "pg019_sec001.html",
+      "resolved_files": [
+        "pg019_sec001.html"
+      ],
+      "requirements": "UK 23\n*Mchoro wa herufi ya konsonanti m uwe kama kwenye kitabu halisi.\n*Utamkaji wa herufi m uboreshwe.\n*Kufuatisha herufi ya konsonanti M na kuandika herufi uzingatiwe kama katika kitabu halisi.\n*Utamkaji wa hatua 1-6 ya kufatisha konsonanti m utumie lugha ya Kiswahili.\n*Utamkaji wa silabi me, urekebishwe.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 23,
+      "reported_issue": "Makosa ya kimatamshi uk 24",
+      "reported_reference": "pg020_sec001.html",
+      "resolved_files": [
+        "pg020_sec001.html",
+        "pg020_sec002.html",
+        "pg020_sec003.html"
+      ],
+      "requirements": "UK 24\n*Matamshi ya maneno maua, mia, mea, mabua, uma yaboreshwe.\n*Maneno yaandikwe kwenye mstari mdogo na yajae.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 24,
+      "reported_issue": "Ondoa neno PAH, Kutumia Lugha ya kingereza uk 25",
+      "reported_reference": "pg020_se002.html",
+      "resolved_files": [
+        "pg020_sec001.html",
+        "pg020_sec002.html",
+        "pg020_sec003.html"
+      ],
+      "requirements": "UK 25\n*Zoezi la pili neno PAH anayotamka iondolewe.\n*Maelezo ya kutaja namba za picha yatumie lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 25,
+      "reported_issue": "Makosa ya kimatamshi, Boresha michoro uk 26",
+      "reported_reference": "pg020_sec003.html",
+      "resolved_files": [
+        "pg020_sec001.html",
+        "pg020_sec002.html",
+        "pg020_sec003.html"
+      ],
+      "requirements": "UK 26\n*Utamkaji wakonsonanti k uboreshwe.\n*Mchoro wa konsonanti k uchorwe kama ilivyo kwenye kitabu halisi.\n *Herufi ya mchoro k ujae kwenye mstari mdogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 26,
+      "reported_issue": "Makosa ya Kimatamshi uk 27",
+      "reported_reference": "pg021_sec001.html",
+      "resolved_files": [
+        "pg021_sec001.html"
+      ],
+      "requirements": "UK 27\n*Kufuatisha herufi ya konsonant k na kuandika herufi uzingatiwe kama katika kitabu halisi.Maelezo ya kuandika herufi k, Andika doti ya kwanza na ya tatu kwa nafasi na ujaze mstari.\n*Utamkaji wa konsonanti k uborehswe.\n*Utamkaji wa silabi ke uboreshwe.\n*Matamshi ya maneno komeo, kobe, kuku, kioo ya boreshwe.\n*Silabi na maneno ya konsonanti k yaandikwe kwenye mstari mdogo na yajae.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 27,
+      "reported_issue": "Ondoa neno PAH, Kutumia Lugha ya kingereza uk 28",
+      "reported_reference": "pg022_sec001.html",
+      "resolved_files": [
+        "pg022_sec001.html",
+        "pg022_sec002.html"
+      ],
+      "requirements": "UK 28\n*Zoezi la tatu neno PAH anayotamka iondolewe.\n*Maelezo ya kutaja namba za picha yatumie lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 28,
+      "reported_issue": "Makosa ya Kimatamshi, Michoro iboreshwe uk 29",
+      "reported_reference": "pg022_sec002.html",
+      "resolved_files": [
+        "pg022_sec001.html",
+        "pg022_sec002.html"
+      ],
+      "requirements": "UK 29\n*Utamkaji wa konsonanti d itamkwe de\n*Baada ya maelezo chora mchoro huu ondoa matamshi k-c c c c.\n*Mchoro wa herufi d uwe kama katika kitabu halisi.\n*Wakati wa kuandika hatua za herufi d ondoa matamshi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 29,
+      "reported_issue": "Makosa ya kimatamshi, Maboresho ya utamkaji wa maneno uk 30",
+      "reported_reference": "pg023_sec001.html",
+      "resolved_files": [
+        "pg023_sec001.html",
+        "pg023_sec002.html"
+      ],
+      "requirements": "UK 30\n*Utamkaji wa konsonanti d uboreshwe.\n*Hatua za herufi d ziwe kama zilivyo kwenye kitabu halisi.\n*Mistari ya kuandikia ichorwe mikubwa na midogo kama ilivyo katika kitabu halisi. Maelezo; Andika herufi d, Andika doti ya kwanza, ya nne na ya tano kwa nafasi na ujaze mstari.\n*herufi ya konsonanti d/silabi de/maneno yandikwe katika mistari mdogo na ijae.\n*Inapotamkwa silabi do matamshi yaboreshwe.\n*Matamshi ya maneno daka, dumu, debe nk yaboreshwe.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 30,
+      "reported_issue": "Kutumia Lugha ya Kingereza uk 32",
+      "reported_reference": "pg024_sec001.html",
+      "resolved_files": [
+        "pg024_sec001.html",
+        "pg024_sec002.html"
+      ],
+      "requirements": "UK 32\n*Maelezo ya kutaja namba yatolewe kwa lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 31,
+      "reported_issue": "Makosa ya kimatamshi uk 33",
+      "reported_reference": "Pg024_sec002.html",
+      "resolved_files": [
+        "pg024_sec001.html",
+        "pg024_sec002.html"
+      ],
+      "requirements": "UK 33\n*Utamkaji wa konsonanti n uboreshwe.\n*Baada ya maelezo chora mchoro huu ondoa matamshi.\n*Mchoro wa herufi n uwe kama kwenye kitabu halisi.\n*Katika kufuatisha na kuandika konsonanti N ziwe kama kwenye kitabu. Maelezo; Andika herufi ya konsonanti n, Andika doti ya kwanza, ya tatu, ya nne na ya tano kwa nafasi na ujaze mstari.\n*Mistari mikubwa na midogo ichorwe kama ilivyo katika kitabu halisi na herufi ijae katika mistari midogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 32,
+      "reported_issue": "Makosa ya kimatamshi, Fupisha muda wa kusoma uk 34",
+      "reported_reference": "pg025_sec001.html",
+      "resolved_files": [
+        "pg025_sec001.html",
+        "pg025_sec002.html"
+      ],
+      "requirements": "UK 34\n*Pumziko kila baada ya kusoma silabi ni kubwa ipunguzwe.\n*Matamshi ya maneno yote yaboreshwe.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 33,
+      "reported_issue": "Makosa ya kimatamshi uk 35",
+      "reported_reference": "pg025_sec002.html",
+      "resolved_files": [
+        "pg025_sec001.html",
+        "pg025_sec002.html"
+      ],
+      "requirements": "UK 35\n*Katika Zoezi la sita mfano;1 -6 ondoa matamshi ya kingereza katika kutaja namba za maswali yatumie lugha ya Kiswahili.\n*Utamkaji uboreshwe wa matamshi ya herufi ya mwanzo katika mfano wa kobe.\n*Utamkaji wa maneno nona, beba, dada, kiko, mikeka yaboreshwe.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 34,
+      "reported_issue": "Makosa ya kimatamshi, Kutumia Lugha ya Kingereza uk 36",
+      "reported_reference": "pg026_sec001.html",
+      "resolved_files": [
+        "pg026_sec001.html",
+        "pg026_sec002.html"
+      ],
+      "requirements": "UK 36\n*Matamshi katika maneno konsonanti, irabu na silabi yaboreshwe.\n*Ondoa matamshi ya lugha ya kingereza katika kutaja namba.\nNB; Mfano-Ueleze kuwa konsonanti M na irabu A tunapata silabi MA.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 35,
+      "reported_issue": "Makosa ya kimatamshi, Kutumia Lugha ya kingereza uk 37",
+      "reported_reference": "pg026_sec002.html",
+      "resolved_files": [
+        "pg026_sec001.html",
+        "pg026_sec002.html"
+      ],
+      "requirements": "UK 37\n*Kwenye irabu e mfano namba moja imetamkwa uni itamkwe moja.\n*Silabi na, ne itamkwe vizuri na neno nane litamkwe vema.\n*Silabi do, bi itamkwe vizuri na neno lake dobi.\n*Silabi ko,be,ne,no,do,do,ki,me,ma,bi,bo yatamkwe vizuri.\n*Namba zitamkwe kwa lugha ya Kiswahili badala ya lugha ya kingereza.\n*Nafasi iachwe kati ya silabi na silabi iachwe kama ilivyo kwenye kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 36,
+      "reported_issue": "Makosa ya kimatamshi, Maboresho ya michoro uk 38",
+      "reported_reference": "pg027_sec001.html",
+      "resolved_files": [
+        "pg027_sec001.html"
+      ],
+      "requirements": "UK 38\n*Baada ya kutaja sura ya nne maelezo ya kuandika herufi ndogo za konsonanti yafuatiwe na kuzitaja konsonanti l, t, p, s, j.\n*Mchoro wa herufi l uwe kama kwenye kitabu.\n*Matamshi ya herufi l yaboreshwe.\n*Katika kufuatisha herufi ya konsonanti l herufi lllllll yaondolewe.\n*Herufi ya konsonantil katika kufuatisha iwe kama katika kitabu halisi kwa hatua zake.\n*Mistari ya kuandikia mikubwa na midogo ichorwe kama ilivyo katika kitabu halisi na kuandika herufi ijae kwenye mstari mdogo. Maelezo; Andika herufi ya konsonanti l Andika doti ya kwanza, ya pili na ya tatu kwa nafasi na ujaze mstari.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 37,
+      "reported_issue": "Makosa ya utamkaji uk 39",
+      "reported_reference": "pg028_sec001.html",
+      "resolved_files": [
+        "pg028_sec001.html",
+        "pg028_sec002.html"
+      ],
+      "requirements": "UK 39\n*Katika silabi la, le, li, lo, lu konsonanti L iwe ndogo.\n*Kwenye maneno yote L iwe ndogo l sio kubwa.\n*Maneno laini,lea,leo,lima,lebo,lako,lenu,lnea,limau,luku yatamkwe kwa usahihi\n*Neno lino liwe lini, neno linea liwe limea.\n*Mistari ya kuandikia maneno iwe mikubwa na midogo kama katika kitabu halisi na maneno na silabi yajae katika mstari.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 38,
+      "reported_issue": "Kutumia Lugha ya kingereza uk 40",
+      "reported_reference": "pg028_sec002.html",
+      "resolved_files": [
+        "pg028_sec001.html",
+        "pg028_sec002.html"
+      ],
+      "requirements": "UK 40\n*Ondoa matamshi ya namba kwa luha ya kingereza yawe kwa lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 39,
+      "reported_issue": "Makosa ya kimatamshi, maboresho ya utamkaji uk 41",
+      "reported_reference": "pg029_sec001.html",
+      "resolved_files": [
+        "pg029_sec001.html"
+      ],
+      "requirements": "UK 41\n*Matamshi ya konsoanti t yaboreshwe iwe (TE) kote.\n*Herufi ya konsonanti t ya kufuatisha iandikwe na kufuata hatua zake kama kwenye kitabu halisi. \n*Katika kufuatisha herufi ya konsonsnti t herufi titititi yaondolewe.\n*Mistari ya kuandikia maneno iwe mikubwa na midogo kama kwenye kitabu halisi.andika konsonanti t Andika doti ya pili, ya tatu, ya nne na ya tano kwa nafasi na ujaze mstari.\n*Herufi, silabi na maneno yaandikwe katika mistari midogo na ijae.\n*Silabi ta, te, ti, to, tu zisomwe zote kwa usahihi.\n*Maneno yote yatamkwe kwa usahihi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 40,
+      "reported_issue": "Ondoa PAH, Kutumia Lugha ya Kingereza uk 42",
+      "reported_reference": "pg030_sec001.html",
+      "resolved_files": [
+        "pg030_sec001.html",
+        "pg030_sec002.html"
+      ],
+      "requirements": "UK 42\n*Ondoa matamshi PAH baada ya maelezo ya zoezi la pili.\n*Namba za maswali zitamkwe kwa Lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 41,
+      "reported_issue": "Makosa ya utamkaji uk 43",
+      "reported_reference": "Pg030_sec002.html",
+      "resolved_files": [
+        "pg030_sec001.html",
+        "pg030_sec002.html"
+      ],
+      "requirements": "UK 43\n*Utamkaji wa herufi P uboreshwe.\n*Mchoro wa konsonanti P uwe kama kwenye kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 42,
+      "reported_issue": "Makosa ya kimatamshi,makosa ya uandishi,Maboresho ya maneno uk 44",
+      "reported_reference": "Pg031_secoo1.html",
+      "resolved_files": [
+        "pg031_sec001.html"
+      ],
+      "requirements": "UK 44\n*Mchoro wa kufuatisha herufi ya konsonanti P uwe kama kwenye kitabu.\n*Mistari ya kuandikia maneno iwe mikubwa na midogo kama kwenye kitabu halisi.Maelezo; kuandika herufi p, Andika doti ya kwanza, ya pili, ya tatu na ya nne kwa nafasi na ujaze mstari.\n*Herufi, silabi na maneno yaandikwe katika mistari midogo na ijae.\n*Katika kufuatisha herufi ya konsonanti P na hatua zake uwe kama atika kitabu halisi.\n*Utamkaji wa namba katika kuchora herufi P zitamkwe kwa Kiswahili\n*Kuandika silabi pa,pe,pi,po,pu zote zitajwe kwa usahihi\n*Maneno pale, pilipili,paua,palilia yatamkwe kwa usahihi",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 43,
+      "reported_issue": "Matamshi yaboreshwe\nKutumika lugha ya kingereza uk 45",
+      "reported_reference": "Pg032-Sec001.html",
+      "resolved_files": [
+        "pg032_sec001.html",
+        "pg032_sec002.html"
+      ],
+      "requirements": "UK 45\n*Ondoa matamshiya PAH baada ya maelezo ya zoezi la tatu.\n*Namba za maswali zitamkwe kwa lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 44,
+      "reported_issue": "Matamshi yaboreshwe\nMichoro\nMpangilio wa mistari uk 46",
+      "reported_reference": "Pg032-Sec002.html",
+      "resolved_files": [
+        "pg032_sec001.html",
+        "pg032_sec002.html"
+      ],
+      "requirements": "UK 46\n*Matamshi ya konsonanti S yaboreshwe (SE) kote.\n*Mchoro wa konsonant S uwe kama kwenye kitabu halisi.\n*Mistari ya kuandikia maneno iwe mikubwa na midogo kama katika kitabu halisi. Maelezo; Andika herufi ya konsonanti s Andika doti ya pili, ya tatu na ya nne kwa nafasi na ujaze mstari.\n*Herufi ya konsonanti S ijae kwenye mstari mdogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 45,
+      "reported_issue": "Hatua\nSilabi na Maneno yajae\nManeno, Silabi na Herufi ziboreshwe uk 47",
+      "reported_reference": "Pg033- Sec001.html",
+      "resolved_files": [
+        "pg033_sec001.html"
+      ],
+      "requirements": "UK 47\n*Katika kufuatisha herufi ya konsonanti S na hatua zake ziwe kama kwenye kitabu halisi.\n*Katika kuandika konsonanti S silabi na maneno yajae kwenye mstari mdogo.\n*Utamkaji wa silabi SE uboreshwe.\n*Uandishi wa herufi, silabi na maneno za kupanda na kushuka uzingatiwe kama katika kitabu halisi Utamkaji wa maneno saidia, sumaku na sikia yaboreshwe.\n*Mistari ya kuandikia maneno iwe mikubwa na midogo kama katika kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 46,
+      "reported_issue": "Matamshi yaboreshwe\nKutumia kingereza uk 48",
+      "reported_reference": "pg034-Sec001.html",
+      "resolved_files": [
+        "pg034_sec001.html",
+        "pg034_sec002.html"
+      ],
+      "requirements": "UK 48\n*Ondoka matamshi ya PAH baada ya maelezo ya zoezi la nne.\n*Utamkaji wa namba za maswali ziwe lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 47,
+      "reported_issue": "Matamshi yaboreshwe \nMpangilio wa maneno uk 49",
+      "reported_reference": "pg034- Sec002.html",
+      "resolved_files": [
+        "pg034_sec001.html",
+        "pg034_sec002.html"
+      ],
+      "requirements": "UK 49\n*Anapoanza kusema ninaandika herufi ya konsonanti ataje J.\n*Matamshi ya konsonanti j yaboreshwe (JE) sio (JI).\n*Katika herufi ya konsonanti j iwe kama ilivyo kwenye kitabu halisi.\n*Katika kuandika herufi ya konsonanti j izingatiwe kushuka kutoka mstari mdogo hadi mstari mkubwa kama ilivyo katika kitabu halisi. Maelezo; Andika herufi ya konsonanti j, Andika doti ya pili, ya nne na ya tano kwa nafasi na ujaze mstari.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 48,
+      "reported_issue": "Matamshi yaboreshwe uk 50",
+      "reported_reference": "pg035-Sec001.html",
+      "resolved_files": [
+        "pg035_sec001.html",
+        "pg035_sec002.html",
+        "pg035_sec003.html"
+      ],
+      "requirements": "UK 50\n*Utamkaji wa haerufi ya konsonanti ja, je, ji, jo, ju matamshi yaboreshwe.\n*Viboksi chini ya silabi ja, je, ji, jo, ju viondolewe.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 49,
+      "reported_issue": "Matamshi yaboreshwe\nManeno yapangiliwe kwenye mistari uk 51",
+      "reported_reference": "pg035-Sec002.html",
+      "resolved_files": [
+        "pg035_sec001.html",
+        "pg035_sec002.html",
+        "pg035_sec003.html"
+      ],
+      "requirements": "Uk 51\n*Utamkaji maneno jino, juisi, judo, jalada, jalala, jali, jamaa uboreshwe.\n*Maneno yaandikwe kwenye mistari midogo yajae na kuzingatiwe herufi za kupanda na kushuka.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 50,
+      "reported_issue": "Kutumia kingereza\nMatamshi yaboreshwe uk 52",
+      "reported_reference": "pg035-Sec001.html",
+      "resolved_files": [
+        "pg035_sec001.html",
+        "pg035_sec002.html",
+        "pg035_sec003.html"
+      ],
+      "requirements": "UK 52\n*Zoezin la tano, Ondoa sauti ya PAH baada ya kutaja andika majina ya picha hizi.\n*Namba zinazotajwa kwenye picha zitumie lugha ya Kiswahili.\n*Picha namba 2 ya jiko iwe kama ilivyo kwenye kitabu halisi.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 51,
+      "reported_issue": "Silabi zitamkwe kwa usahihi\nMatamshi ya boreshwe uk 53",
+      "reported_reference": "pg0036-Sec001.html",
+      "resolved_files": [
+        "pg036_sec001.html",
+        "pg036_sec002.html"
+      ],
+      "requirements": "Uk 53\n*Kwenye mfano namba moja itamkwe namba moja sio Uni.\n*Silabi itamkwe vizuri.\n*Neno pilipili silabi pi, li, pi, li zitamkwe vema.\n* Neno polepole litamkwe vyema.\n*Utamkaji wa namba za maneno zitumie lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 52,
+      "reported_issue": "Matamshi ya boreshwe uk 54",
+      "reported_reference": "pg0036-Sec002.html",
+      "resolved_files": [
+        "pg036_sec001.html",
+        "pg036_sec002.html"
+      ],
+      "requirements": "UK 54\n*Matamshi ya herufi za konsonanti l, t, p, s, j yaboreshwe utamkjai wake uzingatie irabu mficho (le, te, pe, se, je).\n*Utamkaji wa herufi ziizoko kwenye jedwali uboreshwe.\n*Katika jedwali neno la mfano;(lami) lizungushiwe duara kama katika kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 53,
+      "reported_issue": "Matamshi ya boreshwe\nmaneno, Silabi na Herufi ziboreshwe\nKutumia kingereza uk 55",
+      "reported_reference": "pg0037-Sec001.html",
+      "resolved_files": [
+        "pg037_sec001.html"
+      ],
+      "requirements": "UK 55\n*Matamshi katika kuandika herufi ndogo za konsonanti f, g, y, z, h yaboreshwe.\nca ilivyo katika kitabu halisi.\n*Namba za hatua zitamkwe kwa lugha ya kiswahii.\n*Uandishi wa herufi ya konsonanti f. Maelezo; andika herufi ya konsonanti f Andika doti ya kwanza, ya pili na ya nne kwa nafasi na ujaze mstari.\n*Uandishi wa maneno, silabi na herufi yanayoundwa na herufi konsonanti f yaandikwe kwa kuzingatia kitabu halisi.\n*Utamkaji wa silabi fe uboreshwe.\n*Mistari mikubwa na midogo ichorwe na herufi ijae kwenye mstari mdogo kuzingatia kushuka kwa herufi f matamshi ya maneno feni na fito yaboreshwe.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 54,
+      "reported_issue": "Matamshi ya boreshe\nKutumia kingereza uk 56",
+      "reported_reference": "pg038-Sec001.html",
+      "resolved_files": [
+        "pg038_sec001.html"
+      ],
+      "requirements": "UK 56\n*Maneno fisi, famiia, faulu, fukia, fidia, fukua na mengine yaboreshwe utamkaji wake.\n*Ondoa matamshi ya PAH baada ya maelezo ya zoezi la kwanza.\n*Namba za picha zitajwe kwa kutumia lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 55,
+      "reported_issue": "Matamshi ya boreshwe\nKufuatisha konsonanti\nKutumia lugha ya kingereza\nManeno, Silabi na Herufi ziboreshwe uk57",
+      "reported_reference": "pg039-Sec001.html",
+      "resolved_files": [
+        "pg039_sec001.html"
+      ],
+      "requirements": "UK 57\n*Utamkaji wa herufi ya konsonanti G uboreshwe (GE).\n*Kufuatisha konsonanti G iwe kama ilivyo katika kitabu halisi.\n*Uandishi wa herufi G uboreshwe kama ilivyo katika kitabu halisi. Maelezo; Andika herufi G, Andika doti ya kwanza, ya pili, ya nne na ya tano kwa nafasi na ujaze mstari.\n*Namba zitajwe kwa kutumia lugha ya Kiswahili.\n*Herufi g kichwa kijae kwenye mstari mdogo na mkia ushuke chini kwenye mstari mkubwa.\n*Mistari mikubwa na midogo ya kuandikia iboreshwe na Maneno, Silabi na Herufi yaandikwe kwenye mstari mdogo na yajae.\n*Utamkaji wa silabi ge, gi, na gu uboreshwe.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 56,
+      "reported_issue": "Matamshi yaboreshwe\nKutumia lugha ya kingereza uk 58",
+      "reported_reference": "pg040-Sec001.html",
+      "resolved_files": [
+        "pg040_sec001.html",
+        "pg040_sec002.html"
+      ],
+      "requirements": "UK 58\n*Maneno gia, gema, guna yatamkwe kwa usahihi kama ilivyo katika kitabu halisi.\n*Ondoa sauti ya PAH inayotamkwa katika zoezi la pili.\n*Namba za picha zitajwe kwa kutumia lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 57,
+      "reported_issue": "Matamshi yaboreshwe\nKufuatisha hatua uk 59",
+      "reported_reference": "pg040-Sec002.html",
+      "resolved_files": [
+        "pg040_sec001.html",
+        "pg040_sec002.html"
+      ],
+      "requirements": "UK 59\n*Matamshi ya konsonanti Y yatamkwe na kuandiwa kwa usahihi kama ilivyo katika kitabu halisi.\n*Hatua za kufuatisha herufi Y zitajwe hatua ya kwanza, pili, tatu na nne.\n*Sanduku la ninaandika herufi ya konsonanti Y katika uk 59 liondolewe.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 58,
+      "reported_issue": "Uandishi wa maneno\nMatamshi yaboreshwe uk 60",
+      "reported_reference": "pg041-Sec001.html",
+      "resolved_files": [
+        "pg041_sec001.html",
+        "pg041_sec002.html"
+      ],
+      "requirements": "UK 60\n*Uandishi wa herufi Y uboreshwe kama ilivyo katika kitabu halisi. Maelezo; Andika herufi Y; Andika doti ya kwanza, ya tatu, ya nne, ya tano na ya sita kwa nafasi na ujaze mstari.\n\n*Utamkaji wa silabi YE Uboreshwe.\n*Maneno Yule, yake, yoyote, yeyuka yatamkwe kama ilivyo katika kitabu halisi.\n*Neno YUUPO lirekebishwe na kuwa YUPO.\n*Mistari mikubwa na midogo ichorwe na herufi ziwekwe kwenye mistari midogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 59,
+      "reported_issue": "Kutumia lugha ya kingereza uk 62",
+      "reported_reference": "pg042-Sec001.html",
+      "resolved_files": [
+        "pg042_sec001.html",
+        "pg042_sec002.html"
+      ],
+      "requirements": "UK 62\n*Zoezi la nne namba za maneno Y zitajwe kwa kutumia Lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 60,
+      "reported_issue": "Matamshi ya boreshwe\nKutumia lugha ya Kiswahili uk 63",
+      "reported_reference": "pg042-Sec002.html",
+      "resolved_files": [
+        "pg042_sec001.html",
+        "pg042_sec002.html"
+      ],
+      "requirements": "UK 63\n*Katika ninaandika herufi ya konsonanti ataje (consonanti Z).\nMaelezo; Andika herufi ya Z, Andika doti ya kwanza, ya tatu ya tano na sita kwa nafasi na ujaze mstari.\n*Kufuatisha herufi Andika doti ya kwanza, ya tatu ya tano na sita kwa nafasi na ujaze mstari.\nya konsonanti Z iwe kama ilivyo katika kitabu halisi.\n*Namba zitajwe kwa kutumia lugha ya Kiswahili.\n*Utamkaji wa herufi ya konsonanti Z uboreshwe itamkwe (ZE).\n*Mistari mikubwa nmidogo ya kuandikia iboreshwe kama ilivyo katika kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 61,
+      "reported_issue": "Maneno yaboreshwe\nKutumia lugha ya Kiswahili uk 64",
+      "reported_reference": "pg043-Sec001.html",
+      "resolved_files": [
+        "pg043_sec001.html",
+        "pg043_sec002.html"
+      ],
+      "requirements": "UK 64\n*Maneno kama zulia, zamani, zoa yaboreshwe.\n*Sauti ya kutumia lugha ya kingereza itolewe.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 62,
+      "reported_issue": "Ondoa PAH\nKutumia lugha ya Kiswahili uk 65",
+      "reported_reference": "pg043-Sec002.html",
+      "resolved_files": [
+        "pg043_sec001.html",
+        "pg043_sec002.html"
+      ],
+      "requirements": "UK 65\n*Ondoa sauti ya PAH baada ya andika majina ya picha hizi.\n*Namba zitzjwe kwa kutumia lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 63,
+      "reported_issue": "Matamshi yaboreshwe\nManeno, Silabi na Herufi ziboreshwe uk 66",
+      "reported_reference": "pg044-Sec001.html",
+      "resolved_files": [
+        "pg044_sec001.html"
+      ],
+      "requirements": "UK 66\n*Utamkaji wa herufi ya konsonanti h uboreshwe.\n*Kufuatisha herufi ya konsonanti h iwe kama ilivyo katika kitabu halisi.\n*Maneno, Silabi na Herufi ziandikwe kwenye mstari mdogo (Pawe na mistari mikubwa na midogo). Maelezo; andika herufi h, Andika doti ya kwanza, ya pili na ya tano kwa nafasi na ujaze mstari.\n*Utamkaji wa Silabi he, hi ziboreshwe kama zilivyo katika kitabu halisi.\n*Maneno kama hela, hofu, hekima, hama, hilo yaboreshwe katika utamkaji.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 64,
+      "reported_issue": "Matamshi yaboreshwe\nKutumia lugha ya Kiswahili uk 68",
+      "reported_reference": "pg045-Sec002.html",
+      "resolved_files": [
+        "pg045_sec001.html",
+        "pg045_sec002.html"
+      ],
+      "requirements": "UK 68\n*Utamkaji wa herufi  ya konsonanti f, g, y, z, h ziboreshwe.\n*Kwenye mfano wa kwanza neno gogo liboreshwe utamkaji.\n*Namba zitajwe kwa kutumia lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 65,
+      "reported_issue": "Matamshi yaboreshwe",
+      "reported_reference": "pg046-Sec001.html",
+      "resolved_files": [
+        "pg046_sec001.html"
+      ],
+      "requirements": "UK 69\n*Matamshi ya herufi katika chati yaboreshwe.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 66,
+      "reported_issue": "Matamshi ya herufi yaboreshwe\nKutumia lugha ya Kiswahili uk 70",
+      "reported_reference": "pg047-Sec001.html",
+      "resolved_files": [
+        "pg047_sec001.html"
+      ],
+      "requirements": "UK 70\n*Kuandika herufi ndogo za konsonanti zitajwe kwa Kutumia lugha ya Kiswahili.\n*Ataje konsonanti anayoandika r (re) na itamkwe kwa usahihi. Maelezo; Andika herufi r; Andika doti ya kwanza, ya pili, ya tatu na ya tano na kwa nafasi na ujaze mstari.\n*Mistari mikubwa na midogo ya kuandikia ichorwe na kutumika kwa usahihi.\n*Katika kutaja silabi zitajwe kwa usahihi ra, re, ri, ro, ru.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 67,
+      "reported_issue": "Matamshi yaboreshwe uk 71",
+      "reported_reference": "pg048-Sec001.html",
+      "resolved_files": [
+        "pg048_sec001.html",
+        "pg048_sec002.html"
+      ],
+      "requirements": "UK 71\n*Matamshi ya maneno radi, redio, roboti, rudi yaboreshwe.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 68,
+      "reported_issue": "Ondoa PAH\nKutumia lugha ya Kiswahili uk 72",
+      "reported_reference": "pg048-Sec002.html",
+      "resolved_files": [
+        "pg048_sec001.html",
+        "pg048_sec002.html"
+      ],
+      "requirements": "UK 72\n*Baada ya maneno andika majina ya picha hizi sauti PAH itolewe.\n*Namba zitajwe kwa kutumia lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 69,
+      "reported_issue": "Matamshi yaboreshwe\nKutumia lugha ya Kiswahili\nKutaja Herufi uk 73",
+      "reported_reference": "pg049-Sec001.html",
+      "resolved_files": [
+        "pg049_sec001.html"
+      ],
+      "requirements": "UK 73\n*Ataje herufi ya konsonanti inayoandikwa ambayo ni w (we).\n*Mchoro wa konsonanti  w uwe kama ulivyo katika kitabu halisi na sauti ya kutamka iwe herufi wwwww\n*Kufuata hatua za konsonanti ziwe kama katika kitabu halisi.\n*Namba zitwaje kwa lugha ya Kiswahili.\n*Mistari mikubwa na midogo ya kuandikia iboreshwe na herufi zikae kwenye mstari mdogo.\n*Utamkaji wa Silabi we uboreshwe.\n*Utamkaji wa maneno wino, wale, weupe, weusi, wote yaboreshwe.\n*Kuandika herufi ya konsonanti w Maelezo; Andika herufi ya konsonanti w, Andika doti ya pili, ya nne, ya tano na ya sita kwa nafasi na ujaze mstari.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 70,
+      "reported_issue": "Matamshi yaboreshe \nKutumia lugha ya Kiswahili uk 74",
+      "reported_reference": "pg050-Sec001.html",
+      "resolved_files": [
+        "pg050_sec001.html",
+        "pg050_sec002.html"
+      ],
+      "requirements": "UK 74\n*Utamkaji wa herufi  ya konsonanti w uboreshwe.\n*Namba zitajwe kwa lugha ya Kiswahili kama ilivyo katika kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 71,
+      "reported_issue": "Matamshi yaboreshwe, kutumia luha ya kingereza\nSilabi ziboreshwe\nKukosekana kwa mistari ya mwandiko usio sahihi uk 75",
+      "reported_reference": "pg050Sec002.html",
+      "resolved_files": [
+        "pg050_sec001.html",
+        "pg050_sec002.html"
+      ],
+      "requirements": "UK 75\n*Matamshi ya konsonanti V yaboreshwe, Katika kufuatisha herufiya konsonanti V iwe kama ilivyo katika kitabu halisi.\n*Hatua zitajwe kwa lugha ya Kiswahili fasaha.\n*Mistari midogo na mikubwa ya kuandikia iboreshwe na herufi zikae kwenye mstari mdogo. Maelezo; Andika herufi V; Andika doti ya kwanza, ya pili, ya tatu na ya sita kwa nafasi na ujaze mstari.\n*Silabi ve, vi ziboreshwe zitamkwe kwa usahihi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 72,
+      "reported_issue": "Makosa ya Matamshi, kukosekana kwa mistari ya mwandikouk 76",
+      "reported_reference": "pg051-Sec001.html",
+      "resolved_files": [
+        "pg051_sec001.html",
+        "pg051_sec002.html"
+      ],
+      "requirements": "UK 76\n*Matamshi ya maneno vioo,vidole,visu yaboreshwe,Neno Viiti liwe vijiti na voo liwe vioo.\n* Mistari mikubwa na midogo ya kuandikia iboreshwe na maneno yajae katika mstari mdogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 73,
+      "reported_issue": "Sauti zsizo hitajika ziondolewe, Michoro iboreshwe uk 77",
+      "reported_reference": "pg051-Sec002.html",
+      "resolved_files": [
+        "pg051_sec001.html",
+        "pg051_sec002.html"
+      ],
+      "requirements": "UK 77\n*Ondoa sauti ya PAH, Namba zitajwe kwa lugha ya Kiswahili.\n*Mchoro namba Mbili, Nne ziwe kama katika kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 74,
+      "reported_issue": "Matamshi, Maneno, silabi na Herufi ziboreshwe\nKasi ya msomaji ndogo",
+      "reported_reference": "pg052-Sec001.html",
+      "resolved_files": [
+        "pg052_sec001.html"
+      ],
+      "requirements": "UK 78\n*Herufi ya konsonanti ch (che) itajwe kama ilivyo katika kitabu halisi, kufuatisha hatua za konsonanti ch iwe kama kwenye kitabu halisi.\nMaelezo ;Andika herufi ch;Andika doti ya kwanza na ya nne na doti ya kwanza, ya pili na ya tano kwa nafasi na ujaze \nmstari.\n*Silabi che, cho na maneno chura,chaki,chikichi,chakula, yaboreshwe kwenye matamshi.\n*Kasi ya usomaji ni ndogo sana inachukua muda mrefu kutoka neno hadi neno.\n*Mistari mikubwa na midogo ya kuandikia iboreshwe.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 75,
+      "reported_issue": "Matamshi yasiyohitajika,\nKutumia lugha ya Kiswahili\nUk 79",
+      "reported_reference": "pg053-Sec001.html",
+      "resolved_files": [
+        "pg053_sec001.html",
+        "pg053_sec002.html"
+      ],
+      "requirements": "UK 79\n*Ondoa sauti ya PAH\n*Namba zitajwe kwa Kiswahili.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 76,
+      "reported_issue": "Matatizo ya kimatamshi\nKutumia lugha ya Kiswahili uk 80",
+      "reported_reference": "pg053-sec002.html",
+      "resolved_files": [
+        "pg053_sec001.html",
+        "pg053_sec002.html"
+      ],
+      "requirements": "UK 80\n*Matamshi ya silabi vi na ri yaboreshwe.\n*Mfano itamkwe namba Moja sio Uni.\n*Lugha ya Kiswahili itumike katika kutaja namba nasafi za majibu na silabi katika zoezi la tano, Kazi ipangiliwe vizuri.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 77,
+      "reported_issue": "Matatizo ya kimatamshi uk 82",
+      "reported_reference": "pg056-Sec001.html",
+      "resolved_files": [
+        "pg056_sec001.html",
+        "pg056_sec002.html"
+      ],
+      "requirements": "Uk82\n*Patajwe herufi kubwa za irabu zinazounda kuandikwa A, E, I, O, U\n*Utamkaji wa irabu A uboreshwe\n*Fuatisha na hatua zitajwe kama zilivyo kwenye kitabu halisi.\n-Maelezo; Andika herufi A, Katika kuandika irabu A ijae katika mstari mdogo. Andika doti ya sita na ya kwanza kwa nafasi na ujaze mstari.\nAndika herufi kubwa A ikifuatiwa na herufi ndogo a kwa Pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 78,
+      "reported_issue": "Matatizo ya matamshi uk 83",
+      "reported_reference": "pg057-Sec001.html",
+      "resolved_files": [
+        "pg057_sec001.html"
+      ],
+      "requirements": "UK 83\n*Ondoa jedwali lenye majina katika kuandika majina.\n*Maneno yaandikwe kwenye mistari midogo.\n*Neno Ajineta liwe Agineta.\n*Utamkaji wa majina uboreshwe mfano;Lake \n*Neno Anatua katika sentensi ya tatu iwe Anafua.\n*Neno mkeka katika sentens ya kwanza iwe mikeka.\n*Mistari mikubwa na midogo itumike vema.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 79,
+      "reported_issue": "Matatizo ya Lugha uk 84",
+      "reported_reference": "pg056-Sec002.html",
+      "resolved_files": [
+        "pg056_sec001.html",
+        "pg056_sec002.html"
+      ],
+      "requirements": "UK 84\n*Namba zitajwe kwa lugha ya Kiswahili.",
+      "categories": [
+        "content_review"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 80,
+      "reported_issue": "Matatizo ya Lugha uk 85",
+      "reported_reference": "qz001",
+      "resolved_files": [
+        "qz001.html"
+      ],
+      "requirements": "UK 85\n*Itumike Lugha ya Kiswahili katika kutaja herufi na namba.",
+      "categories": [
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 81,
+      "reported_issue": "Makosa ya matamshi\nMatatizo ya Lugha uk 86",
+      "reported_reference": "pg057-Sec001.html",
+      "resolved_files": [
+        "pg057_sec001.html"
+      ],
+      "requirements": "UK 86\n*Katika kufuatisha Irabu hatua zake ziwe kama kwenye kitabu halisi, namba za hatua zitajwe kwa Kiswahili.\n*Matamshi ya Irabu E yaboreshwe katika utamkaji.\n*Kwenye kuandika Irabu kubwa na ndogo ataje E  kubwa na e ndogo.Maelezo;andika herufi E, Andika doti ya sita,ya kwanza na ya tano kwa nafasi na ujaze mstari.Andika herufi kubwa E ikifuatiwa na herufi ndogo e kwa Pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari\n*Majina Edeni, Edita, Elia, Eva, Ema na Emanuel yaboreshwe katika utamkaji.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 82,
+      "reported_issue": "Makosa ya matamshi uk 87/88",
+      "reported_reference": "pg058-Sec001.html/pg058-Sec002.html",
+      "resolved_files": [
+        "pg058_sec001.html",
+        "pg058_sec002.html",
+        "pg058_sec003.html"
+      ],
+      "requirements": "UK 87 / UK 88\n*Matamshi ya majina Elia, Eneuda, Eliza na neno Amevaa yaboreshwe utamkaji.\n*Maneno yajae kwenye mstari mdogo.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 83,
+      "reported_issue": "Makosa ya matamshi na mpangilio wa mistari uk 89",
+      "reported_reference": "pg058-Sec003.html",
+      "resolved_files": [
+        "pg058_sec001.html",
+        "pg058_sec002.html",
+        "pg058_sec003.html"
+      ],
+      "requirements": "UK 89\n*Katika kufuatisha Irabu I na hatua zake iwe kama kwenye kitabu halisi.\n*Mistari mikubwa na midogo na uandishi uzingatiwe.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 84,
+      "reported_issue": "Mpangilio wa matamshi\nMatatizo ya kimatamshi uk 90",
+      "reported_reference": "pg059-Sec001.html",
+      "resolved_files": [
+        "pg059_sec001.html",
+        "pg059_sec002.html"
+      ],
+      "requirements": "UK 90\n*Majina na matamshi yarekebishwe kama ilivyo katika kitabu halisi mfano; Tija iwe Itigi.\n*Mpangilio wa mistari midogo izingatiwe na sanduku liondolewe liwe kama kwenye kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 85,
+      "reported_issue": "Kutumia Lugha ya Kigereza uk 91",
+      "reported_reference": "pg059-Sec002.html",
+      "resolved_files": [
+        "pg059_sec001.html",
+        "pg059_sec002.html"
+      ],
+      "requirements": "UK 91\n*Zoezi la tatu Lugha ya Kiswahili itumike katika kutaja namba na mistari iliyoachwa wazi.",
+      "categories": [
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 86,
+      "reported_issue": "Makosa ya matashi na mpangilio wa sentensi",
+      "reported_reference": "pg060-Sec001.html",
+      "resolved_files": [
+        "pg060_sec001.html"
+      ],
+      "requirements": "UK 92\n*Kufuatisha herufi O mchoro uboreshwe kama kwenye kitabu halisi.\n*Mistari mikubwa na midogo izingatiwe na herufi zikae kwenye mstari mdogo. Maelezo ;Andika herufi, Andika doti ya sita,ya kwanza ya tatu na ya tano kwa nafasi na ujaze mstari.Andika herufi kubwa O ikifuatiwa na herufi ndogo o kwa Pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.\n*Majina yazingatie Matamshi sahihi.\n*Sentensi ipo moja zinapaswa kuwa tatu kama kwenye kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 87,
+      "reported_issue": "Kutumia Lugha ya kingereza uk 93",
+      "reported_reference": "pg061-Sec001.html",
+      "resolved_files": [
+        "pg061_sec001.html",
+        "pg061_sec002.html"
+      ],
+      "requirements": "UK 93\n*Namba zitajwe kwa kutumia Lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 88,
+      "reported_issue": "Makosa ya kimatamshi\nMpangilio wa sentensi uzingatiwe uk 94",
+      "reported_reference": "pg061-Sec002.html",
+      "resolved_files": [
+        "pg061_sec001.html",
+        "pg061_sec002.html"
+      ],
+      "requirements": "UK 94\n*Sentensi hizi zinapaswa kuwa katika ukurasa wa 92 Pg0060-Sec001.html\n*Kufuatisha herufi ya Irabu U iwe kama kwenye kitabu halisi na hatua zake, utamkaji wa herufi U uboreshwe.\n*Kuandika herufi U. Maelezo; Andika herufi ya irabu U, Andika doti ya sita, ya kwanza, ya tatu na ya sita kwa nafasi na ujaze mstari. Andika herufi kubwa U ikifuatiwa na herufi ndogo u kwa Pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.\n*Kutamka herufi ya Irabu U kubwa na u ndogo uboreshwe zitajwe kwa sauti.\n*Mistari mikubwa na midogo uzingatiwe na herufi zijae kwenye mstari mdogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 89,
+      "reported_issue": "Makosa ya kiuandishi uk 95",
+      "reported_reference": "pg062-Sec001.html",
+      "resolved_files": [
+        "pg062_sec001.html",
+        "pg062_sec002.html",
+        "pg062_sec003.html"
+      ],
+      "requirements": "UK 95 \n*Utamkaji wa maneno uboreshwe\n*Majina yaboreshwe katika uandishi mfano; Ujii liwe Ujiji na Utedi liwe Uledi.\n*Mistari mikubwa na midogo uzingatiwe na herufi zijae kwenye mstari mdogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 90,
+      "reported_issue": "Kutumia Lugha ya kingereza uk 96",
+      "reported_reference": "pg062-Sec002.html",
+      "resolved_files": [
+        "pg062_sec001.html",
+        "pg062_sec002.html",
+        "pg062_sec003.html"
+      ],
+      "requirements": "UK 96\n*Namba katika zoezi la tano zitamkwe kwa Lugha ya Kiswahili.",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 91,
+      "reported_issue": "Makosa ya matamshi ya irabu. uk 97",
+      "reported_reference": "pg063-Sec003.html",
+      "resolved_files": [
+        "pg063_sec001.html"
+      ],
+      "requirements": "UK 97\n*Zoezi La sita kuoanisha herufi kubwa na ndogo za Irabu ziboreshwe matamshi A, E, I, O, U (I, U,  na E).",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 92,
+      "reported_issue": "Makosa ya kimatamshi.\nMaboresho ya mpangilio wakonsonanti. Uk 98",
+      "reported_reference": "pg063-Sec001.html",
+      "resolved_files": [
+        "pg063_sec001.html"
+      ],
+      "requirements": "UK 98\n*Kuandika Herufi kubwa za konsonanti zitamkwe kwa sahihi [Be, Me, Ke, De, Ne] (e-Irabu mficho) B, M, K, D.\n*Somo la kwanza anaposema niandika konsonanti aitaje hiyo konsonanti.\n*Kufuatisha herufi B na hatua zake ziwe Kama zilivyo katika kitabu halisi, Hatua zitajwe kwa lugha ya Kiswahili.\n*Utamkaji wa kosnonanti B uboreshwe,Kuandika Herufi ya konsonanti B atamke (B )kubwa na ( b )ndogo.\n*Uandishi wa Bb Uwe Kama katika kwenye kitabu halisi.Maelezo ;Andika herufi B, Andika doti sita, ya kwanza na ya pili kwa nafasi na ujaze mstari.\nAndika herufi kubwa B ikifuatiwa na herufi ndogo b kwa Pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.\n*Mistari mikubwa na midogo itumike kuandikia na Herufi ijae kwenye mstari mdogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 93,
+      "reported_issue": "Makosa ya kimatamshi.\nMakosa ya kiuandishi \nUk 99",
+      "reported_reference": "pg064-Sec001.html",
+      "resolved_files": [
+        "pg064_sec001.html",
+        "pg064_sec002.html",
+        "pg064_sec003.html"
+      ],
+      "requirements": "UK 99\n*Majina yaboreshwe katika uandishi mfano: Benedeta iwe Benadeta, Matamshi ya majina Benedeta, Boke, Bupe yaboreshwe na yaandikwe kwenye mstari mdogo Kama ilivyo katika kitabu halisi.\n*Jedwali litolewe lililoweka iwe Kama ilivyo kwenye kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 94,
+      "reported_issue": "Makosa ya Lafudhi uk 100",
+      "reported_reference": "pg064-Sec002.html",
+      "resolved_files": [
+        "pg064_sec001.html",
+        "pg064_sec002.html",
+        "pg064_sec003.html"
+      ],
+      "requirements": "UK 100\n*Lafudhi ya maneno iboreshwe katika sentensi.\n*Mistari mikubwa na midogo ya kuandika ichorwe na maneno yajae katika msatri mdogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 95,
+      "reported_issue": "Makosa yakimatamshi uk 101",
+      "reported_reference": "pg064-Sec003.html",
+      "resolved_files": [
+        "pg064_sec001.html",
+        "pg064_sec002.html",
+        "pg064_sec003.html"
+      ],
+      "requirements": "UK 101\n*Utamkaji wa neno Begi uboreshwe Kama ilivyo katika kitabu halisi.",
+      "categories": [
+        "audio_pronunciation",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 96,
+      "reported_issue": "",
+      "reported_reference": "pg065-Sec001.html",
+      "resolved_files": [
+        "pg065_sec001.html"
+      ],
+      "requirements": "UK 102\n*Matamshi ya konsonanti M yaboreshwe.\n*Kufuatisha herufi ya konsonanti kwa kufuata hatua iwe Kama ilivyo katika kitabu Halisi.\n*Hatua za uandishi konsonanti zitajwe, Kuandika Herufi ya konsonanti M iboreshwe na itamkwe kwa sahihi na itamkwe M kubwa na m ndogo. Maelezo; Andika herufi M, Andika doti ya sita, ya kwanza, ya tatu na ya nne kwa nafasi na ujaze mstari. Andika herufi kubwa M ikifuatiwa na herufi ndogo m kwa Pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.\n*Kuandika majina yazingatiwe Kama ilivyo kwenye kitabu halisi.\n*Utamkaji wa majina haya uboreshwe Monika, Maria, Majura, Mese na Meru.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 97,
+      "reported_issue": "Makosa ya kimatamshi yaboreshwe na mpangilio wa sentensi uk 103",
+      "reported_reference": "pg066-Sec001",
+      "resolved_files": [
+        "pg066_sec001.html",
+        "pg066_sec002.html",
+        "pg066_sec003.html"
+      ],
+      "requirements": "UK 103\n*Sentensi ya kwanza na ya pili maneno Monika na Amevaa yaboreshwe utamkaji.\n*Sentensi ziaandikwe kwenye mistari midogo.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 98,
+      "reported_issue": "Makosa ya kimatamshi.\nKutumia Lugha ya kingereza uk 104",
+      "reported_reference": "pg066-Sec002",
+      "resolved_files": [
+        "pg066_sec001.html",
+        "pg066_sec002.html",
+        "pg066_sec003.html"
+      ],
+      "requirements": "UK 104\n*Matamshi ya Herufi M yaboreshwe.\n*Namba zitajwe kwa Lugha ya Kiswahili kwenye zoezi la pili.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 99,
+      "reported_issue": "Makosa ya kimatamshi \nKutumia Lugha ya kingereza uk 105",
+      "reported_reference": "pg066-Sec003",
+      "resolved_files": [
+        "pg066_sec001.html",
+        "pg066_sec002.html",
+        "pg066_sec003.html"
+      ],
+      "requirements": "UK 105\n*Baada ya Maneno ninaandika herufi ya konsonanti ataje hiyo konsonanti K\n*Fuatisha neno hili katika matamshi lisirefushwe lisomwe kwa usahihi.\n*Kufuatisha Herufi ya konsonanti K kwa kufuata hatua iwe Kama kwenye kitabu halisi.\n*Hatua zitwaje kwa namba kwa kutumia Lugha ya Kiswahili.\n*Mistari ya kuandika iwe mikubwa na midogo na Herufi ijae kwenye msatri mdogo. Maelezo; Andika herufi K, Andika doti ya sita, ya kwanza na ya tatu kwa nafasi na ujaze mstari. Andika herufi kubwa K ikifuatiwa na herufi ndogo k kwa Pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual",
+        "semantic_content"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 100,
+      "reported_issue": "Makosa ya matamshi na matumizi ya lugha ya kingereza. Alama kutokuandikwa katika mistari, uk 204",
+      "reported_reference": "pg119_sec002.html",
+      "resolved_files": [
+        "pg119_sec001.html",
+        "pg119_sec002.html"
+      ],
+      "requirements": "Matamshi yaboreshwe. Ondoa matamshi ya kingereza kwenye kutamka namba. Alama ya mshangao iandikwe katika mistari kama katika kitabu halisi, uk 204",
+      "categories": [
+        "audio_pronunciation",
+        "source_faithful_visual"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 101,
+      "reported_issue": "Makosa ya matamshi na matumizi ya lugha ya kingereza, uk 205",
+      "reported_reference": "pg120_sec001.html",
+      "resolved_files": [
+        "pg120_sec001.html",
+        "pg120_sec002.html"
+      ],
+      "requirements": "Matamshi yaboreshwe. Ondoa matamshi ya kingereza kwenye kutamka namba, uk 205",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    },
+    {
+      "review_row": 102,
+      "reported_issue": "Makosa ya matamshi na matumizi ya lugha ya kingereza, uk 206",
+      "reported_reference": "pg120_sec002.html",
+      "resolved_files": [
+        "pg120_sec001.html",
+        "pg120_sec002.html"
+      ],
+      "requirements": "Matamshi yaboreshwe. Ondoa matamshi ya kingereza kwenye kutamka namba, uk 206",
+      "categories": [
+        "audio_pronunciation"
+      ],
+      "status": "implemented",
+      "implementation": "Source-faithful PDF artwork retained; semantic text corrected where specified; Rehema sw-TZ audio regenerated with pronunciation overrides."
+    }
+  ]
+}
