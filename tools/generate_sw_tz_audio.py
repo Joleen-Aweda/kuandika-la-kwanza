@@ -57,6 +57,12 @@ def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
     """Return child-friendly Tanzanian Swahili speech without changing display text."""
     if key in overrides:
         return overrides[key]
+    # Easy-read variants must teach the same pronunciation as their standard
+    # tracks, even when their simplified visible text omits the final letter.
+    if key.endswith("_easy_read"):
+        standard_key = key.removesuffix("_easy_read")
+        if standard_key in overrides:
+            return overrides[standard_key]
 
     text = visible.strip()
     text = re.sub(r"\bPAH\b", "", text, flags=re.IGNORECASE)
