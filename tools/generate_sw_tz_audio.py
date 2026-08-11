@@ -69,6 +69,15 @@ def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
     if compact in PUNCTUATION_NAMES:
         return PUNCTUATION_NAMES[compact]
 
+    # Long handwriting-practice strings such as "eeeeeeee" are letters,
+    # not words or sentences. Six clear repetitions are enough to model the
+    # sound without producing an exhausting synthetic drone.
+    repeated = re.fullmatch(r"([A-Za-z])\1{2,}", compact, flags=re.IGNORECASE)
+    if repeated:
+        letter = repeated.group(1).lower()
+        pronunciation = LETTER_NAMES.get(letter, letter)
+        return ", ".join([pronunciation] * min(len(compact), 6))
+
     letters_only = re.sub(r"[^A-Za-z]", "", compact).lower()
     if letters_only in {"a", "e", "i", "o", "u"} and len(compact) <= 3:
         return letters_only
