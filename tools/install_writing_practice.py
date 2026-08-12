@@ -5,8 +5,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-STYLE = '    <link href="./assets/writing-practice.css?v=3" rel="stylesheet">\n'
-SCRIPT = '    <script src="./assets/writing-practice.js?v=3"></script>\n'
+STYLE = '    <link href="./assets/writing-practice.css?v=4" rel="stylesheet">\n'
+SCRIPT = '    <script src="./assets/writing-practice.js?v=4"></script>\n'
 
 
 def main() -> None:

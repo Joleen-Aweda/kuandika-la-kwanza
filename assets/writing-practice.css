@@ -141,6 +141,11 @@
   cursor: default;
 }
 
+.integrated-drawing-grid {
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 1.75rem !important;
+}
+
 .pattern-slice-list {
   display: grid;
   gap: 1.5rem;

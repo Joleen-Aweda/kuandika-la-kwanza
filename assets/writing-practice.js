@@ -279,7 +279,17 @@
     var prompt = section.querySelector('[data-id="' + promptId + '"]');
     var promptText = cleanText(prompt && prompt.textContent);
     if (prompt) prompt.dataset.inlinePromptProcessed = "true";
-    section.querySelectorAll("img[data-id]").forEach(function (image, index) {
+    var images = Array.from(section.querySelectorAll("img[data-id]"));
+    if (images.length) {
+      var outerGrid = images[0].closest(".grid");
+      var ancestorGrid = outerGrid && outerGrid.parentElement && outerGrid.parentElement.closest(".grid");
+      while (ancestorGrid && section.contains(ancestorGrid)) {
+        outerGrid = ancestorGrid;
+        ancestorGrid = outerGrid.parentElement && outerGrid.parentElement.closest(".grid");
+      }
+      if (outerGrid) outerGrid.classList.add("integrated-drawing-grid");
+    }
+    images.forEach(function (image, index) {
       var name = cleanText(image.alt).replace(/[.]$/, "");
       addImageTools(section, image, {
         id: pageId + "-inline-image-" + String(index + 1).padStart(2, "0"),
