@@ -1,39 +1,39 @@
+/* The converted semantic page is the visible, interactive textbook page.
+   The source render remains in the bundle only as a visual QA reference. */
 .source-facsimile-page {
-  display: block;
-  width: min(100%, 930px);
-  height: auto;
-  margin: 0 auto;
-  background: #fff;
-  /* The source artwork is authoritative, but its production footer is not
-     part of the accessible lesson. The lower 10% contains only the green
-     folio strip, page number, crop marks, and timestamp. */
-  clip-path: inset(0 0 10% 0);
-  margin-bottom: -10%;
-}
-
-.source-semantic-copy {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
-
-/* The original exercises are preserved only as semantic/read-aloud content.
-   Their generated answer bar must not cover the faithful textbook page. */
-div[aria-label="Reader controls"]:has(button[title="Submit"]),
-div[aria-label="dock-label"]:has(button[title="Submit"]),
-div[aria-label="dock-label"]:has(button[title="Tuma"]) {
   display: none !important;
 }
 
+.source-semantic-copy {
+  position: relative !important;
+  width: min(100%, 930px) !important;
+  height: auto !important;
+  margin: 0 auto 7rem !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
+
+.source-semantic-copy > h2:not([class]) {
+  margin: 0 0 1.5rem;
+  padding-bottom: .75rem;
+  border-bottom: 4px solid #84cc16;
+  color: #166534;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 850;
+  line-height: 1.15;
+}
+
+.source-semantic-copy > p:not([class]) {
+  margin: 0 0 1.15rem;
+  color: #27272a;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  line-height: 1.75;
+}
+
 @media print {
-  .source-facsimile-page {
-    width: 100%;
-    max-width: none;
+  .source-semantic-copy {
+    width: 100% !important;
+    max-width: none !important;
+    margin-bottom: 0 !important;
   }
 }

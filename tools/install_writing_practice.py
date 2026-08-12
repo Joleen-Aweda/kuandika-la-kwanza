@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Install the independent writing-practice assets on source-facsimile pages."""
+"""Install the integrated writing-practice assets on converted semantic pages."""
 
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-STYLE = '    <link href="./assets/writing-practice.css?v=2" rel="stylesheet">\n'
-SCRIPT = '    <script src="./assets/writing-practice.js?v=2"></script>\n'
+STYLE = '    <link href="./assets/writing-practice.css?v=3" rel="stylesheet">\n'
+SCRIPT = '    <script src="./assets/writing-practice.js?v=3"></script>\n'
 
 
 def main() -> None:
@@ -17,7 +17,7 @@ def main() -> None:
             continue
         updated = html
         if "assets/writing-practice.css" not in updated:
-            marker = '    <link href="./assets/source-facsimile.css?v=3" rel="stylesheet">\n'
+            marker = '    <link href="./assets/source-facsimile.css?v=4" rel="stylesheet">\n'
             updated = updated.replace(marker, marker + STYLE)
         if "assets/writing-practice.js" not in updated:
             updated = updated.replace("</body>", SCRIPT + "</body>")
