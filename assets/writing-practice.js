@@ -167,8 +167,8 @@
     var canvas = document.createElement("canvas");
     canvas.className = "inline-practice-canvas";
     canvas.id = id;
-    canvas.width = 720;
-    canvas.height = options.kind === "drawing" ? 420 : 300;
+    canvas.width = options.kind === "drawing" ? 720 : 900;
+    canvas.height = options.kind === "drawing" ? 420 : 120;
     canvas.tabIndex = 0;
     canvas.setAttribute("role", "img");
     canvas.setAttribute("aria-labelledby", labelId);

@@ -34,29 +34,37 @@
 .inline-practice-tools[data-practice-kind="tracing"] .inline-practice-canvas-wrap {
   background-color: #fff;
   background-image:
-    linear-gradient(to bottom,
-      transparent 0,
-      transparent 24%,
-      #a7b0bd 24%,
-      #a7b0bd 24.7%,
-      transparent 24.7%,
-      transparent 49%,
-      #cbd5e1 49%,
-      #cbd5e1 49.7%,
-      transparent 49.7%,
-      transparent 74%,
-      #64748b 74%,
-      #64748b 74.8%,
-      transparent 74.8%);
+    linear-gradient(#262626, #262626),
+    linear-gradient(#262626, #262626),
+    linear-gradient(#262626, #262626),
+    linear-gradient(#262626, #262626);
+  background-position:
+    left top,
+    left 40%,
+    left 62%,
+    left bottom;
+  background-repeat: no-repeat;
+  background-size:
+    100% 2px,
+    100% 1px,
+    100% 1px,
+    100% 2px;
+  border: 0;
+  border-radius: 0;
 }
 
 .inline-practice-canvas {
   display: block;
   width: 100%;
   height: auto;
-  min-height: 12rem;
   cursor: crosshair;
   touch-action: none;
+}
+
+.inline-practice-tools[data-practice-kind="writing"] .inline-practice-canvas,
+.inline-practice-tools[data-practice-kind="tracing"] .inline-practice-canvas {
+  min-height: 0;
+  aspect-ratio: 15 / 2;
 }
 
 .inline-practice-tools[data-practice-kind="drawing"] .inline-practice-canvas {
@@ -184,6 +192,12 @@
   white-space: nowrap;
 }
 
+.practice-pattern-sample,
+.practice-pattern-sample * {
+  font-family: 'Sassoon Primary Source', 'Atkinson Hyperlegible', sans-serif !important;
+  font-style: normal !important;
+}
+
 .source-semantic-copy.has-integrated-drawing input[type="checkbox"][data-activity-item],
 .source-semantic-copy.has-integrated-drawing input[type="radio"][data-activity-item],
 .source-semantic-copy.has-integrated-drawing .feedback-container {
@@ -202,10 +216,6 @@ body:has(.source-semantic-copy.has-integrated-drawing)
 @media (max-width: 640px) {
   .inline-practice-tools {
     border-radius: .8rem;
-  }
-
-  .inline-practice-canvas {
-    min-height: 9rem;
   }
 
   .inline-practice-tools[data-practice-kind="drawing"] .inline-practice-canvas {

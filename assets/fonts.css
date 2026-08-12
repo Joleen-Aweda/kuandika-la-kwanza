@@ -1,3 +1,12 @@
+/* Exact teaching typeface embedded in the original Kuandika PDF. */
+@font-face {
+  font-family: 'Sassoon Primary Source';
+  src: url('./fonts/SassoonPrimary-Source.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Atkinson Hyperlegible';
   src: url('./fonts/AtkinsonHyperlegible-400-latin.woff2') format('woff2');
@@ -47,9 +56,16 @@
   font-display: swap;
 }
 
-/* Apply the font globally */
+/* Match the printed book. Bold weights are synthesized from the source face,
+   as the PDF's matching bold face is embedded as a non-web CFF subset. */
 body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select {
-  font-family: "Merriweather", serif;
+  font-family: 'Sassoon Primary Source', 'Atkinson Hyperlegible', sans-serif;
+}
+
+.source-semantic-copy,
+.source-semantic-copy :where(p, h1, h2, h3, h4, h5, h6, span, div, label, button, input, textarea, select) {
+  font-family: 'Sassoon Primary Source', 'Atkinson Hyperlegible', sans-serif !important;
+  font-style: normal;
 }
 
 #nav-container, #nav-container *,
