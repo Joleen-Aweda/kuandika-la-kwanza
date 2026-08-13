@@ -1,0 +1,345 @@
+/* Source-faithful answer areas interleaved immediately below each exercise. */
+#content.has-guided-practice .page-ink-toolbar {
+  display: none !important;
+}
+
+.exact-page-stage.has-guided-practice {
+  aspect-ratio: auto;
+  overflow: visible;
+  background: #fff;
+}
+
+.exact-page-stage.has-guided-practice > .source-facsimile-page,
+.exact-page-stage.has-guided-practice > .page-ink-canvas {
+  display: none !important;
+}
+
+.guided-source-flow {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  color: #292524;
+  font-family: 'Sassoon Primary Source', 'Atkinson Hyperlegible', sans-serif;
+  font-style: italic;
+}
+
+.guided-source-band,
+.guided-source-band svg {
+  display: block;
+  width: 100%;
+}
+
+.guided-source-band {
+  overflow: hidden;
+  background: #fff;
+}
+
+.guided-practice-cluster {
+  position: relative;
+  display: grid;
+  width: calc(100% - clamp(2rem, 11vw, 7rem));
+  margin: .55rem auto 1.15rem;
+  padding: clamp(1rem, 2.8vw, 1.45rem);
+  gap: 1rem;
+  border: 2px solid #b7dec6;
+  border-radius: 1.15rem;
+  background: #fafffb;
+  box-shadow: 0 8px 22px rgb(25 70 47 / 9%);
+}
+
+.guided-practice-cluster::before {
+  content: 'Sehemu ya jibu';
+  position: absolute;
+  top: -.85rem;
+  left: 1rem;
+  padding: .2rem .75rem;
+  border-radius: .75rem;
+  background: #15803d;
+  color: #fff;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: .86rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.guided-practice-cluster.has-multiple-answers {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.guided-practice-card {
+  min-width: 0;
+  padding: clamp(.8rem, 2.5vw, 1.35rem);
+  border: 2px solid #b7dec6;
+  border-radius: 1rem;
+  background: #fff;
+  break-inside: avoid;
+}
+
+.guided-practice-prompt {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.guided-practice-index {
+  display: inline-flex;
+  min-width: 2rem;
+  height: 2rem;
+  margin-right: .45rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: .35rem;
+  background: linear-gradient(#a21caf, #db2777);
+  color: #fff;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 800;
+  vertical-align: middle;
+}
+
+.guided-practice-model {
+  margin-bottom: .75rem;
+  overflow: hidden;
+  border: 1px solid #a8a29e;
+  border-radius: .45rem;
+  background-color: #fff;
+}
+
+.guided-practice-model.is-lined,
+.guided-practice-board.is-lined {
+  background-color: #fff;
+  background-image:
+    linear-gradient(#3f3f46, #3f3f46),
+    linear-gradient(#52525b, #52525b),
+    linear-gradient(#52525b, #52525b),
+    linear-gradient(#3f3f46, #3f3f46);
+  background-position:
+    left 8%,
+    left 40%,
+    left 57%,
+    left 89%;
+  background-repeat: no-repeat;
+  background-size:
+    100% 1px,
+    100% 1px,
+    100% 1px,
+    100% 1px;
+}
+
+.guided-practice-model.is-lined {
+  position: relative;
+  height: auto;
+  aspect-ratio: 6.4 / 1;
+  border: 0;
+  border-radius: 0;
+}
+
+.guided-practice-model-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.guided-practice-model-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 2.2rem;
+  color: #292524;
+  font-family: 'Sassoon Primary Source', sans-serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.guided-practice-model-text.is-sentence {
+  justify-content: flex-start;
+  font-size: clamp(1.45rem, 4vw, 2.25rem);
+  white-space: normal;
+}
+
+.guided-practice-model-image {
+  display: grid;
+  min-height: 10rem;
+  place-items: center;
+  padding: 1rem;
+  background: #fff;
+}
+
+.guided-practice-model-image img {
+  display: block;
+  max-width: 100%;
+  max-height: 15rem;
+  object-fit: contain;
+}
+
+.guided-practice-board {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #15803d;
+  border-radius: .55rem;
+  background-color: #fff;
+  isolation: isolate;
+}
+
+.guided-practice-board.is-writing-board {
+  aspect-ratio: 6.4 / 1;
+}
+
+.guided-practice-board.is-writing-board.is-lined {
+  border: 0;
+  border-radius: 0;
+}
+
+.guided-practice-board.is-large-board {
+  aspect-ratio: 9 / 4;
+}
+
+.guided-practice-template {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  pointer-events: none;
+}
+
+.guided-practice-template svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.guided-practice-template img {
+  display: block;
+  max-width: 88%;
+  max-height: 88%;
+  object-fit: contain;
+}
+
+.guided-practice-dotted-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.guided-practice-canvas {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.guided-practice-actions {
+  display: flex;
+  margin-top: .7rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+}
+
+.guided-practice-button {
+  min-height: 2.55rem;
+  padding: .45rem .8rem;
+  border: 2px solid #166534;
+  border-radius: .6rem;
+  background: #fff;
+  color: #166534;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.guided-practice-button:hover,
+.guided-practice-button:focus-visible,
+.guided-practice-button[aria-pressed="true"] {
+  background: #dcfce7;
+}
+
+.guided-practice-status {
+  flex: 1 1 12rem;
+  color: #334155;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+.guided-practice-alternative {
+  margin-top: .7rem;
+  border-top: 1px solid #bbf7d0;
+  padding-top: .5rem;
+}
+
+.guided-practice-alternative summary {
+  cursor: pointer;
+  color: #166534;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 800;
+}
+
+.guided-practice-alternative textarea {
+  width: 100%;
+  min-height: 4.5rem;
+  margin-top: .5rem;
+  padding: .6rem;
+  border: 2px solid #64748b;
+  border-radius: .55rem;
+  background: #fff;
+  color: #172033;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: 1rem;
+}
+
+.guided-practice-canvas:focus-visible,
+.guided-practice-section :focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .guided-practice-cluster.has-multiple-answers {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .guided-practice-cluster {
+    width: 100%;
+    margin: .55rem 0 1rem;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  .guided-practice-model-text {
+    padding: 0 .8rem;
+  }
+}
+
+@media print {
+  .guided-practice-cluster {
+    box-shadow: none;
+  }
+
+  .guided-practice-actions,
+  .guided-practice-alternative {
+    display: none !important;
+  }
+}

@@ -14,12 +14,17 @@
 .exact-page-stage {
   position: relative;
   width: min(100%, 930px);
-  aspect-ratio: 93 / 128;
+  aspect-ratio: 93 / 104;
   margin: 0 auto;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 12px 38px rgb(15 23 42 / 18%);
   isolation: isolate;
+}
+
+.exact-page-stage.source-page-cropped:not(.has-guided-practice) > .source-facsimile-page {
+  height: auto !important;
+  transform: translateY(-8.59375%);
 }
 
 .source-facsimile-page {

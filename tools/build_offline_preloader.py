@@ -33,6 +33,7 @@ def main() -> None:
         "./assets/config.json",
         "./content/pages.json",
         "./content/toc.json",
+        "./content/guided-practice-layout.json",
         "./content/navigation/nav.html",
     ]
     paths.extend(f"./{page['href']}" for page in pages)

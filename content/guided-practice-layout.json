@@ -1,0 +1,2952 @@
+{
+  "pg007_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Chora michoro hii:",
+        "top": 493,
+        "end": 526,
+        "start": 0
+      }
+    ]
+  },
+  "pg008_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha michoro hii /kwa kutumia spa willi fuatisha michoro hii :",
+        "top": 299,
+        "end": 373,
+        "start": 0
+      }
+    ]
+  },
+  "pg009_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Chora picha hizi:",
+        "top": 139,
+        "end": 176,
+        "start": 0
+      }
+    ]
+  },
+  "pg010_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha mchoro hii:",
+        "top": 288,
+        "end": 325,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Chora michoro hii:",
+        "top": 709,
+        "end": 772,
+        "start": 697
+      }
+    ]
+  },
+  "pg011_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Chora mchoro huu:",
+        "top": 605,
+        "end": 642,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya irabu a kwa kufuata hatua.",
+        "top": 780,
+        "end": 818,
+        "start": 768
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya irabu a Andika doti ya kwanza kwa kurudiarudia na ujaze mstari.",
+        "top": 983,
+        "end": 1021,
+        "start": 971
+      }
+    ]
+  },
+  "pg012_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Chora mchoro huu:",
+        "top": 289,
+        "end": 326,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya irabu e kwa kufuata hatua.",
+        "top": 460,
+        "end": 498,
+        "start": 448
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya irabu e. Andika doti ya kwanza na ya tano kwa nafasi na ujaze mstari.",
+        "top": 658,
+        "end": 696,
+        "start": 646
+      },
+      {
+        "domIndex": 3,
+        "text": "Chora mchoro huu:",
+        "top": 996,
+        "end": 1033,
+        "start": 911
+      }
+    ]
+  },
+  "pg013_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya irabu i kwa kufuata hatua.",
+        "top": 149,
+        "end": 187,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya irabu i. Andika doti ya pili na ya nne kwa nafasi na ujaze mstari.",
+        "top": 326,
+        "end": 409,
+        "start": 314
+      },
+      {
+        "domIndex": null,
+        "text": "Chora mchoro huEu:",
+        "top": 643,
+        "end": 720,
+        "start": 491
+      },
+      {
+        "domIndex": 2,
+        "text": "Fuatisha herufi ya irabu o kwa kufuata hatua.",
+        "top": 811,
+        "end": 849,
+        "start": 799
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika herufi ya irabu o. Andika doti ya kwanza, ya tatu na ya tano kwa nafasi na ujaze mstari.",
+        "top": 990,
+        "end": 1028,
+        "start": 978
+      },
+      {
+        "domIndex": 4,
+        "text": "Chora mchoro huu:",
+        "top": 1119,
+        "end": 1159,
+        "start": 1107
+      }
+    ]
+  },
+  "pg014_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Chora mchoro huu:",
+        "top": 257,
+        "end": 295,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya irabu u kwa kufuata hatua.",
+        "top": 438,
+        "end": 476,
+        "start": 426
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya irabu u.",
+        "top": 613,
+        "end": 651,
+        "start": 601
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika herufi za irabu:",
+        "top": 990,
+        "end": 1027,
+        "start": 855
+      }
+    ]
+  },
+  "pg015_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno haya:",
+        "top": 142,
+        "end": 179,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika jina la picha hii:",
+        "top": 546,
+        "end": 582,
+        "start": 464
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi za irabu zilizopo katika kisanduku kifuatacho:",
+        "top": 923,
+        "end": 1000,
+        "start": 848
+      }
+    ]
+  },
+  "pg016_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": null,
+        "text": "ndogo za irabu, kisha andika",
+        "top": 315,
+        "end": 351,
+        "start": 0
+      },
+      {
+        "domIndex": 0,
+        "text": "Tazama video zinazoonesha jinsi ya kuandika herufi ndogo za irabu, kisha andika herufi hizo kwa kufuata hatua zake.",
+        "top": 624,
+        "end": 664,
+        "start": 612
+      }
+    ]
+  },
+  "pg017_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Chora mchoro huu:",
+        "top": 623,
+        "end": 661,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti b kwa kufuata hatua.",
+        "top": 800,
+        "end": 836,
+        "start": 788
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya konsonanti b. Andika doti ya kwanza na ya pili kwa nafasi na ujaze mstari.",
+        "top": 991,
+        "end": 1029,
+        "start": 979
+      }
+    ]
+  },
+  "pg018_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika silabi hizi:",
+        "top": 143,
+        "end": 180,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika maneno haya:",
+        "top": 320,
+        "end": 357,
+        "start": 308
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina ya picha hizi:",
+        "top": 652,
+        "end": 689,
+        "start": 566
+      }
+    ]
+  },
+  "pg019_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Chora mchoro huu:",
+        "top": 514,
+        "end": 551,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti m kwa kufuata hatua.",
+        "top": 680,
+        "end": 716,
+        "start": 668
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya konsonanti m.",
+        "top": 845,
+        "end": 883,
+        "start": 833
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika silabi hizi:",
+        "top": 1005,
+        "end": 1042,
+        "start": 993
+      }
+    ]
+  },
+  "pg020_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno haya:",
+        "top": 142,
+        "end": 179,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina ya picha hizi:",
+        "top": 476,
+        "end": 513,
+        "start": 390
+      },
+      {
+        "domIndex": 2,
+        "text": "Chora mchoro huu:",
+        "top": 959,
+        "end": 996,
+        "start": 869
+      }
+    ]
+  },
+  "pg021_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti k kwa kufuata hatua.",
+        "top": 148,
+        "end": 184,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti k. Andika doti ya kwanza na ya tatu kwa nafasi na ujaze mstari.",
+        "top": 333,
+        "end": 371,
+        "start": 321
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 505,
+        "end": 542,
+        "start": 493
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 678,
+        "end": 716,
+        "start": 666
+      }
+    ]
+  },
+  "pg022_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina ya picha hizi:",
+        "top": 207,
+        "end": 244,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Chora mchoro huu:",
+        "top": 598,
+        "end": 638,
+        "start": 586
+      },
+      {
+        "domIndex": 2,
+        "text": "Fuatisha herufi ya konsonanti d kwa kufuata hatua.",
+        "top": 989,
+        "end": 1026,
+        "start": 977
+      }
+    ]
+  },
+  "pg023_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika herufi ya konsonanti d. Andika doti ya kwanza, ya nne na ya tano kwa nafasi na ujaze mstari.",
+        "top": 143,
+        "end": 181,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika silabi hizi:",
+        "top": 316,
+        "end": 353,
+        "start": 304
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika maneno haya:",
+        "top": 476,
+        "end": 513,
+        "start": 464
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika jina la picha hii:",
+        "top": 862,
+        "end": 902,
+        "start": 850
+      }
+    ]
+  },
+  "pg024_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno yanayoanza na herufi d.",
+        "top": 214,
+        "end": 252,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Chora mchoro huu:",
+        "top": 585,
+        "end": 623,
+        "start": 478
+      },
+      {
+        "domIndex": 2,
+        "text": "Fuatisha herufi ya konsonanti n kwa kufuata hatua.",
+        "top": 945,
+        "end": 983,
+        "start": 933
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika herufi ya konsonanti n. Andika doti ya kwanza, ya tatu, ya nne na ya tano kwa nafasi na ujaze mstari.",
+        "top": 1096,
+        "end": 1136,
+        "start": 1084
+      }
+    ]
+  },
+  "pg025_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika silabi hizi:",
+        "top": 142,
+        "end": 179,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika maneno haya:",
+        "top": 310,
+        "end": 347,
+        "start": 298
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi na silabi za mwanzo za maneno yafuatayo:",
+        "top": 700,
+        "end": 737,
+        "start": 624
+      }
+    ]
+  },
+  "pg026_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika silabi kwa kuunganisha herufi za konsonanti na irabu:",
+        "top": 211,
+        "end": 289,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika maneno kwa kuunganisha silabi zifuatazo:",
+        "top": 661,
+        "end": 698,
+        "start": 579
+      }
+    ]
+  },
+  "pg027_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Chora mchoro huu:",
+        "top": 606,
+        "end": 643,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti l kwa kufuata hatua.",
+        "top": 799,
+        "end": 834,
+        "start": 787
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya konsonanti l.",
+        "top": 989,
+        "end": 1026,
+        "start": 977
+      }
+    ]
+  },
+  "pg028_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika silabi hizi:",
+        "top": 143,
+        "end": 180,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika maneno haya:",
+        "top": 324,
+        "end": 409,
+        "start": 312
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika matendo yaliyopo katika picha hizi kwa kuchagua maneno kutoka katika kisanduku:",
+        "top": 732,
+        "end": 767,
+        "start": 659
+      }
+    ]
+  },
+  "pg029_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti t kwa kufuata hatua.",
+        "top": 293,
+        "end": 329,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti t. Andika doti ya pili, ya tatu, ya nne na ya tano kwa nafasi na ujaze mstari.",
+        "top": 459,
+        "end": 497,
+        "start": 447
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 629,
+        "end": 666,
+        "start": 617
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 938,
+        "end": 978,
+        "start": 926
+      }
+    ]
+  },
+  "pg030_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina ya picha hizi:",
+        "top": 198,
+        "end": 235,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Chora mchoro huu:",
+        "top": 961,
+        "end": 998,
+        "start": 867
+      }
+    ]
+  },
+  "pg031_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti p kwa kufuata hatua.",
+        "top": 146,
+        "end": 182,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti p. Andika doti ya kwanza, ya pili, ya tatu na ya nne kwa nafasi na ujaze mstari.",
+        "top": 331,
+        "end": 369,
+        "start": 319
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 514,
+        "end": 551,
+        "start": 502
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 688,
+        "end": 725,
+        "start": 676
+      }
+    ]
+  },
+  "pg032_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina ya picha hizi:",
+        "top": 208,
+        "end": 245,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Chora mchoro huu:",
+        "top": 987,
+        "end": 1024,
+        "start": 896
+      }
+    ]
+  },
+  "pg033_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti s kwa kufuata hatua.",
+        "top": 145,
+        "end": 182,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti s. Andika doti ya pili, ya tatu na ya nne kwa nafasi na ujaze mstari.",
+        "top": 339,
+        "end": 377,
+        "start": 327
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 517,
+        "end": 554,
+        "start": 505
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 694,
+        "end": 731,
+        "start": 682
+      }
+    ]
+  },
+  "pg034_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina ya picha hizi:",
+        "top": 205,
+        "end": 242,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti j kwa kufuata hatua.",
+        "top": 782,
+        "end": 817,
+        "start": 613
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya konsonanti j. Andika doti ya pili, ya nne na ya tano kwa nafasi na ujaze mstari.",
+        "top": 985,
+        "end": 1022,
+        "start": 973
+      }
+    ]
+  },
+  "pg035_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika silabi hizi:",
+        "top": 141,
+        "end": 178,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika maneno haya:",
+        "top": 320,
+        "end": 357,
+        "start": 308
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina ya picha hizi:",
+        "top": 784,
+        "end": 824,
+        "start": 668
+      }
+    ]
+  },
+  "pg036_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika silabi zinazounda maneno yafuatayo:",
+        "top": 208,
+        "end": 245,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika maneno kumi ya Kiswahili yanayoanza na herufi l t p s j kutoka katika chati hii:",
+        "top": 680,
+        "end": 717,
+        "start": 603
+      }
+    ]
+  },
+  "pg037_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti f kwa kufuata hatua.",
+        "top": 525,
+        "end": 562,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti f. Andika doti ya kwanza, ya pili na ya nne kwa nafasi na ujaze mstari.",
+        "top": 685,
+        "end": 723,
+        "start": 673
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 848,
+        "end": 885,
+        "start": 836
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 998,
+        "end": 1035,
+        "start": 986
+      }
+    ]
+  },
+  "pg038_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina ya picha hizi:",
+        "top": 500,
+        "end": 578,
+        "start": 0
+      }
+    ]
+  },
+  "pg039_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti g kwa kufuata hatua.",
+        "top": 271,
+        "end": 307,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti g. Andika doti ya kwanza, ya pili, ya nne na ya tano kwa nafasi na ujaze mstari.",
+        "top": 476,
+        "end": 513,
+        "start": 464
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 655,
+        "end": 692,
+        "start": 643
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 820,
+        "end": 857,
+        "start": 808
+      }
+    ]
+  },
+  "pg040_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina ya picha hizi:",
+        "top": 327,
+        "end": 409,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti y kwa kufuata hatua.",
+        "top": 983,
+        "end": 1021,
+        "start": 890
+      }
+    ]
+  },
+  "pg041_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika herufi ya konsonanti y. Andika doti ya kwanza, ya tatu, ya nne, ya tano na ya sita kwa nafasi na ujaze mstari.",
+        "top": 140,
+        "end": 178,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika silabi hizi:",
+        "top": 317,
+        "end": 354,
+        "start": 305
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika maneno haya:",
+        "top": 488,
+        "end": 525,
+        "start": 476
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika jina la picha hii:",
+        "top": 907,
+        "end": 982,
+        "start": 825
+      }
+    ]
+  },
+  "pg042_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno yanayoanza na herufi y.",
+        "top": 212,
+        "end": 250,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti z kwa kufuata hatua.",
+        "top": 596,
+        "end": 675,
+        "start": 497
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya konsonanti z. Andika doti ya kwanza, ya tatu, ya tano na ya sita kwa nafasi na ujaze mstari.",
+        "top": 777,
+        "end": 817,
+        "start": 765
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika silabi hizi:",
+        "top": 958,
+        "end": 995,
+        "start": 946
+      }
+    ]
+  },
+  "pg043_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno haya:",
+        "top": 141,
+        "end": 178,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina ya picha hizi:",
+        "top": 570,
+        "end": 606,
+        "start": 484
+      }
+    ]
+  },
+  "pg044_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti h kwa kufuata hatua.",
+        "top": 282,
+        "end": 319,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti h. Andika doti ya kwanza, ya pili na ya tano kwa nafasi na ujaze mstari.",
+        "top": 454,
+        "end": 492,
+        "start": 442
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 624,
+        "end": 661,
+        "start": 612
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 936,
+        "end": 976,
+        "start": 924
+      }
+    ]
+  },
+  "pg045_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika jina la picha hii:",
+        "top": 203,
+        "end": 240,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika maneno matano yenye maana kwa kuunganisha herufi f g y z h na a e i o u.",
+        "top": 768,
+        "end": 804,
+        "start": 690
+      }
+    ]
+  },
+  "pg046_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno kumi ya Kiswahili yanayoanza na herufi f g y z h kutoka katika chati hii:",
+        "top": 207,
+        "end": 283,
+        "start": 0
+      }
+    ]
+  },
+  "pg047_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti r kwa kufuata hatua.",
+        "top": 611,
+        "end": 648,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti r. Andika doti ya kwanza, ya pili, ya tatu na ya tano kwa nafasi na ujaze mstari.",
+        "top": 805,
+        "end": 843,
+        "start": 793
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 1000,
+        "end": 1037,
+        "start": 988
+      }
+    ]
+  },
+  "pg048_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno haya:",
+        "top": 139,
+        "end": 176,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina ya picha hizi:",
+        "top": 566,
+        "end": 642,
+        "start": 487
+      }
+    ]
+  },
+  "pg049_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Chora mchoro huu.",
+        "top": 260,
+        "end": 298,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti w kwa kufuata hatua.",
+        "top": 429,
+        "end": 490,
+        "start": 417
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya konsonanti w. Andika doti ya pili, ya nne, ya tano na ya sita kwa nafasi na ujaze mstari.",
+        "top": 588,
+        "end": 625,
+        "start": 576
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika silabi hizi:",
+        "top": 741,
+        "end": 778,
+        "start": 729
+      },
+      {
+        "domIndex": 4,
+        "text": "Andika maneno haya:",
+        "top": 994,
+        "end": 1034,
+        "start": 982
+      }
+    ]
+  },
+  "pg050_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno yanayoanza na herufi w.",
+        "top": 338,
+        "end": 375,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti v kwa kufuata hatua.",
+        "top": 683,
+        "end": 719,
+        "start": 593
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya konsonanti v. Andika doti ya kwanza, ya pili, ya tatu na ya sita kwa nafasi na ujaze mstari.",
+        "top": 846,
+        "end": 884,
+        "start": 834
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika silabi hizi:",
+        "top": 1002,
+        "end": 1039,
+        "start": 990
+      }
+    ]
+  },
+  "pg051_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno haya:",
+        "top": 144,
+        "end": 181,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina ya picha hizi:",
+        "top": 553,
+        "end": 590,
+        "start": 470
+      }
+    ]
+  },
+  "pg052_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti ch kwa kufuata hatua.",
+        "top": 276,
+        "end": 313,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti ch. Andika doti ya kwanza na ya nne, na doti ya kwanza, ya pili na ya tano kwa nafasi na ujaze mstari.",
+        "top": 457,
+        "end": 495,
+        "start": 445
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 638,
+        "end": 675,
+        "start": 626
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 841,
+        "end": 881,
+        "start": 829
+      },
+      {
+        "domIndex": 4,
+        "text": "chora",
+        "top": 1045,
+        "end": 1085,
+        "start": 1033
+      }
+    ]
+  },
+  "pg053_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina ya picha hizi:",
+        "top": 208,
+        "end": 245,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika maneno yenye maana kwa kuchagua silabi zilizomo kwenye kisanduku na kujaza nafasi zilizo wazi:",
+        "top": 728,
+        "end": 768,
+        "start": 716
+      },
+      {
+        "domIndex": null,
+        "text": "Andika maneno yenye maana kwa kuchagua",
+        "top": 807,
+        "end": 843,
+        "start": 795
+      }
+    ]
+  },
+  "pg054_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": null,
+        "text": "andika herufi h izo kwa",
+        "top": 395,
+        "end": 432,
+        "start": 0
+      },
+      {
+        "domIndex": 0,
+        "text": "Tazama video zinazoonesha jinsi ya kuandika herufi ndogo za konsonanti, kisha andika herufi hizo kwa kufuata hatua zake.",
+        "top": 624,
+        "end": 664,
+        "start": 612
+      }
+    ]
+  },
+  "pg055_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya irabu A kwa kufuata hatua.",
+        "top": 680,
+        "end": 718,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya irabu A. Katika kuandika irabu A ijae katika mstari mdogo. Andika doti ya sita na ya kwanza kwa nafasi na ujaze mstari. Andika herufi kubwa A ikifuatiwa na herufi ndogo a kwa pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        "top": 964,
+        "end": 1004,
+        "start": 952
+      }
+    ]
+  },
+  "pg056_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina haya:",
+        "top": 140,
+        "end": 177,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika sentensi hizi:",
+        "top": 494,
+        "end": 531,
+        "start": 482
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina yanayoanza na herufi A.",
+        "top": 935,
+        "end": 973,
+        "start": 832
+      }
+    ]
+  },
+  "pg057_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya irabu E kwa kufuata hatua.",
+        "top": 314,
+        "end": 352,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya irabu E. Andika doti ya sita, ya kwanza na ya tano kwa nafasi na ujaze mstari. Andika herufi kubwa E ikifuatiwa na herufi ndogo e kwa pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        "top": 492,
+        "end": 530,
+        "start": 480
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 763,
+        "end": 800,
+        "start": 751
+      }
+    ]
+  },
+  "pg058_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 145,
+        "end": 182,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina haya kwa usahihi:",
+        "top": 557,
+        "end": 593,
+        "start": 480
+      },
+      {
+        "domIndex": 2,
+        "text": "Fuatisha herufi ya irabu I kwa kufuata hatua.",
+        "top": 845,
+        "end": 884,
+        "start": 833
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika herufi ya irabu I.",
+        "top": 1007,
+        "end": 1045,
+        "start": 995
+      }
+    ]
+  },
+  "pg059_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina haya:",
+        "top": 276,
+        "end": 313,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika sentensi hizi:",
+        "top": 551,
+        "end": 588,
+        "start": 539
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina yanayoanza na herufi I.",
+        "top": 968,
+        "end": 1006,
+        "start": 887
+      }
+    ]
+  },
+  "pg060_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya irabu O kwa kufuata hatua.",
+        "top": 291,
+        "end": 329,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya irabu O. Andika doti ya sita, ya kwanza, ya tatu na ya tano kwa nafasi na ujaze mstari. Andika herufi kubwa O ikifuatiwa na herufi ndogo o kwa pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        "top": 470,
+        "end": 508,
+        "start": 458
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 743,
+        "end": 780,
+        "start": 731
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika sentensi hizi:",
+        "top": 1000,
+        "end": 1037,
+        "start": 988
+      }
+    ]
+  },
+  "pg061_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina yanayoanza na herufi O.",
+        "top": 412,
+        "end": 493,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya irabu U kwa kufuata hatua.",
+        "top": 719,
+        "end": 757,
+        "start": 626
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya irabu U. Andika doti ya sita, ya kwanza, ya tatu na ya sita kwa nafasi na ujaze mstari. Andika herufi kubwa U ikifuatiwa na herufi ndogo u kwa pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        "top": 898,
+        "end": 936,
+        "start": 886
+      }
+    ]
+  },
+  "pg062_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina haya:",
+        "top": 140,
+        "end": 178,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika sentensi hizi:",
+        "top": 387,
+        "end": 424,
+        "start": 375
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina yanayoanza na herufi U.",
+        "top": 774,
+        "end": 811,
+        "start": 700
+      },
+      {
+        "domIndex": 3,
+        "text": "Oanisha herufi kubwa na ndogo za irabu:",
+        "top": 956,
+        "end": 990,
+        "start": 944
+      }
+    ]
+  },
+  "pg063_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti B kwa kufuata hatua.",
+        "top": 691,
+        "end": 728,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti B. Andika doti ya sita, ya kwanza na ya pili kwa nafasi na ujaze mstari. Andika herufi kubwa B ikifuatiwa na herufi ndogo b kwa pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        "top": 886,
+        "end": 924,
+        "start": 874
+      }
+    ]
+  },
+  "pg064_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina haya:",
+        "top": 142,
+        "end": 179,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika sentensi hizi:",
+        "top": 426,
+        "end": 463,
+        "start": 414
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika sentensi tano kwa kutumia maneno yaliyomo kwenye jedwali hili:",
+        "top": 849,
+        "end": 886,
+        "start": 837
+      }
+    ]
+  },
+  "pg065_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti M kwa kufuata hatua.",
+        "top": 314,
+        "end": 352,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti M. Andika doti ya sita, ya kwanza, ya tatu na ya nne kwa nafasi na ujaze mstari. Andika herufi kubwa M ikifuatiwa na herufi ndogo m kwa pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        "top": 488,
+        "end": 526,
+        "start": 476
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 751,
+        "end": 835,
+        "start": 739
+      }
+    ]
+  },
+  "pg066_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 146,
+        "end": 183,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina yanayoanza na herufi M.",
+        "top": 551,
+        "end": 589,
+        "start": 470
+      },
+      {
+        "domIndex": 2,
+        "text": "Fuatisha herufi ya konsonanti K kwa kufuata hatua.",
+        "top": 999,
+        "end": 1037,
+        "start": 987
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika herufi ya konsonanti K. Andika doti ya sita, ya kwanza na ya tatu kwa nafasi na ujaze mstari. Andika herufi kubwa K ikifuatiwa na herufi ndogo k kwa pamoja kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        "top": 1124,
+        "end": 1164,
+        "start": 1112
+      }
+    ]
+  },
+  "pg067_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina haya:",
+        "top": 272,
+        "end": 309,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika sentensi hizi:",
+        "top": 533,
+        "end": 611,
+        "start": 521
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya kwa usahihi:",
+        "top": 940,
+        "end": 977,
+        "start": 863
+      }
+    ]
+  },
+  "pg068_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti D kwa kufuata hatua.",
+        "top": 305,
+        "end": 342,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti D.",
+        "top": 487,
+        "end": 525,
+        "start": 475
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 761,
+        "end": 798,
+        "start": 749
+      }
+    ]
+  },
+  "pg069_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 143,
+        "end": 180,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina yanayoanza na herufi D.",
+        "top": 587,
+        "end": 624,
+        "start": 493
+      },
+      {
+        "domIndex": 2,
+        "text": "Fuatisha herufi ya konsonanti N kwa kufuata hatua.",
+        "top": 949,
+        "end": 986,
+        "start": 850
+      }
+    ]
+  },
+  "pg070_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika herufi ya konsonanti N.",
+        "top": 143,
+        "end": 181,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina haya:",
+        "top": 398,
+        "end": 435,
+        "start": 386
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika sentensi hizi:",
+        "top": 759,
+        "end": 796,
+        "start": 747
+      }
+    ]
+  },
+  "pg071_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi moja kwa kila picha:",
+        "top": 203,
+        "end": 240,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika kwa usahihi majina kumi yanayoanza na herufi B M K D N kutoka katika chati hii:",
+        "top": 735,
+        "end": 772,
+        "start": 653
+      }
+    ]
+  },
+  "pg072_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti L kwa kufuata hatua.",
+        "top": 552,
+        "end": 589,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti L.",
+        "top": 726,
+        "end": 800,
+        "start": 714
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 996,
+        "end": 1033,
+        "start": 984
+      }
+    ]
+  },
+  "pg073_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 477,
+        "end": 514,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina yanayoanza na herufi L.",
+        "top": 944,
+        "end": 982,
+        "start": 850
+      }
+    ]
+  },
+  "pg074_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti T kwa kufuata hatua.",
+        "top": 313,
+        "end": 350,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti T.",
+        "top": 488,
+        "end": 526,
+        "start": 476
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 764,
+        "end": 801,
+        "start": 752
+      }
+    ]
+  },
+  "pg075_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 141,
+        "end": 179,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika sentensi tano kwa kuunganisha maneno yafuatayo:",
+        "top": 573,
+        "end": 610,
+        "start": 497
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika sentensi tano kwa kuunganisha maneno yafuatayo:",
+        "top": 785,
+        "end": 825,
+        "start": 773
+      },
+      {
+        "domIndex": 3,
+        "text": "Fuatisha herufi ya konsonanti P kwa kufuata hatua.",
+        "top": 998,
+        "end": 1036,
+        "start": 907
+      }
+    ]
+  },
+  "pg076_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika herufi ya konsonanti P.",
+        "top": 142,
+        "end": 180,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina haya:",
+        "top": 422,
+        "end": 459,
+        "start": 410
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika sentensi hizi:",
+        "top": 706,
+        "end": 772,
+        "start": 694
+      }
+    ]
+  },
+  "pg077_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina yanayoanza na herufi P.",
+        "top": 205,
+        "end": 239,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti S kwa kufuata hatua.",
+        "top": 538,
+        "end": 576,
+        "start": 425
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya konsonanti S.",
+        "top": 713,
+        "end": 751,
+        "start": 701
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika majina haya:",
+        "top": 996,
+        "end": 1033,
+        "start": 984
+      }
+    ]
+  },
+  "pg078_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 362,
+        "end": 444,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina haya kwa usahihi:",
+        "top": 782,
+        "end": 819,
+        "start": 696
+      }
+    ]
+  },
+  "pg079_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti J kwa kufuata hatua.",
+        "top": 295,
+        "end": 373,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti J.",
+        "top": 457,
+        "end": 495,
+        "start": 445
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 737,
+        "end": 774,
+        "start": 725
+      }
+    ]
+  },
+  "pg080_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 143,
+        "end": 180,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina matano yanayoanza na herufi J.",
+        "top": 571,
+        "end": 608,
+        "start": 484
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika maneno yafuatayo kwa herufi ndogo:",
+        "top": 909,
+        "end": 949,
+        "start": 734
+      }
+    ]
+  },
+  "pg081_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti F kwa kufuata hatua.",
+        "top": 559,
+        "end": 597,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti F.",
+        "top": 734,
+        "end": 772,
+        "start": 722
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 998,
+        "end": 1035,
+        "start": 986
+      }
+    ]
+  },
+  "pg082_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 355,
+        "end": 392,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina haya kwa usahihi:",
+        "top": 748,
+        "end": 785,
+        "start": 676
+      },
+      {
+        "domIndex": 2,
+        "text": "Fuatisha herufi ya konsonanti G kwa kufuata hatua.",
+        "top": 1003,
+        "end": 1041,
+        "start": 924
+      }
+    ]
+  },
+  "pg083_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika herufi ya konsonanti G.",
+        "top": 144,
+        "end": 182,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina haya:",
+        "top": 431,
+        "end": 468,
+        "start": 419
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika sentensi hizi:",
+        "top": 803,
+        "end": 840,
+        "start": 791
+      }
+    ]
+  },
+  "pg084_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi tano kwa kutumia maneno yaliyomo kwenye jedwali hili:",
+        "top": 206,
+        "end": 280,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti Y kwa kufuata hatua.",
+        "top": 725,
+        "end": 800,
+        "start": 621
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya konsonanti Y.",
+        "top": 986,
+        "end": 1026,
+        "start": 974
+      }
+    ]
+  },
+  "pg085_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina haya:",
+        "top": 143,
+        "end": 181,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika sentensi hizi:",
+        "top": 516,
+        "end": 553,
+        "start": 504
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina yanayoanza na herufi Y.",
+        "top": 964,
+        "end": 998,
+        "start": 952
+      }
+    ]
+  },
+  "pg086_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti Z kwa kufuata hatua.",
+        "top": 305,
+        "end": 342,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti Z.",
+        "top": 495,
+        "end": 578,
+        "start": 483
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 762,
+        "end": 799,
+        "start": 750
+      }
+    ]
+  },
+  "pg087_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 138,
+        "end": 175,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina yanayoanza na herufi Z kutoka katika kisanduku kifuatacho:",
+        "top": 570,
+        "end": 607,
+        "start": 480
+      },
+      {
+        "domIndex": 2,
+        "text": "Fuatisha herufi ya konsonanti H kwa kufuata hatua.",
+        "top": 999,
+        "end": 1036,
+        "start": 921
+      }
+    ]
+  },
+  "pg088_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika herufi ya konsonanti H.",
+        "top": 142,
+        "end": 180,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina haya:",
+        "top": 412,
+        "end": 493,
+        "start": 400
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika sentensi hizi:",
+        "top": 770,
+        "end": 807,
+        "start": 758
+      }
+    ]
+  },
+  "pg089_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi kwa usahihi:",
+        "top": 206,
+        "end": 243,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika maneno yafuatayo kwa herufi kubwa:",
+        "top": 707,
+        "end": 772,
+        "start": 627
+      }
+    ]
+  },
+  "pg090_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti R kwa kufuata hatua.",
+        "top": 578,
+        "end": 615,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti R.",
+        "top": 743,
+        "end": 781,
+        "start": 731
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 992,
+        "end": 1029,
+        "start": 980
+      }
+    ]
+  },
+  "pg091_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 362,
+        "end": 444,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina yanayoanza na herufi R.",
+        "top": 797,
+        "end": 834,
+        "start": 712
+      }
+    ]
+  },
+  "pg092_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi ya konsonanti W kwa kufuata hatua.",
+        "top": 299,
+        "end": 373,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi ya konsonanti W.",
+        "top": 500,
+        "end": 578,
+        "start": 488
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 874,
+        "end": 914,
+        "start": 862
+      }
+    ]
+  },
+  "pg093_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 143,
+        "end": 180,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina yaliyoandikwa kwa usahihi kutoka katika kisanduku kifuatacho:",
+        "top": 583,
+        "end": 619,
+        "start": 498
+      },
+      {
+        "domIndex": 2,
+        "text": "Fuatisha herufi ya konsonanti V kwa kufuata hatua.",
+        "top": 997,
+        "end": 1035,
+        "start": 914
+      }
+    ]
+  },
+  "pg094_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika herufi ya konsonanti V.",
+        "top": 144,
+        "end": 182,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina haya:",
+        "top": 408,
+        "end": 445,
+        "start": 396
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika sentensi hizi:",
+        "top": 781,
+        "end": 818,
+        "start": 769
+      }
+    ]
+  },
+  "pg095_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi tano kwa kutumia maneno yaliyomo kwenye jedwali hili:",
+        "top": 212,
+        "end": 287,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi ya konsonanti CH kwa kufuata hatua.",
+        "top": 709,
+        "end": 772,
+        "start": 608
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi ya konsonanti CH.",
+        "top": 888,
+        "end": 926,
+        "start": 876
+      }
+    ]
+  },
+  "pg096_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina haya:",
+        "top": 144,
+        "end": 181,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika sentensi hizi:",
+        "top": 500,
+        "end": 578,
+        "start": 488
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika sentensi tano kwa kutumia maneno yaliyopo kwenye kisanduku:",
+        "top": 920,
+        "end": 993,
+        "start": 908
+      }
+    ]
+  },
+  "pg097_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi kwa usahihi:",
+        "top": 201,
+        "end": 238,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Tazama video zinazoonesha jinsi ya kuandika herufi kubwa za konsonanti, kisha andika herufi hizo kwa kufuata hatua zake.",
+        "top": 725,
+        "end": 765,
+        "start": 644
+      },
+      {
+        "domIndex": null,
+        "text": "andika herufi hizo kwa",
+        "top": 877,
+        "end": 914,
+        "start": 865
+      }
+    ]
+  },
+  "pg098_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi mwambatano sh.",
+        "top": 610,
+        "end": 648,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi mwambatano sh.",
+        "top": 789,
+        "end": 829,
+        "start": 777
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 967,
+        "end": 1004,
+        "start": 955
+      }
+    ]
+  },
+  "pg099_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno haya:",
+        "top": 140,
+        "end": 177,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina haya:",
+        "top": 490,
+        "end": 527,
+        "start": 478
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika sentensi hizi:",
+        "top": 832,
+        "end": 870,
+        "start": 820
+      }
+    ]
+  },
+  "pg100_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina ya picha hizi:",
+        "top": 210,
+        "end": 247,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina matano yanayoanza na herufi sh.",
+        "top": 643,
+        "end": 720,
+        "start": 561
+      },
+      {
+        "domIndex": 2,
+        "text": "Fuatisha herufi mwambatano th.",
+        "top": 997,
+        "end": 1035,
+        "start": 909
+      }
+    ]
+  },
+  "pg101_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika herufi mwambatano th.",
+        "top": 142,
+        "end": 181,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika silabi hizi:",
+        "top": 315,
+        "end": 352,
+        "start": 303
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika maneno haya:",
+        "top": 477,
+        "end": 512,
+        "start": 465
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika majina haya:",
+        "top": 734,
+        "end": 771,
+        "start": 722
+      },
+      {
+        "domIndex": 4,
+        "text": "Andika sentensi hizi:",
+        "top": 991,
+        "end": 1031,
+        "start": 979
+      }
+    ]
+  },
+  "pg102_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno yanayoanza na herufi th.",
+        "top": 351,
+        "end": 388,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi mwambatano mb.",
+        "top": 662,
+        "end": 700,
+        "start": 566
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi mwambatano mb.",
+        "top": 829,
+        "end": 869,
+        "start": 817
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika silabi hizi:",
+        "top": 997,
+        "end": 1034,
+        "start": 985
+      }
+    ]
+  },
+  "pg103_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika maneno haya:",
+        "top": 138,
+        "end": 175,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina haya:",
+        "top": 483,
+        "end": 545,
+        "start": 471
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika sentensi hizi:",
+        "top": 865,
+        "end": 905,
+        "start": 853
+      }
+    ]
+  },
+  "pg104_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina ya picha hizi:",
+        "top": 201,
+        "end": 234,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi mwambatano ny.",
+        "top": 815,
+        "end": 853,
+        "start": 803
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika herufi mwambatano ny.",
+        "top": 994,
+        "end": 1032,
+        "start": 982
+      }
+    ]
+  },
+  "pg105_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika silabi hizi:",
+        "top": 141,
+        "end": 178,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika maneno haya:",
+        "top": 306,
+        "end": 343,
+        "start": 294
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina haya:",
+        "top": 652,
+        "end": 689,
+        "start": 640
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika sentensi hizi:",
+        "top": 996,
+        "end": 1033,
+        "start": 984
+      }
+    ]
+  },
+  "pg106_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina ya picha hizi:",
+        "top": 408,
+        "end": 442,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Fuatisha herufi mwambatano ng.",
+        "top": 991,
+        "end": 1029,
+        "start": 910
+      }
+    ]
+  },
+  "pg107_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika herufi mwambatano ng.",
+        "top": 141,
+        "end": 179,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika silabi hizi:",
+        "top": 327,
+        "end": 409,
+        "start": 315
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika maneno haya:",
+        "top": 507,
+        "end": 544,
+        "start": 495
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika majina haya:",
+        "top": 865,
+        "end": 903,
+        "start": 853
+      }
+    ]
+  },
+  "pg108_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 146,
+        "end": 183,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina ya picha hizi:",
+        "top": 572,
+        "end": 605,
+        "start": 485
+      }
+    ]
+  },
+  "pg109_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi mwambatano nd.",
+        "top": 233,
+        "end": 271,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi mwambatano nd.",
+        "top": 389,
+        "end": 427,
+        "start": 377
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 541,
+        "end": 578,
+        "start": 529
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 686,
+        "end": 723,
+        "start": 674
+      },
+      {
+        "domIndex": 4,
+        "text": "Andika majina haya:",
+        "top": 1016,
+        "end": 1053,
+        "start": 1004
+      }
+    ]
+  },
+  "pg110_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 363,
+        "end": 444,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika majina ya picha hizi:",
+        "top": 764,
+        "end": 798,
+        "start": 687
+      }
+    ]
+  },
+  "pg111_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi mwambatano kw.",
+        "top": 256,
+        "end": 294,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi mwambatano kw.",
+        "top": 408,
+        "end": 493,
+        "start": 396
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 564,
+        "end": 642,
+        "start": 552
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 708,
+        "end": 772,
+        "start": 696
+      },
+      {
+        "domIndex": 4,
+        "text": "Andika majina haya:",
+        "top": 951,
+        "end": 988,
+        "start": 939
+      }
+    ]
+  },
+  "pg112_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi:",
+        "top": 142,
+        "end": 179,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika jina la picha hii:",
+        "top": 558,
+        "end": 594,
+        "start": 476
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina na maneno yanayoanza na herufi kw kutoka katika kisanduku kifuatacho:",
+        "top": 903,
+        "end": 943,
+        "start": 816
+      }
+    ]
+  },
+  "pg113_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Fuatisha herufi mwambatano mw.",
+        "top": 288,
+        "end": 326,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika herufi mwambatano mw.",
+        "top": 465,
+        "end": 503,
+        "start": 453
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika silabi hizi:",
+        "top": 636,
+        "end": 673,
+        "start": 624
+      },
+      {
+        "domIndex": 3,
+        "text": "Andika maneno haya:",
+        "top": 812,
+        "end": 849,
+        "start": 800
+      }
+    ]
+  },
+  "pg114_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika majina haya:",
+        "top": 146,
+        "end": 184,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika sentensi hizi:",
+        "top": 500,
+        "end": 578,
+        "start": 488
+      },
+      {
+        "domIndex": 2,
+        "text": "Andika majina yafuatayo kwa herufi kubwa:",
+        "top": 914,
+        "end": 951,
+        "start": 834
+      }
+    ]
+  },
+  "pg115_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi moja kwa kila picha:",
+        "top": 204,
+        "end": 241,
+        "start": 0
+      }
+    ]
+  },
+  "pg116_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika alama ya nukta:",
+        "top": 737,
+        "end": 774,
+        "start": 0
+      }
+    ]
+  },
+  "pg117_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi kisha weka alama ya nukta mahali panapostahili:",
+        "top": 200,
+        "end": 273,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika alama ya mkato:",
+        "top": 725,
+        "end": 800,
+        "start": 713
+      }
+    ]
+  },
+  "pg118_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi, kisha weka alama ya mkato mahali panapostahili:",
+        "top": 198,
+        "end": 271,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika alama ya kuuliza:",
+        "top": 754,
+        "end": 835,
+        "start": 742
+      }
+    ]
+  },
+  "pg119_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi, kisha weka alama ya kuuliza mahali panapostahili:",
+        "top": 202,
+        "end": 276,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika alama ya mshangao:",
+        "top": 697,
+        "end": 734,
+        "start": 685
+      }
+    ]
+  },
+  "pg120_sec001": {
+    "footerStart": 1235,
+    "entries": [
+      {
+        "domIndex": 0,
+        "text": "Andika sentensi hizi, kisha weka alama ya mshangao mahali panapostahili:",
+        "top": 206,
+        "end": 280,
+        "start": 0
+      },
+      {
+        "domIndex": 1,
+        "text": "Andika sentensi hizi, kisha weka alama sahihi za uandishi mahali panapostahili:",
+        "top": 583,
+        "end": 620,
+        "start": 503
+      }
+    ]
+  }
+}

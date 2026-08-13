@@ -3,6 +3,10 @@
 
   var SVG_NS = "http://www.w3.org/2000/svg";
   var STORAGE_PREFIX = "kuandika-page-ink-v1:";
+  var SOURCE_CONTENT_TOP = 110;
+  var SOURCE_CONTENT_BOTTOM = 1150;
+  var SOURCE_PAGE_HEIGHT = 1280;
+  var SOURCE_PDF_HEIGHT = 767.669;
 
   function storageKey(pageId, suffix) {
     return STORAGE_PREFIX + pageId + ":" + suffix;
@@ -68,7 +72,8 @@
 
     var svg = createSvgElement("svg", {
       class: "toc-number-overlay",
-      viewBox: "0 0 930 1280",
+      viewBox: "0 " + String(SOURCE_CONTENT_TOP) + " 930 " +
+        String(SOURCE_CONTENT_BOTTOM - SOURCE_CONTENT_TOP),
       "aria-hidden": "true",
       focusable: "false",
     });
@@ -119,8 +124,11 @@
       link.className = "toc-hotspot";
       link.href = target[1];
       link.setAttribute("aria-label", target[0]);
-      link.style.top = (target[2] / 7.67669) + "%";
-      link.style.height = ((target[3] - target[2]) / 7.67669) + "%";
+      var cropTopPoints = SOURCE_CONTENT_TOP / SOURCE_PAGE_HEIGHT * SOURCE_PDF_HEIGHT;
+      var cropHeightPoints = (SOURCE_CONTENT_BOTTOM - SOURCE_CONTENT_TOP) /
+        SOURCE_PAGE_HEIGHT * SOURCE_PDF_HEIGHT;
+      link.style.top = ((target[2] - cropTopPoints) / cropHeightPoints * 100) + "%";
+      link.style.height = ((target[3] - target[2]) / cropHeightPoints * 100) + "%";
       links.appendChild(link);
     });
     stage.appendChild(links);
@@ -330,7 +338,7 @@
     content.classList.add("exact-facsimile-content");
 
     var stage = document.createElement("div");
-    stage.className = "exact-page-stage";
+    stage.className = "exact-page-stage source-page-cropped";
     image.parentElement.insertBefore(stage, image);
     stage.appendChild(image);
     addTocNumberOverlay(stage, pageNumber);
