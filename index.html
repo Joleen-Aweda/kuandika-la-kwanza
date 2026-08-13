@@ -11,11 +11,15 @@
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css?v=2" rel="stylesheet">
     <link href="./assets/certificate.css?v=1" rel="stylesheet">
+    <link href="./assets/source-facsimile.css?v=5" rel="stylesheet">
+    <link href="./assets/page-ink.css?v=1" rel="stylesheet">
+
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
-<div id="content" class="container mx-auto bg-white px-8 py-6 max-lg:px-6 max-sm:px-4 opacity-0"><section data-section-type="front_cover" data-section-id="pg001_sec001" class="book-cover-page relative min-h-[1400px] overflow-hidden bg-white font-sans text-left">
+<div id="content" class="container mx-auto bg-white px-8 py-6 max-lg:px-6 max-sm:px-4 opacity-0">
+  <img class="source-facsimile-page" src="images/source-pages/pg001.png" alt="" aria-hidden="true" /><section data-section-type="front_cover" data-section-id="pg001_sec001" class="book-cover-page relative min-h-[1400px] overflow-hidden bg-white font-sans text-left source-semantic-copy">
   <div class="absolute inset-0 pointer-events-none">
     <div class="absolute left-4 top-4 h-10 w-10 border-l-2 border-t-2 border-gray-300"></div>
     <div class="absolute right-4 top-4 h-10 w-10 border-r-2 border-t-2 border-gray-300"></div>
@@ -66,9 +70,10 @@
 
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/offline-preloader.js?v=6"></script>
+    <script src="./assets/offline-preloader.js?v=7"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>
+    <script src="./assets/page-ink.js?v=1"></script>
 </body>
 
 </html>

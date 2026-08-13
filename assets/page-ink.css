@@ -1,0 +1,114 @@
+.page-ink-toolbar {
+  position: sticky;
+  top: .5rem;
+  z-index: 30;
+  display: flex;
+  width: min(calc(100% - 1rem), 930px);
+  margin: .75rem auto;
+  padding: .65rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .55rem;
+  border: 2px solid #15803d;
+  border-radius: .9rem;
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 8px 24px rgb(15 23 42 / 16%);
+  color: #172033;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  backdrop-filter: blur(8px);
+}
+
+.page-ink-toolbar button,
+.page-ink-toolbar input,
+.page-ink-toolbar textarea,
+.page-ink-toolbar summary {
+  font-family: 'Atkinson Hyperlegible', sans-serif !important;
+}
+
+.page-ink-button {
+  min-height: 2.65rem;
+  padding: .5rem .85rem;
+  border: 2px solid #166534;
+  border-radius: .65rem;
+  background: #fff;
+  color: #166534;
+  font-weight: 800;
+}
+
+.page-ink-button:hover,
+.page-ink-button:focus-visible,
+.page-ink-button[aria-pressed="true"] {
+  background: #dcfce7;
+}
+
+.page-ink-button.is-primary {
+  background: #166534;
+  color: #fff;
+}
+
+.page-ink-button.is-primary[aria-pressed="true"] {
+  border-color: #1d4ed8;
+  background: #2563eb;
+}
+
+.page-ink-colour {
+  width: 2.65rem;
+  height: 2.65rem;
+  padding: .2rem;
+  border: 2px solid #166534;
+  border-radius: .65rem;
+  background: #fff;
+}
+
+.page-ink-status {
+  flex: 1 1 13rem;
+  min-width: 12rem;
+  color: #334155;
+  font-size: .98rem;
+  font-weight: 700;
+}
+
+.page-ink-alternative {
+  flex-basis: 100%;
+  border-top: 1px solid #bbf7d0;
+  padding-top: .4rem;
+}
+
+.page-ink-alternative summary {
+  cursor: pointer;
+  color: #166534;
+  font-weight: 800;
+}
+
+.page-ink-alternative textarea {
+  width: 100%;
+  min-height: 5rem;
+  margin-top: .55rem;
+  padding: .65rem;
+  border: 2px solid #64748b;
+  border-radius: .65rem;
+  background: #fff;
+  color: #172033;
+  font-size: 1rem;
+}
+
+.page-ink-toolbar :focus-visible,
+.page-ink-canvas:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+  .page-ink-toolbar {
+    position: relative;
+    top: auto;
+  }
+
+  .page-ink-button {
+    flex: 1 1 auto;
+  }
+
+  .page-ink-status {
+    flex-basis: 100%;
+  }
+}

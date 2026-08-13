@@ -1,39 +1,122 @@
-/* The converted semantic page is the visible, interactive textbook page.
-   The source render remains in the bundle only as a visual QA reference. */
+/* Exact visual edition: the cleaned source page is visible while the full
+   semantic conversion remains in the accessibility tree for read-aloud. */
+#content.exact-facsimile-content {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 0 clamp(6rem, 12vw, 9rem) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #edf2ee !important;
+  box-shadow: none !important;
+}
+
+.exact-page-stage {
+  position: relative;
+  width: min(100%, 930px);
+  aspect-ratio: 93 / 128;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 12px 38px rgb(15 23 42 / 18%);
+  isolation: isolate;
+}
+
 .source-facsimile-page {
-  display: none !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
+/* Keep every converted text node readable by assistive technology without
+   allowing reconstructed typography to alter the exact printed page. */
 .source-semantic-copy {
-  position: relative !important;
-  width: min(100%, 930px) !important;
-  height: auto !important;
-  margin: 0 auto 7rem !important;
-  clip: auto !important;
-  white-space: normal !important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
 }
 
-.source-semantic-copy > h2:not([class]) {
-  margin: 0 0 1.5rem;
-  padding-bottom: .75rem;
-  border-bottom: 4px solid #84cc16;
-  color: #166534;
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  font-weight: 850;
-  line-height: 1.15;
+.toc-number-overlay,
+.toc-link-layer,
+.page-ink-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.source-semantic-copy > p:not([class]) {
-  margin: 0 0 1.15rem;
-  color: #27272a;
-  font-size: clamp(1rem, 2.2vw, 1.2rem);
-  line-height: 1.75;
+.toc-number-overlay {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.toc-link-layer {
+  z-index: 3;
+  pointer-events: none;
+}
+
+.toc-hotspot {
+  position: absolute;
+  left: 11%;
+  right: 11%;
+  border: 3px solid transparent;
+  border-radius: .45rem;
+  pointer-events: auto;
+}
+
+.toc-hotspot:focus-visible {
+  border-color: #2563eb;
+  outline: 3px solid #fff;
+  outline-offset: 1px;
+}
+
+.page-ink-canvas {
+  z-index: 4;
+  cursor: crosshair;
+  pointer-events: none;
+  touch-action: none;
+}
+
+.exact-page-stage.is-ink-active {
+  outline: 4px solid #2563eb;
+  outline-offset: 4px;
+}
+
+.exact-page-stage.is-ink-active .page-ink-canvas {
+  pointer-events: auto;
+}
+
+@media (max-width: 640px) {
+  .exact-page-stage {
+    box-shadow: none;
+  }
 }
 
 @media print {
-  .source-semantic-copy {
-    width: 100% !important;
-    max-width: none !important;
-    margin-bottom: 0 !important;
+  #content.exact-facsimile-content {
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .exact-page-stage {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .page-ink-canvas,
+  .page-ink-toolbar {
+    display: none !important;
   }
 }
