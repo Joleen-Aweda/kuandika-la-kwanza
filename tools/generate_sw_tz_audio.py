@@ -43,6 +43,18 @@ PUNCTUATION_NAMES = {
     ".": "nukta", ",": "koma", "?": "kiulizo", "!": "mshangao",
     "( . )": "nukta", "( , )": "koma", "( ? )": "kiulizo", "( ! )": "mshangao",
 }
+SPOKEN_WORD_OVERRIDES = {
+    # The voice can blur the unvoiced p into an m-like onset. A syllable
+    # boundary keeps "pili" distinct from the number word "mbili" while the
+    # visible textbook text remains unchanged.
+    "pili": "pi-li",
+}
+YEAR_SPEECH = {
+    "2016": "mwaka elfu mbili na kumi na sita",
+    "2018": "mwaka elfu mbili na kumi na nane",
+    "2021": "mwaka elfu mbili na ishirini na moja",
+    "2023": "mwaka elfu mbili na ishirini na tatu",
+}
 
 
 def load_json(path: Path) -> dict[str, str]:
@@ -56,18 +68,23 @@ def number_word(value: int) -> str:
 def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
     """Return child-friendly Tanzanian Swahili speech without changing display text."""
     if key in overrides:
-        return overrides[key]
+        visible = overrides[key]
     # Easy-read variants must teach the same pronunciation as their standard
     # tracks, even when their simplified visible text omits the final letter.
-    if key.endswith("_easy_read"):
+    elif key.endswith("_easy_read"):
         standard_key = key.removesuffix("_easy_read")
-        if standard_key in overrides:
-            return overrides[standard_key]
+        # Read the simplified text itself when it contains numerals so 1/2
+        # remain moja/mbili instead of inheriting kwanza/pili wording from
+        # the standard track.
+        has_visible_number = re.search(r"(?<![\w-])\d+(?![\w-])", visible)
+        if standard_key in overrides and not has_visible_number:
+            visible = overrides[standard_key]
 
     text = visible.strip()
     text = re.sub(r"\bPAH\b", "", text, flags=re.IGNORECASE)
-    text = text.replace("2018", "mwaka elfu mbili na kumi na nane")
-    text = text.replace("2016", "mwaka elfu mbili na kumi na sita")
+    for year, spoken_year in YEAR_SPEECH.items():
+        text = re.sub(rf"\bmwaka\s+{year}\b", spoken_year, text, flags=re.IGNORECASE)
+        text = re.sub(rf"\b{year}\b", spoken_year, text)
     text = re.sub(r"https?://ol\.tie\.go\.tz|\bol\.tie\.go\.tz\b", "maktaba mtandao ya Taasisi ya Elimu Tanzania", text, flags=re.I)
     text = re.sub(r"_{3,}|\.{4,}|…{2,}|\[\[blank[^]]*\]\]", " ", text, flags=re.I)
 
@@ -85,16 +102,36 @@ def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
         return ", ".join([pronunciation] * min(len(compact), 6))
 
     letters_only = re.sub(r"[^A-Za-z]", "", compact).lower()
-    if letters_only in {"a", "e", "i", "o", "u"} and len(compact) <= 3:
+    if letters_only in {"a", "e", "i", "o", "u"} and len(compact) <= 3 and not re.search(r"\d", compact):
         return letters_only
-    if letters_only in LETTER_NAMES and len(compact) <= 4:
+    if letters_only in LETTER_NAMES and len(compact) <= 4 and not re.search(r"\d", compact):
         return LETTER_NAMES[letters_only]
+
+    standalone_number = re.fullmatch(r"\d{1,2}", compact)
+    if standalone_number:
+        return number_word(int(standalone_number.group(0)))
 
     marker = re.match(r"^\s*(\d{1,2})[.)]\s*(.*)$", compact, re.S)
     if marker:
         number = int(marker.group(1))
         remainder = marker.group(2).strip()
         compact = f"Namba {number_word(number)}. {remainder}".strip()
+
+    # Convert standalone numerals inside ordinary text without touching years,
+    # identifiers such as item-2, or digits that form part of a larger number.
+    compact = re.sub(
+        r"(?<![\w-])(\d{1,2})(?![\w-])",
+        lambda match: number_word(int(match.group(1))),
+        compact,
+    )
+
+    for written, spoken in SPOKEN_WORD_OVERRIDES.items():
+        compact = re.sub(
+            rf"\b{re.escape(written)}\b",
+            spoken,
+            compact,
+            flags=re.IGNORECASE,
+        )
 
     # A Tanzanian literacy lesson names isolated consonant graphemes with the
     # implicit vowel e. This remains separate from visible spelling.

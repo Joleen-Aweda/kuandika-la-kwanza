@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install exact source-page presentation and direct page inking."""
+"""Install the exact source-page presentation without answer canvases."""
 
 from __future__ import annotations
 
@@ -8,9 +8,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_STYLE = '    <link href="./assets/source-facsimile.css?v=5" rel="stylesheet">\n'
-INK_STYLE = '    <link href="./assets/page-ink.css?v=1" rel="stylesheet">\n'
-INK_SCRIPT = '    <script src="./assets/page-ink.js?v=1"></script>\n'
+SOURCE_STYLE = '    <link href="./assets/source-facsimile.css?v=11" rel="stylesheet">\n'
+SOURCE_SCRIPT = '    <script src="./assets/source-page.js?v=12"></script>\n'
 
 
 def page_path(number: int) -> Path:
@@ -43,6 +42,16 @@ def install_page(number: int) -> bool:
         updated,
     )
     updated = re.sub(
+        r'\s*<link href="\./assets/(?:guided-practice|page-ink)\.css(?:\?v=\d+)?" rel="stylesheet">',
+        "",
+        updated,
+    )
+    updated = re.sub(
+        r'\s*<script src="\./assets/(?:guided-practice|page-ink)\.js(?:\?v=\d+)?"></script>',
+        "",
+        updated,
+    )
+    updated = re.sub(
         r'<link href="\./assets/source-facsimile\.css(?:\?v=\d+)?" rel="stylesheet">',
         SOURCE_STYLE.strip(),
         updated,
@@ -52,17 +61,6 @@ def install_page(number: int) -> bool:
         if not marker:
             raise RuntimeError(f"Missing </head> in {path.name}")
         updated = updated[: marker.start()] + "\n" + SOURCE_STYLE + updated[marker.start() :]
-
-    updated = re.sub(
-        r'<link href="\./assets/page-ink\.css(?:\?v=\d+)?" rel="stylesheet">',
-        INK_STYLE.strip(),
-        updated,
-    )
-    if "assets/page-ink.css" not in updated:
-        source_link = re.search(r'\s*<link href="\./assets/source-facsimile\.css\?v=5" rel="stylesheet">', updated)
-        if not source_link:
-            raise RuntimeError(f"Missing source style in {path.name}")
-        updated = updated[: source_link.end()] + "\n" + INK_STYLE.rstrip() + updated[source_link.end() :]
 
     image = f'<img class="source-facsimile-page" src="images/source-pages/pg{number:03d}.png" alt="" aria-hidden="true" />'
     if "source-facsimile-page" not in updated:
@@ -77,12 +75,18 @@ def install_page(number: int) -> bool:
     updated = updated[: section.start()] + ensure_class(section.group(0), "source-semantic-copy") + updated[section.end() :]
 
     updated = re.sub(
-        r'<script src="\./assets/page-ink\.js(?:\?v=\d+)?"></script>',
-        INK_SCRIPT.strip(),
+        r'<script src="\./assets/source-page\.js(?:\?v=\d+)?"></script>',
+        SOURCE_SCRIPT.strip(),
         updated,
     )
-    if "assets/page-ink.js" not in updated:
-        updated = updated.replace("</body>", INK_SCRIPT + "</body>")
+    if "assets/source-page.js" not in updated:
+        updated = updated.replace("</body>", SOURCE_SCRIPT + "</body>")
+
+    updated = re.sub(
+        r'offline-preloader\.js(?:\?v=\d+)?',
+        'offline-preloader.js?v=20',
+        updated,
+    )
 
     if updated != html:
         path.write_text(updated, encoding="utf-8")
