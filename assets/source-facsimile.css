@@ -28,6 +28,10 @@
   transform: translateY(-8.59375%);
 }
 
+.exact-page-stage.source-page-extended {
+  aspect-ratio: 93 / 117;
+}
+
 .source-facsimile-page {
   display: block !important;
   width: 100% !important;

@@ -9,6 +9,15 @@
   var SOURCE_PDF_HEIGHT = 767.669;
   var CORRECTION_FONT_SIZE = 28;
   var CORRECTION_LINE_HEIGHT = 27;
+  var EXTENDED_CORRECTION_HEIGHTS = {
+    55: 1200,
+    57: 1200,
+    60: 1200,
+    61: 1200,
+    63: 1200,
+    65: 1200,
+    66: 1250,
+  };
 
   function pageNumberFromId(pageId) {
     var match = String(pageId || "").match(/^pg(\d{3})_/);
@@ -156,6 +165,35 @@
       66: ["K", "k"],
     };
     var positions = {
+      6: [
+        {
+          rectX: 110,
+          rectY: 548,
+          rectWidth: 510,
+          firstLineY: 578,
+          height: 36,
+          textX: 119,
+          firstLine: "1. Kumudu misingi ya kuandika;",
+        },
+        {
+          rectX: 110,
+          rectY: 588,
+          rectWidth: 560,
+          firstLineY: 618,
+          height: 36,
+          textX: 119,
+          firstLine: "2. Kumudu stadi za kuandika; na",
+        },
+        {
+          rectX: 110,
+          rectY: 628,
+          rectWidth: 520,
+          firstLineY: 658,
+          height: 36,
+          textX: 119,
+          firstLine: "3. Kutumia kanuni za uandishi.",
+        },
+      ],
       8: {
         rectY: 292,
         firstLineY: 321,
@@ -243,7 +281,7 @@
         firstLineY: 476,
         secondLineY: 499,
         height: 56,
-        firstLine: "andika konsonanti t Andika doti ya pili, ya tatu,",
+        firstLine: "Andika konsonanti t Andika doti ya pili, ya tatu,",
         secondLine: "ya nne na ya tano kwa nafasi na ujaze mstari.",
       },
       31: {
@@ -275,7 +313,7 @@
         firstLineY: 702,
         secondLineY: 726,
         height: 57,
-        firstLine: "andika herufi ya konsonanti f Andika doti ya kwanza,",
+        firstLine: "Andika herufi ya konsonanti f Andika doti ya kwanza,",
         secondLine: "ya pili na ya nne kwa nafasi na ujaze mstari",
       },
       39: {
@@ -307,7 +345,7 @@
         firstLineY: 472,
         secondLineY: 493,
         height: 50,
-        firstLine: "andika herufi ya konsonanti h, Andika doti ya kwanza,",
+        firstLine: "Andika herufi ya konsonanti h, Andika doti ya kwanza,",
         secondLine: "ya pili na ya tano kwa nafasi na ujaze mstari.",
       },
       47: {
@@ -341,77 +379,256 @@
         secondLine: "na doti ya kwanza, ya pili na ya tano kwa nafasi",
         thirdLine: "na ujaze",
       },
-      55: {
-        rectY: 815,
-        firstLineY: 837,
-        height: 96,
-        firstLine: "Andika herufi ya irabu A. Andika doti ya sita na ya kwanza kwa",
-        secondLine: "nafasi na ujaze mstari. Andika herufi kubwa A ikifuatiwa na",
-        thirdLine: "herufi ndogo a kwa Pamoja kisha, andika tena herufi hizo kwa nafasi",
-        fourthLine: "na ujaze mstari",
-      },
-      57: {
-        rectY: 447,
-        firstLineY: 469,
-        height: 96,
-        firstLine: "andika herufi ya irabu E, Andika doti ya sita, ya kwanza na ya tano",
-        secondLine: "kwa nafasi na ujaze mstari. Andika herufi kubwa E ikifuatiwa na",
-        thirdLine: "herufi ndogo e kwa Pamoja kisha, andika tena herufi hizo kwa nafasi",
-        fourthLine: "na ujaze mstari",
-      },
-      60: {
-        rectY: 424,
-        firstLineY: 446,
-        height: 96,
-        firstLine: "Andika herufi ya irabu O, Andika doti ya sita, ya kwanza, ya tatu na",
-        secondLine: "ya tano kwa nafasi na ujaze mstari. Andika herufi kubwa O ikifuatiwa",
-        thirdLine: "na herufi ndogo o kwa Pamoja kisha, andika tena herufi hizo kwa nafasi",
-        fourthLine: "na ujaze mstari.",
-      },
-      61: {
-        rectY: 848,
-        firstLineY: 870,
-        height: 96,
-        firstLine: "Andika herufi ya irabu U, Andika doti ya sita, ya kwanza, ya tatu na ya",
-        secondLine: "sita kwa nafasi na ujaze mstari. Andika herufi kubwa U ikifuatiwa na",
-        thirdLine: "herufi ndogo u kwa Pamoja kisha, andika tena herufi hizo kwa nafasi",
-        fourthLine: "na ujaze mstari.",
-      },
-      63: {
-        rectY: 829,
-        firstLineY: 851,
-        height: 96,
-        firstLine: "Andika herufi ya konsonanti B, Andika doti sita, ya kwanza na ya pili kwa",
-        secondLine: "nafasi na ujaze mstari. Andika herufi kubwa B ikifuatiwa na herufi",
-        thirdLine: "ndogo b kwa Pamoja kisha, andika tena herufi hizo kwa nafasi",
-        fourthLine: "na ujaze mstari.",
-      },
-      65: {
-        rectY: 438,
-        firstLineY: 460,
-        height: 96,
-        firstLine: "Andika herufi ya konsonanti M, Andika doti ya sita, ya kwanza, ya tatu na",
-        secondLine: "ya nne kwa nafasi na ujaze mstari. Andika herufi kubwa M ikifuatiwa",
-        thirdLine: "na herufi ndogo m kwa Pamoja kisha, andika tena herufi hizo kwa nafasi",
-        fourthLine: "na ujaze mstari.",
-      },
-      66: {
-        rectY: 955,
-        firstLineY: 977,
-        height: 96,
-        firstLine: "Andika herufi ya konsonanti K, Andika doti ya sita, ya kwanza na ya tatu",
-        secondLine: "kwa nafasi na ujaze mstari. Andika herufi kubwa K ikifuatiwa na",
-        thirdLine: "herufi ndogo k kwa Pamoja kisha, andika tena herufi hizo kwa nafasi",
-        fourthLine: "na ujaze mstari.",
-      },
+      55: [
+        {
+          rectY: 815,
+          firstLineY: 843,
+          secondLineY: 870,
+          height: 56,
+          firstLine: "Andika herufi ya irabu A. Andika doti ya sita na ya kwanza",
+          secondLine: "kwa nafasi na ujaze mstari.",
+        },
+        {
+          rectY: 987,
+          firstLineY: 1015,
+          secondLineY: 1042,
+          height: 56,
+          firstLine: "Andika herufi kubwa A ikifuatiwa na herufi ndogo a kwa pamoja",
+          secondLine: "kisha, andika tena herufi hizo kwa nafasi na ujaze mstari",
+        },
+      ],
+      57: [
+        {
+          rectY: 447,
+          firstLineY: 475,
+          secondLineY: 502,
+          height: 56,
+          firstLine: "Andika herufi ya irabu E, Andika doti ya sita, ya kwanza na ya tano",
+          secondLine: "kwa nafasi na ujaze mstari.",
+        },
+        {
+          rectY: 615,
+          firstLineY: 643,
+          secondLineY: 670,
+          height: 56,
+          firstLine: "Andika herufi kubwa E ikifuatiwa na herufi ndogo e kwa pamoja",
+          secondLine: "kisha, andika tena herufi hizo kwa nafasi na ujaze mstari",
+        },
+      ],
+      60: [
+        {
+          rectY: 424,
+          firstLineY: 452,
+          secondLineY: 479,
+          height: 56,
+          firstLine: "Andika herufi ya irabu O, Andika doti ya sita, ya kwanza, ya tatu",
+          secondLine: "na ya tano kwa nafasi na ujaze mstari.",
+        },
+        {
+          rectY: 590,
+          firstLineY: 618,
+          secondLineY: 645,
+          height: 56,
+          firstLine: "Andika herufi kubwa O ikifuatiwa na herufi ndogo o kwa pamoja",
+          secondLine: "kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        },
+      ],
+      61: [
+        {
+          rectY: 848,
+          firstLineY: 876,
+          secondLineY: 903,
+          height: 56,
+          firstLine: "Andika herufi ya irabu U, Andika doti ya sita, ya kwanza, ya tatu",
+          secondLine: "na ya sita kwa nafasi na ujaze mstari.",
+        },
+        {
+          rectY: 1017,
+          firstLineY: 1045,
+          secondLineY: 1072,
+          height: 56,
+          firstLine: "Andika herufi kubwa U ikifuatiwa na herufi ndogo u kwa pamoja",
+          secondLine: "kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        },
+      ],
+      63: [
+        {
+          rectY: 829,
+          firstLineY: 857,
+          secondLineY: 884,
+          height: 56,
+          firstLine: "Andika herufi ya konsonanti B, Andika doti sita, ya kwanza",
+          secondLine: "na ya pili kwa nafasi na ujaze mstari.",
+        },
+        {
+          rectY: 999,
+          firstLineY: 1027,
+          secondLineY: 1054,
+          height: 56,
+          firstLine: "Andika herufi kubwa B ikifuatiwa na herufi ndogo b kwa pamoja",
+          secondLine: "kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        },
+      ],
+      65: [
+        {
+          rectY: 438,
+          firstLineY: 466,
+          secondLineY: 493,
+          height: 56,
+          firstLine: "Andika herufi ya konsonanti M, Andika doti ya sita, ya kwanza, ya tatu",
+          secondLine: "na ya nne kwa nafasi na ujaze mstari.",
+        },
+        {
+          rectY: 605,
+          firstLineY: 633,
+          secondLineY: 660,
+          height: 56,
+          firstLine: "Andika herufi kubwa M ikifuatiwa na herufi ndogo m kwa pamoja",
+          secondLine: "kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        },
+      ],
+      66: [
+        {
+          rectY: 955,
+          firstLineY: 983,
+          secondLineY: 1010,
+          height: 56,
+          firstLine: "Andika herufi ya konsonanti K, Andika doti ya sita, ya kwanza",
+          secondLine: "na ya tatu kwa nafasi na ujaze mstari.",
+        },
+        {
+          rectY: 1175,
+          firstLineY: 1203,
+          secondLineY: 1230,
+          height: 56,
+          firstLine: "Andika herufi kubwa K ikifuatiwa na herufi ndogo k kwa pamoja",
+          secondLine: "kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
+        },
+      ],
+      89: [
+        {
+          rectX: 308,
+          rectY: 247,
+          rectWidth: 500,
+          firstLineY: 278,
+          height: 36,
+          textX: 315,
+          firstLine: "Hamida amebeba mizigo ya bibi.",
+        },
+        {
+          rectX: 210,
+          rectY: 337,
+          rectWidth: 600,
+          firstLineY: 368,
+          height: 36,
+          textX: 218,
+          firstLine: "Hawa amepewa hela ya kununua kalamu.",
+        },
+        {
+          rectX: 210,
+          rectY: 382,
+          rectWidth: 600,
+          firstLineY: 413,
+          height: 36,
+          textX: 218,
+          firstLine: "Hasani na Halima wanapalilia miti.",
+        },
+        {
+          rectX: 210,
+          rectY: 427,
+          rectWidth: 560,
+          firstLineY: 458,
+          height: 36,
+          textX: 218,
+          firstLine: "Hadija amehamia Hedaru.",
+        },
+        {
+          rectX: 210,
+          rectY: 470,
+          rectWidth: 600,
+          firstLineY: 501,
+          height: 36,
+          textX: 218,
+          firstLine: "Hosea anawasaidia watoto wasioona",
+        },
+        {
+          rectX: 210,
+          rectY: 558,
+          rectWidth: 560,
+          firstLineY: 589,
+          height: 36,
+          textX: 218,
+          firstLine: "Haruna anavuna karafuu.",
+        },
+      ],
+      97: [
+        {
+          rectX: 305,
+          rectY: 242,
+          rectWidth: 500,
+          firstLineY: 273,
+          height: 36,
+          textX: 315,
+          firstLine: "Chiku atapika chakula siku ya",
+        },
+        {
+          rectX: 190,
+          rectY: 421,
+          rectWidth: 620,
+          firstLineY: 452,
+          height: 36,
+          textX: 199,
+          firstLine: "Chacha na Chipa wameua chatu.",
+        },
+        {
+          rectX: 190,
+          rectY: 467,
+          rectWidth: 620,
+          firstLineY: 498,
+          height: 36,
+          textX: 199,
+          firstLine: "Chuwa ananawa mikono kwa maji na sabuni.",
+        },
+        {
+          rectX: 190,
+          rectY: 512,
+          rectWidth: 620,
+          firstLineY: 543,
+          height: 36,
+          textX: 199,
+          firstLine: "Chichi anatoa elimu ya usalama barabarani.",
+        },
+        {
+          rectX: 190,
+          rectY: 557,
+          rectWidth: 520,
+          firstLineY: 588,
+          height: 36,
+          textX: 199,
+          firstLine: "Chaula anachota maji.",
+        },
+        {
+          rectX: 190,
+          rectY: 594,
+          rectWidth: 520,
+          firstLineY: 633,
+          height: 44,
+          textX: 199,
+          firstLine: "Chiza atafika jumatatu.",
+        },
+      ],
     };
     var pagePositions = positions[pageNumber];
     if (!pagePositions) return;
     if (!Array.isArray(pagePositions)) pagePositions = [pagePositions];
 
+    if (!EXTENDED_CORRECTION_HEIGHTS[pageNumber] && pageNumber >= 11 && pageNumber <= 52) {
+      stage.style.aspectRatio = "930 / " + (1040 + (pagePositions.length * 30));
+    }
+
     var overlay = document.createElement("img");
     overlay.className = "source-text-correction-image";
-    overlay.src = "images/corrections/pg" + String(pageNumber).padStart(3, "0") + ".png?v=2";
+    overlay.src = "images/corrections/pg" + String(pageNumber).padStart(3, "0") + ".png?v=14";
     overlay.alt = "";
     overlay.setAttribute("aria-hidden", "true");
     overlay.draggable = false;
@@ -432,6 +649,9 @@
 
     var stage = document.createElement("div");
     stage.className = "exact-page-stage source-page-cropped";
+    if (EXTENDED_CORRECTION_HEIGHTS[pageNumber]) {
+      stage.style.aspectRatio = "930 / " + EXTENDED_CORRECTION_HEIGHTS[pageNumber];
+    }
     image.parentElement.insertBefore(stage, image);
     stage.appendChild(image);
     addTocNumberOverlay(stage, pageNumber);

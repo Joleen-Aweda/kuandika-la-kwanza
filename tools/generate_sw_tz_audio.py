@@ -192,8 +192,20 @@ async def run(args: argparse.Namespace) -> None:
         if speech:
             jobs.append((key, speech, filename))
 
-    if args.key:
-        selected = set(args.key)
+    selected = set(args.key or [])
+    if args.letter_titles:
+        title_keys = {
+            key
+            for key, speech in overrides.items()
+            if speech.startswith("Ninaandika herufi")
+        }
+        selected.update(title_keys)
+        selected.update(
+            f"{key}_easy_read"
+            for key in title_keys
+            if f"{key}_easy_read" in texts
+        )
+    if selected:
         jobs = [job for job in jobs if job[0] in selected]
         missing_keys = selected - {job[0] for job in jobs}
         if missing_keys:
@@ -242,6 +254,11 @@ def main() -> None:
     parser.add_argument("--retries", type=int, default=4)
     parser.add_argument("--timeout", type=int, default=90, help="seconds allowed per synthesis attempt")
     parser.add_argument("--key", action="append", help="generate only this text ID (repeatable)")
+    parser.add_argument(
+        "--letter-titles",
+        action="store_true",
+        help="generate every Ninaandika-herufi title and its easy-read track",
+    )
     parser.add_argument("--limit", type=int, help="generate only the first N tracks for testing")
     parser.add_argument("--dry-run", action="store_true")
     asyncio.run(run(parser.parse_args()))

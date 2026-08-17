@@ -19,9 +19,90 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE_TOP = 110
 PAGE_WIDTH = 930
 CROPPED_HEIGHT = 1040
+EXTENDED_HEIGHT = 1170
 FONT_SIZE = 28
 LINE_HEIGHT = 27
+LETTER_INSTRUCTION_GAP = 30
 LINE_NAMES = ("firstLine", "secondLine", "thirdLine", "fourthLine")
+
+SPLIT_LAYOUTS = {
+    "55": {
+        "height": 1200,
+        "content_offset": 90,
+        "top_insertions": [(575, 30), (660, 30), (815, 30)],
+        "covers": [(90, 815, 850, 1220)],
+        "rows": [
+            ((100, 912, 830, 974), (100, 898)),
+            ((100, 1001, 830, 1098), (100, 1065)),
+        ],
+    },
+    "57": {
+        "height": 1200,
+        "content_offset": 90,
+        "top_insertions": [(205, 30), (280, 30), (447, 30)],
+        "covers": [(90, 447, 850, 1220)],
+        "lower_source_y": 750,
+        "lower_shift": 70,
+        "rows": [
+            ((100, 542, 830, 600), (100, 530)),
+            ((100, 623, 830, 724), (100, 690)),
+        ],
+    },
+    "60": {
+        "height": 1200,
+        "content_offset": 90,
+        "top_insertions": [(205, 30), (265, 30), (424, 30)],
+        "covers": [(90, 424, 850, 1220)],
+        "lower_source_y": 730,
+        "lower_shift": 70,
+        "rows": [
+            ((100, 522, 830, 579), (100, 507)),
+            ((100, 613, 830, 705), (100, 668)),
+        ],
+    },
+    "61": {
+        "height": 1200,
+        "content_offset": 90,
+        "top_insertions": [(640, 30), (695, 30), (848, 30)],
+        "covers": [(90, 848, 850, 1220)],
+        "rows": [
+            ((100, 939, 830, 998), (100, 931)),
+            ((100, 1030, 830, 1125), (100, 1095)),
+        ],
+    },
+    "63": {
+        "height": 1200,
+        "content_offset": 90,
+        "top_insertions": [(570, 30), (655, 30), (829, 30)],
+        "covers": [(90, 829, 850, 1220)],
+        "rows": [
+            ((100, 938, 830, 998), (100, 912)),
+            ((100, 1030, 830, 1120), (100, 1077)),
+        ],
+    },
+    "65": {
+        "height": 1200,
+        "content_offset": 90,
+        "top_insertions": [(205, 30), (280, 30), (438, 30)],
+        "covers": [(90, 438, 850, 1220)],
+        "lower_source_y": 735,
+        "lower_shift": 70,
+        "rows": [
+            ((100, 533, 830, 591), (100, 521)),
+            ((100, 623, 830, 715), (100, 683)),
+        ],
+    },
+    "66": {
+        "height": 1250,
+        "content_offset": 80,
+        "top_insertions": [(760, 25, -1), (815, 25, -1), (955, 30, -1)],
+        "covers": [
+            (90, 955, 850, 1045),
+            (0, 1142, PAGE_WIDTH, 1280),
+        ],
+        "rows": [],
+    },
+}
 
 
 def read_js_object(source: str, variable: str, following: str) -> dict:
@@ -71,6 +152,31 @@ def draw_styled_line(
         x += round(draw.textlength(part, font=font))
 
 
+def blank_background_band(
+    source_page: Image.Image,
+    insertion_y: int,
+    height: int,
+) -> Image.Image:
+    """Find a nearby text-free band while preserving the page-edge texture."""
+    minimum_y = max(SOURCE_TOP, insertion_y - 80)
+    maximum_y = min(1150 - height, insertion_y + 80)
+    best: tuple[int, int] | None = None
+    best_start = insertion_y
+    for candidate_y in range(minimum_y, maximum_y + 1):
+        interior = source_page.crop(
+            (90, candidate_y, 850, candidate_y + height)
+        ).convert("L")
+        histogram = interior.histogram()
+        dark_pixels = sum(histogram[:235])
+        score = (dark_pixels, abs(candidate_y - insertion_y))
+        if best is None or score < best:
+            best = score
+            best_start = candidate_y
+    return source_page.crop(
+        (0, best_start, PAGE_WIDTH, best_start + height)
+    )
+
+
 def balance_lines(
     values: list[str],
     font: ImageFont.FreeTypeFont,
@@ -106,6 +212,187 @@ def balance_lines(
     return lines
 
 
+def draw_position_text(
+    draw: ImageDraw.ImageDraw,
+    position: dict,
+    font: ImageFont.FreeTypeFont,
+    bold_tokens: list[str],
+    y_offset: int = 0,
+) -> list[str]:
+    source_lines = [position[name] for name in LINE_NAMES if position.get(name)]
+    lines = balance_lines(source_lines, font)
+    text_top = position["firstLineY"] + y_offset - FONT_SIZE - SOURCE_TOP
+    for index, line in enumerate(lines):
+        draw_styled_line(
+            draw,
+            (position.get("textX", 110), text_top + (index * LINE_HEIGHT)),
+            line,
+            font,
+            bold_tokens,
+        )
+    return lines
+
+
+def render_split_layout(
+    overlay: Image.Image,
+    page_key: str,
+    positions: list[dict],
+    font: ImageFont.FreeTypeFont,
+    bold_tokens: list[str],
+) -> None:
+    """Place each instruction beside the practice row it describes."""
+    layout = SPLIT_LAYOUTS[page_key]
+    content_offset = layout.get("content_offset", 0)
+    draw = ImageDraw.Draw(overlay)
+    draw.rectangle((0, 0, overlay.width, overlay.height), fill=(255, 255, 255, 255))
+
+    source_page = Image.open(
+        ROOT / f"images/source-pages/pg{int(page_key):03d}.png"
+    ).convert("RGBA")
+    insertions = layout.get("top_insertions", [])
+    if insertions:
+        source_cursor = SOURCE_TOP
+        destination_y = 0
+        inserted_height = 0
+        for insertion in insertions:
+            insertion_y, gap_height = insertion[:2]
+            sample_y = insertion[2] if len(insertion) == 3 else None
+            segment = source_page.crop((0, source_cursor, PAGE_WIDTH, insertion_y))
+            overlay.alpha_composite(segment, dest=(0, destination_y))
+            destination_y += segment.height
+
+            if sample_y == -1:
+                background_band = Image.new(
+                    "RGBA",
+                    (PAGE_WIDTH, gap_height),
+                    (255, 255, 255, 255),
+                )
+            elif sample_y is not None:
+                background_band = source_page.crop(
+                    (0, sample_y, PAGE_WIDTH, sample_y + gap_height)
+                )
+            else:
+                background_band = blank_background_band(
+                    source_page,
+                    insertion_y,
+                    gap_height,
+                )
+            overlay.alpha_composite(background_band, dest=(0, destination_y))
+            destination_y += gap_height
+            inserted_height += gap_height
+            source_cursor = insertion_y
+
+        remaining = source_page.crop((0, source_cursor, PAGE_WIDTH, 1150))
+        overlay.alpha_composite(remaining, dest=(0, destination_y))
+        if inserted_height != content_offset:
+            raise RuntimeError(
+                f"Page {page_key} inserts {inserted_height}px but offsets {content_offset}px"
+            )
+    else:
+        source_base = source_page.crop((0, SOURCE_TOP, PAGE_WIDTH, 1150))
+        overlay.alpha_composite(source_base, dest=(0, 0))
+
+    draw = ImageDraw.Draw(overlay)
+    for left, top, right, bottom in layout["covers"]:
+        draw.rectangle(
+            (
+                left,
+                top + content_offset - SOURCE_TOP,
+                right,
+                bottom + content_offset - SOURCE_TOP,
+            ),
+            fill=(255, 255, 255, 255),
+        )
+
+    lower_source_y = layout.get("lower_source_y")
+    if lower_source_y is not None:
+        lower_content = source_page.crop((0, lower_source_y, PAGE_WIDTH, 1150))
+        overlay.alpha_composite(
+            lower_content,
+            dest=(
+                0,
+                lower_source_y
+                + layout["lower_shift"]
+                + content_offset
+                - SOURCE_TOP,
+            ),
+        )
+
+    for crop_box, destination in layout["rows"]:
+        row = source_page.crop(crop_box)
+        overlay.alpha_composite(
+            row,
+            dest=(
+                destination[0],
+                destination[1] + content_offset - SOURCE_TOP,
+            ),
+        )
+
+    draw = ImageDraw.Draw(overlay)
+    for position in positions:
+        draw_position_text(draw, position, font, bold_tokens, content_offset)
+
+
+def shifted_position(position: dict, y_offset: int) -> dict:
+    shifted = dict(position)
+    for key in ("rectY", "firstLineY", "secondLineY", "thirdLineY", "fourthLineY"):
+        if key in shifted:
+            shifted[key] += y_offset
+    return shifted
+
+
+def render_gapped_instruction_layout(
+    overlay: Image.Image,
+    page_key: str,
+    positions: list[dict],
+    font: ImageFont.FreeTypeFont,
+    bold_tokens: list[str],
+) -> None:
+    """Insert breathing room before each letter-writing instruction."""
+    source_page = Image.open(
+        ROOT / f"images/source-pages/pg{int(page_key):03d}.png"
+    ).convert("RGBA")
+    draw = ImageDraw.Draw(overlay)
+    draw.rectangle((0, 0, overlay.width, overlay.height), fill=(255, 255, 255, 255))
+
+    source_cursor = SOURCE_TOP
+    destination_y = 0
+    for position in positions:
+        insertion_y = position["rectY"]
+        segment = source_page.crop((0, source_cursor, PAGE_WIDTH, insertion_y))
+        overlay.alpha_composite(segment, dest=(0, destination_y))
+        destination_y += segment.height
+        background_band = blank_background_band(
+            source_page,
+            insertion_y,
+            LETTER_INSTRUCTION_GAP,
+        )
+        overlay.alpha_composite(background_band, dest=(0, destination_y))
+        destination_y += LETTER_INSTRUCTION_GAP
+        source_cursor = insertion_y
+
+    remaining = source_page.crop((0, source_cursor, PAGE_WIDTH, 1150))
+    overlay.alpha_composite(remaining, dest=(0, destination_y))
+
+    draw = ImageDraw.Draw(overlay)
+    for index, position in enumerate(positions):
+        shifted = shifted_position(
+            position,
+            LETTER_INSTRUCTION_GAP * (index + 1),
+        )
+        source_lines = [shifted[name] for name in LINE_NAMES if shifted.get(name)]
+        lines = balance_lines(source_lines, font)
+        rect_top = shifted["rectY"] - SOURCE_TOP
+        rect_height = max(shifted["height"], (len(lines) * LINE_HEIGHT) + 4)
+        rect_left = shifted.get("rectX", 100)
+        rect_right = rect_left + shifted.get("rectWidth", 730)
+        draw.rectangle(
+            (rect_left, rect_top, rect_right, rect_top + rect_height),
+            fill=(255, 255, 255, 255),
+        )
+        draw_position_text(draw, shifted, font, bold_tokens)
+
+
 def main() -> None:
     source = (ROOT / "assets" / "source-page.js").read_text(encoding="utf-8")
     bold_by_page = read_js_object(source, "boldTokensByPage", "positions")
@@ -117,27 +404,53 @@ def main() -> None:
     rendered = 0
     for page_key, raw_positions in positions.items():
         page_positions = raw_positions if isinstance(raw_positions, list) else [raw_positions]
-        overlay = Image.new("RGBA", (PAGE_WIDTH, CROPPED_HEIGHT), (255, 255, 255, 0))
+        layout = SPLIT_LAYOUTS.get(page_key)
+        gapped_instruction_page = layout is None and 11 <= int(page_key) <= 52
+        overlay_height = (
+            layout.get("height", CROPPED_HEIGHT)
+            if layout
+            else CROPPED_HEIGHT + (
+                len(page_positions) * LETTER_INSTRUCTION_GAP
+                if gapped_instruction_page
+                else 0
+            )
+        )
+        overlay = Image.new("RGBA", (PAGE_WIDTH, overlay_height), (255, 255, 255, 0))
         draw = ImageDraw.Draw(overlay)
         bold_tokens = bold_by_page.get(page_key, [])
+        if layout:
+            render_split_layout(overlay, page_key, page_positions, font, bold_tokens)
+            overlay.save(output_dir / f"pg{int(page_key):03d}.png", optimize=True)
+            rendered += 1
+            continue
+        if gapped_instruction_page:
+            render_gapped_instruction_layout(
+                overlay,
+                page_key,
+                page_positions,
+                font,
+                bold_tokens,
+            )
+            overlay.save(output_dir / f"pg{int(page_key):03d}.png", optimize=True)
+            rendered += 1
+            continue
         for position in page_positions:
             source_lines = [position[name] for name in LINE_NAMES if position.get(name)]
             lines = balance_lines(source_lines, font)
             rect_top = position["rectY"] - SOURCE_TOP
             rect_height = max(position["height"], (len(lines) * LINE_HEIGHT) + 4)
-            draw.rectangle(
-                (100, rect_top, 830, rect_top + rect_height),
-                fill=(255, 255, 255, 255),
+            rect_left = position.get("rectX", 100)
+            rect_right = rect_left + position.get("rectWidth", 730)
+            rectangle_fill = (
+                (255, 253, 217, 255)
+                if page_key in {"89", "97"}
+                else (255, 255, 255, 255)
             )
-            text_top = position["firstLineY"] - FONT_SIZE - SOURCE_TOP
-            for index, line in enumerate(lines):
-                draw_styled_line(
-                    draw,
-                    (110, text_top + (index * LINE_HEIGHT)),
-                    line,
-                    font,
-                    bold_tokens,
-                )
+            draw.rectangle(
+                (rect_left, rect_top, rect_right, rect_top + rect_height),
+                fill=rectangle_fill,
+            )
+            draw_position_text(draw, position, font, bold_tokens)
         overlay.save(output_dir / f"pg{int(page_key):03d}.png", optimize=True)
         rendered += 1
 

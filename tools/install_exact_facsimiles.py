@@ -8,8 +8,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_STYLE = '    <link href="./assets/source-facsimile.css?v=11" rel="stylesheet">\n'
-SOURCE_SCRIPT = '    <script src="./assets/source-page.js?v=12"></script>\n'
+SOURCE_STYLE = '    <link href="./assets/source-facsimile.css?v=12" rel="stylesheet">\n'
+SOURCE_SCRIPT = '    <script src="./assets/source-page.js?v=23"></script>\n'
 
 
 def page_path(number: int) -> Path:
@@ -84,7 +84,7 @@ def install_page(number: int) -> bool:
 
     updated = re.sub(
         r'offline-preloader\.js(?:\?v=\d+)?',
-        'offline-preloader.js?v=20',
+        'offline-preloader.js?v=31',
         updated,
     )
 

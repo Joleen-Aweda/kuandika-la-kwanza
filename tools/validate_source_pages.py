@@ -26,9 +26,9 @@ def main() -> None:
         "Sehemu ya jibu",
     )
     required = (
-        "source-facsimile.css?v=11",
-        "source-page.js?v=12",
-        "offline-preloader.js?v=20",
+        "source-facsimile.css?v=12",
+        "source-page.js?v=24",
+        "offline-preloader.js?v=32",
     )
     for path in source_pages:
         source = path.read_text(encoding="utf-8")
