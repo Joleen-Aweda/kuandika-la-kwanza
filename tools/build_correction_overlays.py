@@ -14,6 +14,8 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
+from joleen_review_overlays import BOLD_TOKENS, OVERLAY_POSITIONS
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_TOP = 110
@@ -23,7 +25,14 @@ EXTENDED_HEIGHT = 1170
 FONT_SIZE = 28
 LINE_HEIGHT = 27
 LETTER_INSTRUCTION_GAP = 30
-LINE_NAMES = ("firstLine", "secondLine", "thirdLine", "fourthLine")
+LINE_NAMES = (
+    "firstLine",
+    "secondLine",
+    "thirdLine",
+    "fourthLine",
+    "fifthLine",
+    "sixthLine",
+)
 
 SPLIT_LAYOUTS = {
     "55": {
@@ -223,9 +232,14 @@ def draw_position_text(
     lines = balance_lines(source_lines, font)
     text_top = position["firstLineY"] + y_offset - FONT_SIZE - SOURCE_TOP
     for index, line in enumerate(lines):
+        x = position.get("textX", 110)
+        if position.get("textAlign") == "center":
+            rect_left = position.get("rectX", 100)
+            rect_width = position.get("rectWidth", 730)
+            x = rect_left + round((rect_width - font.getlength(line)) / 2)
         draw_styled_line(
             draw,
-            (position.get("textX", 110), text_top + (index * LINE_HEIGHT)),
+            (x, text_top + (index * LINE_HEIGHT)),
             line,
             font,
             bold_tokens,
@@ -330,7 +344,17 @@ def render_split_layout(
 
     draw = ImageDraw.Draw(overlay)
     for position in positions:
-        draw_position_text(draw, position, font, bold_tokens, content_offset)
+        y_offset = position.get("layoutOffset", content_offset)
+        lines = [position[name] for name in LINE_NAMES if position.get(name)]
+        rect_top = position["rectY"] + y_offset - SOURCE_TOP
+        rect_height = max(position["height"], (len(lines) * LINE_HEIGHT) + 4)
+        rect_left = position.get("rectX", 100)
+        rect_right = rect_left + position.get("rectWidth", 730)
+        draw.rectangle(
+            (rect_left, rect_top, rect_right, rect_top + rect_height),
+            fill=tuple(position.get("fill", (255, 255, 255, 255))),
+        )
+        draw_position_text(draw, position, font, bold_tokens, y_offset)
 
 
 def shifted_position(position: dict, y_offset: int) -> dict:
@@ -348,7 +372,7 @@ def render_gapped_instruction_layout(
     font: ImageFont.FreeTypeFont,
     bold_tokens: list[str],
 ) -> None:
-    """Insert breathing room before each letter-writing instruction."""
+    """Replace one printed instruction with a taller corrected block."""
     source_page = Image.open(
         ROOT / f"images/source-pages/pg{int(page_key):03d}.png"
     ).convert("RGBA")
@@ -357,46 +381,48 @@ def render_gapped_instruction_layout(
 
     source_cursor = SOURCE_TOP
     destination_y = 0
+    rendered_positions: list[tuple[dict, int, list[str]]] = []
     for position in positions:
-        insertion_y = position["rectY"]
-        segment = source_page.crop((0, source_cursor, PAGE_WIDTH, insertion_y))
+        old_top = position["rectY"] - 10
+        old_bottom = position["rectY"] + 50
+        segment = source_page.crop((0, source_cursor, PAGE_WIDTH, old_top))
         overlay.alpha_composite(segment, dest=(0, destination_y))
         destination_y += segment.height
-        background_band = blank_background_band(
-            source_page,
-            insertion_y,
-            LETTER_INSTRUCTION_GAP,
-        )
+        source_lines = [position[name] for name in LINE_NAMES if position.get(name)]
+        lines = balance_lines(source_lines, font)
+        block_height = max(position["height"], (len(lines) * LINE_HEIGHT) + 4) + 12
+        background_band = blank_background_band(source_page, old_top, block_height)
         overlay.alpha_composite(background_band, dest=(0, destination_y))
-        destination_y += LETTER_INSTRUCTION_GAP
-        source_cursor = insertion_y
+        rendered_positions.append((position, destination_y, lines))
+        destination_y += block_height
+        source_cursor = old_bottom
 
     remaining = source_page.crop((0, source_cursor, PAGE_WIDTH, 1150))
     overlay.alpha_composite(remaining, dest=(0, destination_y))
 
     draw = ImageDraw.Draw(overlay)
-    for index, position in enumerate(positions):
-        shifted = shifted_position(
-            position,
-            LETTER_INSTRUCTION_GAP * (index + 1),
-        )
-        source_lines = [shifted[name] for name in LINE_NAMES if shifted.get(name)]
-        lines = balance_lines(source_lines, font)
-        rect_top = shifted["rectY"] - SOURCE_TOP
-        rect_height = max(shifted["height"], (len(lines) * LINE_HEIGHT) + 4)
-        rect_left = shifted.get("rectX", 100)
-        rect_right = rect_left + shifted.get("rectWidth", 730)
+    for position, rect_top, lines in rendered_positions:
+        rect_height = max(position["height"], (len(lines) * LINE_HEIGHT) + 4) + 12
+        rect_left = position.get("rectX", 100)
+        rect_right = rect_left + position.get("rectWidth", 730)
         draw.rectangle(
             (rect_left, rect_top, rect_right, rect_top + rect_height),
-            fill=(255, 255, 255, 255),
+            fill=tuple(position.get("fill", (255, 255, 255, 255))),
         )
-        draw_position_text(draw, shifted, font, bold_tokens)
+        for index, line in enumerate(lines):
+            x = position.get("textX", 110)
+            draw_styled_line(
+                draw,
+                (x, rect_top + 5 + (index * LINE_HEIGHT)),
+                line,
+                font,
+                bold_tokens,
+            )
 
 
 def main() -> None:
-    source = (ROOT / "assets" / "source-page.js").read_text(encoding="utf-8")
-    bold_by_page = read_js_object(source, "boldTokensByPage", "positions")
-    positions = read_js_object(source, "positions", "pagePositions")
+    bold_by_page = BOLD_TOKENS
+    positions = OVERLAY_POSITIONS
     font = ImageFont.truetype(ROOT / "assets" / "fonts" / "SassoonPrimary-Source.ttf", FONT_SIZE)
     output_dir = ROOT / "images" / "corrections"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -405,12 +431,22 @@ def main() -> None:
     for page_key, raw_positions in positions.items():
         page_positions = raw_positions if isinstance(raw_positions, list) else [raw_positions]
         layout = SPLIT_LAYOUTS.get(page_key)
-        gapped_instruction_page = layout is None and 11 <= int(page_key) <= 52
+        gapped_instruction_page = layout is None and any(
+            position.get("gap", 0) > 0 for position in page_positions
+        )
         overlay_height = (
             layout.get("height", CROPPED_HEIGHT)
             if layout
             else CROPPED_HEIGHT + (
-                len(page_positions) * LETTER_INSTRUCTION_GAP
+                sum(
+                    max(
+                        position["height"],
+                        len([name for name in LINE_NAMES if position.get(name)]) * LINE_HEIGHT + 4,
+                    )
+                    + 12
+                    - 60
+                    for position in page_positions
+                )
                 if gapped_instruction_page
                 else 0
             )
@@ -441,11 +477,7 @@ def main() -> None:
             rect_height = max(position["height"], (len(lines) * LINE_HEIGHT) + 4)
             rect_left = position.get("rectX", 100)
             rect_right = rect_left + position.get("rectWidth", 730)
-            rectangle_fill = (
-                (255, 253, 217, 255)
-                if page_key in {"89", "97"}
-                else (255, 255, 255, 255)
-            )
+            rectangle_fill = tuple(position.get("fill", (255, 255, 255, 255)))
             draw.rectangle(
                 (rect_left, rect_top, rect_right, rect_top + rect_height),
                 fill=rectangle_fill,

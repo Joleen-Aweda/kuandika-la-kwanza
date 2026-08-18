@@ -9,6 +9,14 @@
   var SOURCE_PDF_HEIGHT = 767.669;
   var CORRECTION_FONT_SIZE = 28;
   var CORRECTION_LINE_HEIGHT = 27;
+  var CORRECTION_PAGES = [
+    6, 8, 9, 10, 11, 12, 13, 16, 17, 19, 20, 21, 22, 23, 24,
+    27, 29, 30, 31, 32, 33, 34, 37, 39, 40, 41, 42, 44, 47, 49,
+    50, 52, 54, 55, 57, 58, 60, 61, 63, 65, 66, 68, 69, 70, 72,
+    74, 75, 76, 77, 79, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92,
+    93, 94, 95, 97, 98, 100, 101, 102, 104, 106, 107, 109, 111,
+    113,
+  ];
   var EXTENDED_CORRECTION_HEIGHTS = {
     55: 1200,
     57: 1200,
@@ -618,17 +626,16 @@
         },
       ],
     };
-    var pagePositions = positions[pageNumber];
-    if (!pagePositions) return;
-    if (!Array.isArray(pagePositions)) pagePositions = [pagePositions];
-
-    if (!EXTENDED_CORRECTION_HEIGHTS[pageNumber] && pageNumber >= 11 && pageNumber <= 52) {
-      stage.style.aspectRatio = "930 / " + (1040 + (pagePositions.length * 30));
-    }
+    if (CORRECTION_PAGES.indexOf(pageNumber) < 0) return;
 
     var overlay = document.createElement("img");
     overlay.className = "source-text-correction-image";
-    overlay.src = "images/corrections/pg" + String(pageNumber).padStart(3, "0") + ".png?v=14";
+    overlay.addEventListener("load", function () {
+      if (overlay.naturalWidth && overlay.naturalHeight) {
+        stage.style.aspectRatio = overlay.naturalWidth + " / " + overlay.naturalHeight;
+      }
+    }, { once: true });
+    overlay.src = "images/corrections/pg" + String(pageNumber).padStart(3, "0") + ".png?v=15";
     overlay.alt = "";
     overlay.setAttribute("aria-hidden", "true");
     overlay.draggable = false;

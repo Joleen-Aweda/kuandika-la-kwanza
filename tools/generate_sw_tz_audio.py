@@ -32,6 +32,9 @@ NUMBER_WORDS = {
     0: "sifuri", 1: "moja", 2: "mbili", 3: "tatu", 4: "nne",
     5: "tano", 6: "sita", 7: "saba", 8: "nane", 9: "tisa",
     10: "kumi", 11: "kumi na moja", 12: "kumi na mbili",
+    13: "kumi na tatu", 14: "kumi na nne", 15: "kumi na tano",
+    16: "kumi na sita", 17: "kumi na saba", 18: "kumi na nane",
+    19: "kumi na tisa", 20: "ishirini",
 }
 LETTER_NAMES = {
     "b": "be", "m": "me", "k": "ke", "d": "de", "n": "ne",
@@ -55,6 +58,20 @@ YEAR_SPEECH = {
     "2021": "mwaka elfu mbili na ishirini na moja",
     "2023": "mwaka elfu mbili na ishirini na tatu",
 }
+ABBREVIATION_SPEECH = (
+    (r"(?<!\w)Dkt\.(?=\s|$)", "Doctor"),
+    (r"(?<!\w)Bw\.(?=\s|$)", "Bwana"),
+    (r"(?<!\w)Bi\.(?=\s|$)", "Bibi"),
+)
+ROMAN_VALUES = {
+    "i": 1,
+    "v": 5,
+    "x": 10,
+    "l": 50,
+    "c": 100,
+    "d": 500,
+    "m": 1000,
+}
 
 
 def load_json(path: Path) -> dict[str, str]:
@@ -63,6 +80,43 @@ def load_json(path: Path) -> dict[str, str]:
 
 def number_word(value: int) -> str:
     return NUMBER_WORDS.get(value, str(value))
+
+
+def roman_value(token: str) -> int:
+    total = 0
+    previous = 0
+    for character in reversed(token.lower()):
+        value = ROMAN_VALUES[character]
+        if value < previous:
+            total -= value
+        else:
+            total += value
+            previous = value
+    return total
+
+
+def expand_roman_marker(text: str) -> str:
+    """Expand list-style Roman numerals without changing exercise letter i."""
+    marker = re.match(r"^(\s*)(\(?)([ivxlcdm]+)([.)])(?=\s|$)", text)
+    if marker:
+        replacement = f"{marker.group(1)}{number_word(roman_value(marker.group(3)))}"
+        return replacement + text[marker.end():]
+
+    exact = re.fullmatch(r"\s*([ivxlcdm]{2,8})\s*", text)
+    if exact and exact.group(1) not in {"di", "li", "mi", "vi"}:
+        return number_word(roman_value(exact.group(1)))
+    return text
+
+
+def exercise_grapheme(value: str):
+    compact = re.sub(r"\s+", "", value).lower()
+    if re.fullmatch(r"[a-z]", compact) or compact == "ch":
+        return compact
+    return None
+
+
+def is_answer_field(key: str) -> bool:
+    return "_ans_item-" in key
 
 
 def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
@@ -82,6 +136,19 @@ def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
 
     text = visible.strip()
     text = re.sub(r"\bPAH\b", "", text, flags=re.IGNORECASE)
+
+    # ISBN hyphens are visual separators, not spoken subtraction signs. Read
+    # the identifier digit by digit so the voice never inserts "ondoa".
+    isbn = re.search(r"\bISBN\s*:\s*([0-9-]+)", text, flags=re.IGNORECASE)
+    if isbn:
+        digits = re.sub(r"\D", "", isbn.group(1))
+        spoken_digits = ", ".join(number_word(int(digit)) for digit in digits)
+        return f"I, S, B, N. {spoken_digits}"
+
+    for pattern, expansion in ABBREVIATION_SPEECH:
+        text = re.sub(pattern, expansion, text)
+    text = expand_roman_marker(text)
+
     for year, spoken_year in YEAR_SPEECH.items():
         text = re.sub(rf"\bmwaka\s+{year}\b", spoken_year, text, flags=re.IGNORECASE)
         text = re.sub(rf"\b{year}\b", spoken_year, text)
@@ -101,11 +168,10 @@ def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
         pronunciation = LETTER_NAMES.get(letter, letter)
         return ", ".join([pronunciation] * min(len(compact), 6))
 
-    letters_only = re.sub(r"[^A-Za-z]", "", compact).lower()
-    if letters_only in {"a", "e", "i", "o", "u"} and len(compact) <= 3 and not re.search(r"\d", compact):
-        return letters_only
-    if letters_only in LETTER_NAMES and len(compact) <= 4 and not re.search(r"\d", compact):
-        return LETTER_NAMES[letters_only]
+    grapheme = exercise_grapheme(compact)
+    if grapheme:
+        pronunciation = LETTER_NAMES.get(grapheme, grapheme)
+        return f"Herufi {pronunciation}"
 
     standalone_number = re.fullmatch(r"\d{1,2}", compact)
     if standalone_number:
@@ -177,9 +243,24 @@ async def run(args: argparse.Namespace) -> None:
     overrides = load_json(ROOT / "tools" / "sw_tz_pronunciation_overrides.json")
     mappings = load_json(source_root / "audios.json")
 
+    removed_answer_mappings = 0
+    for key in list(mappings):
+        visible = texts.get(key)
+        if visible is not None and (not visible.strip() or is_answer_field(key)):
+            del mappings[key]
+            removed_answer_mappings += 1
+
     for key, value in texts.items():
-        if value.strip():
+        if value.strip() and not is_answer_field(key):
             mappings.setdefault(key, f"{key}.mp3")
+
+    exercise_letter_keys: set[str] = set()
+    if args.exercise_letters:
+        for key, value in texts.items():
+            grapheme = exercise_grapheme(value)
+            if grapheme and not is_answer_field(key):
+                mappings[key] = f"exercise-letter-{grapheme}.mp3"
+                exercise_letter_keys.add(key)
 
     for lang in TARGET_LANGS:
         target_mapping = ROOT / "content" / "i18n" / lang / "audios.json"
@@ -193,6 +274,14 @@ async def run(args: argparse.Namespace) -> None:
             jobs.append((key, speech, filename))
 
     selected = set(args.key or [])
+    if args.abbreviations:
+        selected.update(
+            key
+            for key, value in texts.items()
+            if any(re.search(pattern, value) for pattern, _ in ABBREVIATION_SPEECH)
+        )
+    if args.exercise_letters:
+        selected.update(exercise_letter_keys)
     if args.letter_titles:
         title_keys = {
             key
@@ -205,6 +294,22 @@ async def run(args: argparse.Namespace) -> None:
             for key in title_keys
             if f"{key}_easy_read" in texts
         )
+    if args.review_corrections:
+        from apply_instruction_expansions import EXPANSIONS
+
+        selected.update(EXPANSIONS)
+        selected.update(
+            f"{key}_easy_read"
+            for key in EXPANSIONS
+            if f"{key}_easy_read" in texts
+        )
+        # Page 111 previously reused page 108 IDs.  Its repaired, unique IDs
+        # all need their own read-aloud files and mappings.
+        selected.update(
+            key
+            for key, value in texts.items()
+            if key.startswith("pg111_") and value.strip() and not is_answer_field(key)
+        )
     if selected:
         jobs = [job for job in jobs if job[0] in selected]
         missing_keys = selected - {job[0] for job in jobs}
@@ -212,7 +317,19 @@ async def run(args: argparse.Namespace) -> None:
             raise SystemExit(f"Unknown or empty text IDs: {', '.join(sorted(missing_keys))}")
     if args.limit:
         jobs = jobs[: args.limit]
-    print(f"Selected {len(jobs)} Rehema tracks for {', '.join(TARGET_LANGS)}")
+    selected_text_ids = len(jobs)
+    unique_jobs: dict[str, tuple[str, str, str]] = {}
+    for job in jobs:
+        key, speech, filename = job
+        existing = unique_jobs.get(filename)
+        if existing and existing[1] != speech:
+            raise SystemExit(f"Conflicting speech for shared audio file {filename}")
+        unique_jobs.setdefault(filename, job)
+    jobs = list(unique_jobs.values())
+    print(
+        f"Selected {len(jobs)} Rehema tracks for {selected_text_ids} text IDs "
+        f"in {', '.join(TARGET_LANGS)}; removed {removed_answer_mappings} answer/blank mappings"
+    )
     if args.dry_run:
         for key, speech, filename in jobs[:100]:
             print(key, filename, "=>", speech)
@@ -258,6 +375,21 @@ def main() -> None:
         "--letter-titles",
         action="store_true",
         help="generate every Ninaandika-herufi title and its easy-read track",
+    )
+    parser.add_argument(
+        "--abbreviations",
+        action="store_true",
+        help="generate tracks containing Dkt., Bw., or Bi. with spoken expansions",
+    )
+    parser.add_argument(
+        "--exercise-letters",
+        action="store_true",
+        help="generate shared Herufi-a, Herufi-be, and related exercise tracks",
+    )
+    parser.add_argument(
+        "--review-corrections",
+        action="store_true",
+        help="generate every Joleen review correction and repaired page 111 track",
     )
     parser.add_argument("--limit", type=int, help="generate only the first N tracks for testing")
     parser.add_argument("--dry-run", action="store_true")
