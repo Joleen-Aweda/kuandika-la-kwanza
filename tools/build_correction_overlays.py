@@ -139,8 +139,34 @@ def draw_styled_line(
     value: str,
     font: ImageFont.FreeTypeFont,
     bold_tokens: list[str],
+    target_width: int | None = None,
 ) -> None:
     x, y = position
+    if target_width is not None:
+        words = value.split()
+        if len(words) > 1:
+            word_widths = [round(draw.textlength(word, font=font)) for word in words]
+            natural_space = draw.textlength(" ", font=font)
+            available_space = target_width - sum(word_widths)
+            justified_space = available_space / (len(words) - 1)
+            # Avoid the conspicuously loose spacing produced by justifying a
+            # very short line. Such lines are treated like paragraph endings.
+            if natural_space <= justified_space <= natural_space * 3:
+                for index, word in enumerate(words):
+                    token = word.strip(".,;:!?()[]")
+                    bold = token in bold_tokens
+                    draw.text(
+                        (x, y),
+                        word,
+                        font=font,
+                        fill=(35, 31, 32, 255),
+                        stroke_width=1 if bold else 0,
+                        stroke_fill=(35, 31, 32, 255),
+                    )
+                    x += word_widths[index]
+                    if index < len(words) - 1:
+                        x += justified_space
+                return
     if bold_tokens:
         alternatives = "|".join(re.escape(token) for token in sorted(bold_tokens, key=len, reverse=True))
         parts = re.split(rf"(\b(?:{alternatives})\b)", value)
@@ -233,16 +259,21 @@ def draw_position_text(
     text_top = position["firstLineY"] + y_offset - FONT_SIZE - SOURCE_TOP
     for index, line in enumerate(lines):
         x = position.get("textX", 110)
-        if position.get("textAlign") == "center":
-            rect_left = position.get("rectX", 100)
-            rect_width = position.get("rectWidth", 730)
+        rect_left = position.get("rectX", 100)
+        rect_width = position.get("rectWidth", 730)
+        alignment = position.get("textAlign", "justify")
+        if alignment == "center":
             x = rect_left + round((rect_width - font.getlength(line)) / 2)
+        target_width = None
+        if alignment == "justify" and index < len(lines) - 1:
+            target_width = rect_left + rect_width - x - 10
         draw_styled_line(
             draw,
             (x, text_top + (index * LINE_HEIGHT)),
             line,
             font,
             bold_tokens,
+            target_width,
         )
     return lines
 
@@ -411,12 +442,18 @@ def render_gapped_instruction_layout(
         )
         for index, line in enumerate(lines):
             x = position.get("textX", 110)
+            rect_left = position.get("rectX", 100)
+            rect_width = position.get("rectWidth", 730)
+            target_width = None
+            if position.get("textAlign", "justify") == "justify" and index < len(lines) - 1:
+                target_width = rect_left + rect_width - x - 10
             draw_styled_line(
                 draw,
                 (x, rect_top + 5 + (index * LINE_HEIGHT)),
                 line,
                 font,
                 bold_tokens,
+                target_width,
             )
 
 

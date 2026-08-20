@@ -60,7 +60,10 @@ def blend_write(letter: str, *dots: int) -> str:
     )
 
 
-SPAR_WHEEL = "Chora mchoro huu kwa kutumia kifaa cha kuchorea (Spar wheel)."
+SPAR_WHEEL = (
+    "Chora mchoro huu/Chora mchoro huu kwa kutumia Kifaa cha kuchorea "
+    "(Spar wheel)."
+)
 
 VIDEO_IRABU = (
     "Tazama video zinavyoonesha jinsi ya kuandika herufi ndogo za irabu. "
@@ -80,6 +83,10 @@ VIDEO_CAPITAL_CONSONANTS = (
 EXPANSIONS: dict[str, tuple[int, str]] = {
     # Front matter and pre-writing exercises.
     "pg006_n0016": (6, "4. Kumudu kuandika kwa kutumia vifaa vya brelli."),
+    "pg007_n0008": (
+        7,
+        "Chora michoro hii/Chora michoro hii  kwa kutumia vifaa vya brielli.",
+    ),
     "pg008_n0005": (
         8,
         "Fuatisha michoro hii / kwa kutumia kifaa cha kuchorea (Spar wheel), "
@@ -96,10 +103,11 @@ EXPANSIONS: dict[str, tuple[int, str]] = {
     ),
     "pg010_n0006": (
         10,
-        "Chora michoro hii / Chora michoro hii kwa kutumia vifaa vya brelli.",
+        "Chora michoro hii/Chora michoro hii  kwa kutumia vifaa vya brielli.",
     ),
 
     # Lowercase vowels and consonants.
+    "pg011_n0014": (11, SPAR_WHEEL),
     "pg011_n0016": (
         11,
         "Fuatisha herufi ya irabu a kwa kuandika doti ya kwanza kwa kurudia "
@@ -111,6 +119,7 @@ EXPANSIONS: dict[str, tuple[int, str]] = {
         "na ujaze mstari.",
     ),
     "pg012_n0005": (12, SPAR_WHEEL),
+    "pg012_n0034": (12, SPAR_WHEEL),
     "pg012_n0009": (
         12,
         "Fuatisha herufi ya irabu e kwa kuandika doti ya kwanza na doti ya tano "
@@ -131,6 +140,8 @@ EXPANSIONS: dict[str, tuple[int, str]] = {
         "Andika herufi ya irabu o. Andika doti ya kwanza, doti ya tatu na "
         "doti ya tano kwa nafasi na ujaze mstari.",
     ),
+    "pg013_n0028": (13, SPAR_WHEEL),
+    "pg014_n0006": (14, SPAR_WHEEL),
     "pg016_n0006": (16, VIDEO_IRABU),
     "pg017_n0013": (17, SPAR_WHEEL),
     "pg017_n0014": (17, trace_instruction("ya konsonanti", "b", 1, 2)),

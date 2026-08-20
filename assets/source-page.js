@@ -10,7 +10,7 @@
   var CORRECTION_FONT_SIZE = 28;
   var CORRECTION_LINE_HEIGHT = 27;
   var CORRECTION_PAGES = [
-    6, 8, 9, 10, 11, 12, 13, 16, 17, 19, 20, 21, 22, 23, 24,
+    6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 19, 20, 21, 22, 23, 24,
     27, 29, 30, 31, 32, 33, 34, 37, 39, 40, 41, 42, 44, 47, 49,
     50, 52, 54, 55, 57, 58, 60, 61, 63, 65, 66, 68, 69, 70, 72,
     74, 75, 76, 77, 79, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92,
@@ -635,7 +635,7 @@
         stage.style.aspectRatio = overlay.naturalWidth + " / " + overlay.naturalHeight;
       }
     }, { once: true });
-    overlay.src = "images/corrections/pg" + String(pageNumber).padStart(3, "0") + ".png?v=15";
+    overlay.src = "images/corrections/pg" + String(pageNumber).padStart(3, "0") + ".png?v=18";
     overlay.alt = "";
     overlay.setAttribute("aria-hidden", "true");
     overlay.draggable = false;
