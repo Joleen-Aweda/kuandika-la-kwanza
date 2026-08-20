@@ -106,10 +106,16 @@ OVERLAY_POSITIONS: dict[str, list[dict] | dict] = {
         "fontSize": 25,
     },
     "8": correction("pg008_n0005", 292, line_count=2, rect_x=110, rect_width=700, text_x=119, first_line_y=321, gap=0),
-    "9": correction("pg009_n0002", 132, line_count=2, rect_x=110, rect_width=700, text_x=120, first_line_y=160, gap=0),
+    "9": {
+        **correction("pg009_n0002", 132, line_count=1, rect_x=110, rect_width=700, text_x=120, first_line_y=160, gap=0),
+        "fontSize": 25,
+    },
     "10": [
         correction("pg010_n0005", 278, line_count=2, rect_x=110, rect_width=700, text_x=120, first_line_y=307, gap=30),
-        correction("pg010_n0006", 700, line_count=2, rect_x=110, rect_width=720, text_x=120, first_line_y=729, gap=30),
+        {
+            **correction("pg010_n0006", 700, line_count=1, rect_x=110, rect_width=720, text_x=120, first_line_y=729, gap=30),
+            "fontSize": 25,
+        },
     ],
     "11": [correction("pg011_n0014", 604, line_count=2), correction("pg011_n0016", 772, line_count=2), correction("pg011_n0028", 974, line_count=2)],
     "12": [correction("pg012_n0005", 281, line_count=2), correction("pg012_n0009", 452, line_count=2), correction("pg012_n0021", 648, line_count=2), correction("pg012_n0034", 989, line_count=2)],

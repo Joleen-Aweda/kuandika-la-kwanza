@@ -25,6 +25,7 @@ EXTENDED_HEIGHT = 1170
 FONT_SIZE = 28
 LINE_HEIGHT = 27
 LETTER_INSTRUCTION_GAP = 30
+PARAGRAPH_AFTER_GAP = 16
 LINE_NAMES = (
     "firstLine",
     "secondLine",
@@ -297,14 +298,18 @@ def draw_position_text(
         - text_x
         - 10
     )
+    flow = position.get(
+        "flow",
+        "balance" if position.get("textAlign") == "center" else "fill",
+    )
     lines = (
         fill_lines(
             source_lines,
             position_font,
             usable_width,
-            position.get("minLastWords", 1),
+            position.get("minLastWords", 3),
         )
-        if position.get("flow") == "fill"
+        if flow == "fill"
         else balance_lines(source_lines, position_font)
     )
     text_top = position["firstLineY"] + y_offset - position_font.size - SOURCE_TOP
@@ -464,8 +469,16 @@ def render_gapped_instruction_layout(
 
     source_cursor = SOURCE_TOP
     destination_y = 0
-    rendered_positions: list[tuple[dict, int, list[str]]] = []
+    rendered_positions: list[
+        tuple[dict, int, list[str], ImageFont.FreeTypeFont]
+    ] = []
     for position in positions:
+        position_font = font
+        if position.get("fontSize") and position["fontSize"] != FONT_SIZE:
+            position_font = ImageFont.truetype(
+                ROOT / "assets" / "fonts" / "SassoonPrimary-Source.ttf",
+                position["fontSize"],
+            )
         old_top = position["rectY"] - 10
         old_bottom = position["rectY"] + 50
         segment = source_page.crop((0, source_cursor, PAGE_WIDTH, old_top))
@@ -478,20 +491,28 @@ def render_gapped_instruction_layout(
             - position.get("textX", 110)
             - 10
         )
+        flow = position.get(
+            "flow",
+            "balance" if position.get("textAlign") == "center" else "fill",
+        )
         lines = (
             fill_lines(
                 source_lines,
-                font,
+                position_font,
                 usable_width,
-                position.get("minLastWords", 1),
+                position.get("minLastWords", 3),
             )
-            if position.get("flow") == "fill"
-            else balance_lines(source_lines, font)
+            if flow == "fill"
+            else balance_lines(source_lines, position_font)
         )
-        block_height = max(position["height"], (len(lines) * LINE_HEIGHT) + 4) + 12
+        block_height = (
+            max(position["height"], (len(lines) * LINE_HEIGHT) + 4)
+            + 12
+            + PARAGRAPH_AFTER_GAP
+        )
         background_band = blank_background_band(source_page, old_top, block_height)
         overlay.alpha_composite(background_band, dest=(0, destination_y))
-        rendered_positions.append((position, destination_y, lines))
+        rendered_positions.append((position, destination_y, lines, position_font))
         destination_y += block_height
         source_cursor = old_bottom
 
@@ -499,8 +520,12 @@ def render_gapped_instruction_layout(
     overlay.alpha_composite(remaining, dest=(0, destination_y))
 
     draw = ImageDraw.Draw(overlay)
-    for position, rect_top, lines in rendered_positions:
-        rect_height = max(position["height"], (len(lines) * LINE_HEIGHT) + 4) + 12
+    for position, rect_top, lines, position_font in rendered_positions:
+        rect_height = (
+            max(position["height"], (len(lines) * LINE_HEIGHT) + 4)
+            + 12
+            + PARAGRAPH_AFTER_GAP
+        )
         rect_left = position.get("rectX", 100)
         rect_right = rect_left + position.get("rectWidth", 730)
         draw.rectangle(
@@ -518,7 +543,7 @@ def render_gapped_instruction_layout(
                 draw,
                 (x, rect_top + 5 + (index * LINE_HEIGHT)),
                 line,
-                font,
+                position_font,
                 bold_tokens,
                 target_width,
                 position.get("maxSpaceMultiplier", 3),
@@ -542,18 +567,22 @@ def main() -> None:
         overlay_height = (
             layout.get("height", CROPPED_HEIGHT)
             if layout
-            else CROPPED_HEIGHT + (
-                sum(
-                    max(
-                        position["height"],
-                        len([name for name in LINE_NAMES if position.get(name)]) * LINE_HEIGHT + 4,
+            else max(
+                CROPPED_HEIGHT,
+                CROPPED_HEIGHT + (
+                    sum(
+                        max(
+                            position["height"],
+                            len([name for name in LINE_NAMES if position.get(name)]) * LINE_HEIGHT + 4,
+                        )
+                        + 12
+                        + PARAGRAPH_AFTER_GAP
+                        - 60
+                        for position in page_positions
                     )
-                    + 12
-                    - 60
-                    for position in page_positions
-                )
-                if gapped_instruction_page
-                else 0
+                    if gapped_instruction_page
+                    else 0
+                ),
             )
         )
         overlay = Image.new("RGBA", (PAGE_WIDTH, overlay_height), (255, 255, 255, 0))
