@@ -140,6 +140,7 @@ def draw_styled_line(
     font: ImageFont.FreeTypeFont,
     bold_tokens: list[str],
     target_width: int | None = None,
+    max_space_multiplier: float = 3,
 ) -> None:
     x, y = position
     if target_width is not None:
@@ -151,7 +152,7 @@ def draw_styled_line(
             justified_space = available_space / (len(words) - 1)
             # Avoid the conspicuously loose spacing produced by justifying a
             # very short line. Such lines are treated like paragraph endings.
-            if natural_space <= justified_space <= natural_space * 3:
+            if natural_space <= justified_space <= natural_space * max_space_multiplier:
                 for index, word in enumerate(words):
                     token = word.strip(".,;:!?()[]")
                     bold = token in bold_tokens
@@ -247,6 +248,34 @@ def balance_lines(
     return lines
 
 
+def fill_lines(
+    values: list[str],
+    font: ImageFont.FreeTypeFont,
+    max_width: float,
+    min_last_words: int = 1,
+) -> list[str]:
+    """Wrap like body text: use the line width before continuing below."""
+    words = " ".join(values).split()
+    line_count = len(values)
+    lines: list[str] = []
+    start = 0
+    for line_index in range(line_count - 1):
+        words_needed_below = max(
+            line_count - line_index - 1,
+            min_last_words if line_index == line_count - 2 else 1,
+        )
+        end = start + 1
+        while end < len(words) - words_needed_below:
+            candidate = " ".join(words[start : end + 1])
+            if font.getlength(candidate) > max_width:
+                break
+            end += 1
+        lines.append(" ".join(words[start:end]))
+        start = end
+    lines.append(" ".join(words[start:]))
+    return lines
+
+
 def draw_position_text(
     draw: ImageDraw.ImageDraw,
     position: dict,
@@ -254,16 +283,38 @@ def draw_position_text(
     bold_tokens: list[str],
     y_offset: int = 0,
 ) -> list[str]:
+    position_font = font
+    if position.get("fontSize") and position["fontSize"] != FONT_SIZE:
+        position_font = ImageFont.truetype(
+            ROOT / "assets" / "fonts" / "SassoonPrimary-Source.ttf",
+            position["fontSize"],
+        )
     source_lines = [position[name] for name in LINE_NAMES if position.get(name)]
-    lines = balance_lines(source_lines, font)
-    text_top = position["firstLineY"] + y_offset - FONT_SIZE - SOURCE_TOP
+    text_x = position.get("textX", 110)
+    usable_width = (
+        position.get("rectX", 100)
+        + position.get("rectWidth", 730)
+        - text_x
+        - 10
+    )
+    lines = (
+        fill_lines(
+            source_lines,
+            position_font,
+            usable_width,
+            position.get("minLastWords", 1),
+        )
+        if position.get("flow") == "fill"
+        else balance_lines(source_lines, position_font)
+    )
+    text_top = position["firstLineY"] + y_offset - position_font.size - SOURCE_TOP
     for index, line in enumerate(lines):
         x = position.get("textX", 110)
         rect_left = position.get("rectX", 100)
         rect_width = position.get("rectWidth", 730)
         alignment = position.get("textAlign", "justify")
         if alignment == "center":
-            x = rect_left + round((rect_width - font.getlength(line)) / 2)
+            x = rect_left + round((rect_width - position_font.getlength(line)) / 2)
         target_width = None
         if alignment == "justify" and index < len(lines) - 1:
             target_width = rect_left + rect_width - x - 10
@@ -271,9 +322,10 @@ def draw_position_text(
             draw,
             (x, text_top + (index * LINE_HEIGHT)),
             line,
-            font,
+            position_font,
             bold_tokens,
             target_width,
+            position.get("maxSpaceMultiplier", 3),
         )
     return lines
 
@@ -420,7 +472,22 @@ def render_gapped_instruction_layout(
         overlay.alpha_composite(segment, dest=(0, destination_y))
         destination_y += segment.height
         source_lines = [position[name] for name in LINE_NAMES if position.get(name)]
-        lines = balance_lines(source_lines, font)
+        usable_width = (
+            position.get("rectX", 100)
+            + position.get("rectWidth", 730)
+            - position.get("textX", 110)
+            - 10
+        )
+        lines = (
+            fill_lines(
+                source_lines,
+                font,
+                usable_width,
+                position.get("minLastWords", 1),
+            )
+            if position.get("flow") == "fill"
+            else balance_lines(source_lines, font)
+        )
         block_height = max(position["height"], (len(lines) * LINE_HEIGHT) + 4) + 12
         background_band = blank_background_band(source_page, old_top, block_height)
         overlay.alpha_composite(background_band, dest=(0, destination_y))
@@ -454,6 +521,7 @@ def render_gapped_instruction_layout(
                 font,
                 bold_tokens,
                 target_width,
+                position.get("maxSpaceMultiplier", 3),
             )
 
 

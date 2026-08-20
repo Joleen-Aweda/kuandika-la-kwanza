@@ -101,7 +101,10 @@ OVERLAY_POSITIONS: dict[str, list[dict] | dict] = {
         positioned("3. Kutumia kanuni za uandishi.", 628, line_count=1, rect_x=110, rect_width=560, text_x=119, first_line_y=658, gap=0),
         correction("pg006_n0016", 665, line_count=1, rect_x=110, rect_width=650, text_x=119, first_line_y=695, gap=0),
     ],
-    "7": correction("pg007_n0008", 489, line_count=2, rect_x=110, rect_width=710, text_x=120, first_line_y=517, gap=30),
+    "7": {
+        **correction("pg007_n0008", 489, line_count=1, rect_x=110, rect_width=710, text_x=120, first_line_y=517, gap=0),
+        "fontSize": 25,
+    },
     "8": correction("pg008_n0005", 292, line_count=2, rect_x=110, rect_width=700, text_x=119, first_line_y=321, gap=0),
     "9": correction("pg009_n0002", 132, line_count=2, rect_x=110, rect_width=700, text_x=120, first_line_y=160, gap=0),
     "10": [
