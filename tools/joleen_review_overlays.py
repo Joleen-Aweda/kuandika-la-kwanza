@@ -40,6 +40,13 @@ def correction(
     align: str | None = None,
 ) -> dict:
     value = EXPANSIONS[text_id][1]
+    # The review uses a slash to retain the printed tracing prompt and add the
+    # complete accessible instruction.  That paired sentence needs one more
+    # line than the former replacement-only wording.
+    if value.startswith("Fuatisha herufi"):
+        line_count += 1
+        if gap is not None and gap > 0:
+            gap += 30
     return positioned(
         value,
         rect_y,
@@ -119,8 +126,18 @@ OVERLAY_POSITIONS: dict[str, list[dict] | dict] = {
     ],
     "11": [correction("pg011_n0014", 604, line_count=2), correction("pg011_n0016", 772, line_count=2), correction("pg011_n0028", 974, line_count=2)],
     "12": [correction("pg012_n0005", 281, line_count=2), correction("pg012_n0009", 452, line_count=2), correction("pg012_n0021", 648, line_count=2), correction("pg012_n0034", 989, line_count=2)],
-    "13": [correction("pg013_n0007", 319, line_count=2), correction("pg013_n0028", 641, line_count=2), correction("pg013_n0018", 982, line_count=2)],
-    "14": correction("pg014_n0006", 254, line_count=2),
+    "13": [
+        correction("pg013_n0002", 142, line_count=2),
+        correction("pg013_n0007", 319, line_count=2),
+        correction("pg013_n0028", 641, line_count=2),
+        correction("pg013_n0014", 807, line_count=2),
+        correction("pg013_n0018", 982, line_count=2),
+    ],
+    "14": [
+        correction("pg014_n0006", 254, line_count=2),
+        correction("pg014_n0009", 438, line_count=2),
+        correction("pg014_n0022", 616, line_count=2),
+    ],
     "16": positioned(VIDEO_IRABU, 220, line_count=6, rect_x=185, rect_width=420, text_x=195, first_line_y=252, gap=0, fill=WHITE, align="center"),
     "17": [correction("pg017_n0013", 615, line_count=2), correction("pg017_n0014", 792, line_count=2), correction("pg017_n0025", 976, line_count=2)],
     "19": [correction("pg019_n0008", 506, line_count=2), correction("pg019_n0010", 672, line_count=2)],

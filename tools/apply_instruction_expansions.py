@@ -34,8 +34,8 @@ def dot_list(*numbers: int) -> str:
 
 def trace_instruction(kind: str, letter: str, *dots: int) -> str:
     return (
-        f"Andika herufi {kind} {letter} kwa {dot_list(*dots)} kwa nafasi "
-        "na ujaze mstari."
+        f"Fuatisha herufi {kind} {letter} kwa kufuata hatua / Andika herufi "
+        f"{kind} {letter} kwa {dot_list(*dots)} kwa nafasi na ujaze mstari."
     )
 
 
@@ -48,8 +48,8 @@ def write_instruction(kind: str, letter: str, *dots: int) -> str:
 
 def blend_trace(letter: str, *dots: int) -> str:
     return (
-        f"Andika herufi mwambatano {letter} kwa {dot_list(*dots)} kwa nafasi "
-        "na ujaze mstari."
+        f"Fuatisha herufi mwambatano {letter} kwa kufuata hatua / Andika herufi "
+        f"mwambatano {letter} kwa {dot_list(*dots)} kwa nafasi na ujaze mstari."
     )
 
 
@@ -61,8 +61,13 @@ def blend_write(letter: str, *dots: int) -> str:
 
 
 SPAR_WHEEL = (
-    "Chora mchoro huu/Chora mchoro huu kwa kutumia Kifaa cha kuchorea "
+    "Chora mchoro huu / Chora mchoro huu kwa kutumia kifaa cha kuchorea "
     "(Spar wheel)."
+)
+
+TRACE_DRAWINGS = (
+    "Fuatisha michoro hii / Fuatisha michoro hii kwa kutumia kifaa cha "
+    "kuchorea (Spar wheel)."
 )
 
 VIDEO_IRABU = (
@@ -85,33 +90,30 @@ EXPANSIONS: dict[str, tuple[int, str]] = {
     "pg006_n0016": (6, "4. Kumudu kuandika kwa kutumia vifaa vya brelli."),
     "pg007_n0008": (
         7,
-        "Chora michoro hii/Chora michoro hii  kwa kutumia vifaa vya brielli.",
+        "Chora michoro hii / Chora michoro hii kwa kutumia vifaa vya brelli.",
     ),
     "pg008_n0005": (
         8,
-        "Fuatisha michoro hii / kwa kutumia kifaa cha kuchorea (Spar wheel), "
-        "fuatisha michoro hii.",
+        TRACE_DRAWINGS,
     ),
     "pg009_n0002": (
         9,
-        "Chora picha hizi kwa kutumia kifaa cha brelli. Chora picha hizi.",
+        "Chora picha hizi / Chora picha hizi kwa kutumia kifaa cha brelli.",
     ),
     "pg010_n0005": (
         10,
-        "Fuatisha michoro hii / kwa kutumia kifaa cha kuchorea (Spar wheel), "
-        "fuatisha michoro hii.",
+        TRACE_DRAWINGS,
     ),
     "pg010_n0006": (
         10,
-        "Chora michoro hii/Chora michoro hii  kwa kutumia vifaa vya brielli.",
+        "Chora michoro hii / Chora michoro hii kwa kutumia vifaa vya brelli.",
     ),
 
     # Lowercase vowels and consonants.
     "pg011_n0014": (11, SPAR_WHEEL),
     "pg011_n0016": (
         11,
-        "Fuatisha herufi ya irabu a kwa kuandika doti ya kwanza kwa kurudia "
-        "na ujaze mstari.",
+        trace_instruction("ya irabu", "a", 1),
     ),
     "pg011_n0028": (
         11,
@@ -122,19 +124,20 @@ EXPANSIONS: dict[str, tuple[int, str]] = {
     "pg012_n0034": (12, SPAR_WHEEL),
     "pg012_n0009": (
         12,
-        "Fuatisha herufi ya irabu e kwa kuandika doti ya kwanza na doti ya tano "
-        "kwa nafasi na ujaze mstari.",
+        trace_instruction("ya irabu", "e", 1, 5),
     ),
     "pg012_n0021": (
         12,
         "Andika herufi ya irabu e. Andika doti ya kwanza na doti ya tano kwa "
         "nafasi na ujaze mstari.",
     ),
+    "pg013_n0002": (13, trace_instruction("ya irabu", "i", 2, 4)),
     "pg013_n0007": (
         13,
         "Andika herufi ya irabu i. Andika doti ya pili na doti ya nne kwa "
         "nafasi na ujaze mstari.",
     ),
+    "pg013_n0014": (13, trace_instruction("ya irabu", "o", 1, 3, 5)),
     "pg013_n0018": (
         13,
         "Andika herufi ya irabu o. Andika doti ya kwanza, doti ya tatu na "
@@ -142,6 +145,8 @@ EXPANSIONS: dict[str, tuple[int, str]] = {
     ),
     "pg013_n0028": (13, SPAR_WHEEL),
     "pg014_n0006": (14, SPAR_WHEEL),
+    "pg014_n0009": (14, trace_instruction("ya irabu", "u", 1, 3, 6)),
+    "pg014_n0022": (14, write_instruction("ya irabu", "u", 1, 3, 6)),
     "pg016_n0006": (16, VIDEO_IRABU),
     "pg017_n0013": (17, SPAR_WHEEL),
     "pg017_n0014": (17, trace_instruction("ya konsonanti", "b", 1, 2)),

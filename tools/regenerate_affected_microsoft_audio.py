@@ -13,6 +13,7 @@ from pathlib import Path
 import edge_tts
 
 from generate_sw_tz_audio import spoken_text
+from apply_instruction_expansions import EXPANSIONS
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,6 +36,13 @@ async def main(args: argparse.Namespace) -> None:
     mappings = json.loads((source / "audios.json").read_text(encoding="utf-8"))
     overrides = json.loads((ROOT / "tools/sw_tz_pronunciation_overrides.json").read_text(encoding="utf-8"))
     keys = set(EXPLICIT_KEYS)
+    if args.all_reviewed:
+        keys.update(EXPANSIONS)
+        keys.update(
+            f"{key}_easy_read"
+            for key in EXPANSIONS
+            if f"{key}_easy_read" in texts
+        )
     keys.update(
         key for key, value in texts.items()
         if re.fullmatch(r"([A-Za-z])\1{2,}", str(value).strip(), flags=re.IGNORECASE)
@@ -66,4 +74,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--cache-dir", type=Path, default=Path("/private/tmp/kuandika-corrected-rehema"))
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument(
+        "--all-reviewed",
+        action="store_true",
+        help="Regenerate every reviewed instruction and its easy-read track.",
+    )
     asyncio.run(main(parser.parse_args()))

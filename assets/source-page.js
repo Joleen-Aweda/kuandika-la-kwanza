@@ -635,7 +635,7 @@
         stage.style.aspectRatio = overlay.naturalWidth + " / " + overlay.naturalHeight;
       }
     }, { once: true });
-    overlay.src = "images/corrections/pg" + String(pageNumber).padStart(3, "0") + ".png?v=23";
+    overlay.src = "images/corrections/pg" + String(pageNumber).padStart(3, "0") + ".png?v=24";
     overlay.alt = "";
     overlay.setAttribute("aria-hidden", "true");
     overlay.draggable = false;

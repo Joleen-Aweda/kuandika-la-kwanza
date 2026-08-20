@@ -27,8 +27,8 @@ def main() -> None:
     )
     required = (
         "source-facsimile.css?v=12",
-        "source-page.js?v=25",
-        "offline-preloader.js?v=34",
+        "source-page.js?v=34",
+        "offline-preloader.js?v=37",
     )
     for path in source_pages:
         source = path.read_text(encoding="utf-8")
