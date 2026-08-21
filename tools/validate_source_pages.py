@@ -27,8 +27,8 @@ def main() -> None:
     )
     required = (
         "source-facsimile.css?v=12",
-        "source-page.js?v=34",
-        "offline-preloader.js?v=37",
+        "source-page.js?v=40",
+        "offline-preloader.js?v=57",
     )
     for path in source_pages:
         source = path.read_text(encoding="utf-8")
@@ -36,6 +36,9 @@ def main() -> None:
             raise AssertionError(f"{path.name}: answer-area reference remains")
         if any(value not in source for value in required):
             raise AssertionError(f"{path.name}: source-page assets are incomplete")
+        facsimile = source.split('class="source-facsimile-page"', 1)[1].split(">", 1)[0]
+        if 'alt=""' not in facsimile or 'aria-hidden="true"' not in facsimile or "data-id=" in facsimile:
+            raise AssertionError(f"{path.name}: full-page facsimile is exposed as narrated content")
 
     source_script = (ROOT / "assets" / "source-page.js").read_text(encoding="utf-8")
     if any(value in source_script for value in ("canvas", "textarea", "localStorage")):
@@ -56,6 +59,8 @@ def main() -> None:
             data = json.loads((base / name).read_text(encoding="utf-8"))
             if any(key.startswith("qz") for key in data):
                 raise AssertionError(f"{language}/{name}: quiz mapping remains")
+            if any(key.endswith("_page_image") for key in data):
+                raise AssertionError(f"{language}/{name}: full-page image narration remains")
         if list((base / "audio").glob("qz*.mp3")):
             raise AssertionError(f"{language}: quiz audio files remain")
 

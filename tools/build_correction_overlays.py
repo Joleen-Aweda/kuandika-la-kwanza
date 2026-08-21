@@ -48,11 +48,12 @@ SPLIT_LAYOUTS = {
     },
     "57": {
         "height": 1200,
-        "content_offset": 90,
-        "top_insertions": [(205, 30), (280, 30), (447, 30)],
+        "content_offset": 150,
+        "top_insertions": [(205, 30), (280, 90, -1), (447, 30)],
         "covers": [(90, 447, 850, 1220)],
         "lower_source_y": 750,
         "lower_shift": 70,
+        "overlay_covers": [(90, 317, 850, 371)],
         "rows": [
             ((100, 542, 830, 600), (100, 530)),
             ((100, 623, 830, 724), (100, 690)),
@@ -60,11 +61,12 @@ SPLIT_LAYOUTS = {
     },
     "60": {
         "height": 1200,
-        "content_offset": 90,
-        "top_insertions": [(205, 30), (265, 30), (424, 30)],
+        "content_offset": 150,
+        "top_insertions": [(205, 30), (265, 90, -1), (424, 30)],
         "covers": [(90, 424, 850, 1220)],
         "lower_source_y": 730,
         "lower_shift": 70,
+        "overlay_covers": [(90, 294, 850, 342)],
         "rows": [
             ((100, 522, 830, 579), (100, 507)),
             ((100, 613, 830, 705), (100, 668)),
@@ -72,9 +74,10 @@ SPLIT_LAYOUTS = {
     },
     "61": {
         "height": 1200,
-        "content_offset": 90,
-        "top_insertions": [(640, 30), (695, 30), (848, 30)],
+        "content_offset": 150,
+        "top_insertions": [(640, 30), (695, 90, -1), (848, 30)],
         "covers": [(90, 848, 850, 1220)],
+        "overlay_covers": [(90, 718, 850, 768)],
         "rows": [
             ((100, 939, 830, 998), (100, 931)),
             ((100, 1030, 830, 1125), (100, 1095)),
@@ -82,9 +85,10 @@ SPLIT_LAYOUTS = {
     },
     "63": {
         "height": 1200,
-        "content_offset": 90,
-        "top_insertions": [(570, 30), (655, 30), (829, 30)],
+        "content_offset": 150,
+        "top_insertions": [(570, 30), (655, 90, -1), (829, 30)],
         "covers": [(90, 829, 850, 1220)],
+        "overlay_covers": [(90, 690, 850, 741)],
         "rows": [
             ((100, 938, 830, 998), (100, 912)),
             ((100, 1030, 830, 1120), (100, 1077)),
@@ -92,11 +96,12 @@ SPLIT_LAYOUTS = {
     },
     "65": {
         "height": 1200,
-        "content_offset": 90,
-        "top_insertions": [(205, 30), (280, 30), (438, 30)],
+        "content_offset": 150,
+        "top_insertions": [(205, 30), (280, 90, -1), (438, 30)],
         "covers": [(90, 438, 850, 1220)],
         "lower_source_y": 735,
         "lower_shift": 70,
+        "overlay_covers": [(90, 311, 850, 363)],
         "rows": [
             ((100, 533, 830, 591), (100, 521)),
             ((100, 623, 830, 715), (100, 683)),
@@ -104,12 +109,20 @@ SPLIT_LAYOUTS = {
     },
     "66": {
         "height": 1250,
-        "content_offset": 80,
-        "top_insertions": [(760, 25, -1), (815, 25, -1), (955, 30, -1)],
+        "content_offset": 140,
+        "top_insertions": [(760, 25, -1), (815, 85, -1), (955, 30, -1)],
         "covers": [
             (90, 955, 850, 1045),
             (0, 1142, PAGE_WIDTH, 1280),
         ],
+        "overlay_covers": [(90, 830, 850, 881)],
+        "rows": [],
+    },
+    "72": {
+        "height": 1130,
+        "content_offset": 90,
+        "top_insertions": [(710, 90, -1)],
+        "covers": [],
         "rows": [],
     },
 }
@@ -431,6 +444,9 @@ def render_split_layout(
         )
 
     draw = ImageDraw.Draw(overlay)
+    for left, top, right, bottom in layout.get("overlay_covers", []):
+        draw.rectangle((left, top, right, bottom), fill=(255, 255, 255, 255))
+
     for position in positions:
         y_offset = position.get("layoutOffset", content_offset)
         lines = [position[name] for name in LINE_NAMES if position.get(name)]
@@ -480,7 +496,7 @@ def render_gapped_instruction_layout(
                 position["fontSize"],
             )
         old_top = position["rectY"] - 10
-        old_bottom = position["rectY"] + 50
+        old_bottom = position.get("oldBottom", position["rectY"] + 50)
         segment = source_page.crop((0, source_cursor, PAGE_WIDTH, old_top))
         overlay.alpha_composite(segment, dest=(0, destination_y))
         destination_y += segment.height

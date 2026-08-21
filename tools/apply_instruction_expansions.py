@@ -71,15 +71,15 @@ TRACE_DRAWINGS = (
 )
 
 VIDEO_IRABU = (
-    "Tazama video zinavyoonesha jinsi ya kuandika herufi ndogo za irabu. "
+    "Sikiliza/Tazama video zinavyoonesha jinsi ya kuandika herufi ndogo za irabu. "
     "Kisha andika herufi hizo kwa kufuata hatua zake / doti zake."
 )
 VIDEO_SMALL_CONSONANTS = (
-    "Tazama video zinavyoonesha jinsi ya kuandika herufi ndogo za konsonanti. "
+    "Sikiliza/Tazama video zinavyoonesha jinsi ya kuandika herufi ndogo za konsonanti. "
     "Kisha andika herufi hizo kwa kufuata hatua zake / doti zake."
 )
 VIDEO_CAPITAL_CONSONANTS = (
-    "Tazama video zinavyoonesha jinsi ya kuandika herufi kubwa za konsonanti. "
+    "Sikiliza/Tazama video zinavyoonesha jinsi ya kuandika herufi kubwa za konsonanti. "
     "Kisha andika herufi hizo kwa kufuata hatua zake / doti zake."
 )
 
@@ -157,6 +157,7 @@ EXPANSIONS: dict[str, tuple[int, str]] = {
     ),
     "pg019_n0008": (19, SPAR_WHEEL),
     "pg019_n0010": (19, trace_instruction("ya konsonanti", "m", 1, 3, 4)),
+    "pg019_n0024": (19, write_instruction("ya konsonanti", "m", 1, 3, 4)),
     "pg020_n0030": (20, SPAR_WHEEL),
     "pg021_n0002": (21, trace_instruction("ya konsonanti", "k", 1, 3)),
     "pg021_n0008": (21, write_instruction("ya konsonanti", "k", 1, 3)),
@@ -220,6 +221,7 @@ EXPANSIONS: dict[str, tuple[int, str]] = {
         "kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
     ),
     "pg058_n0018": (58, trace_instruction("ya irabu", "I", 6, 2, 4)),
+    "pg058_n0020": (58, write_instruction("ya irabu", "I", 6, 2, 4)),
     "pg060_n0004": (60, trace_instruction("ya irabu", "O", 6, 1, 3, 5)),
     "pg060_n0011": (
         60,
@@ -256,10 +258,13 @@ EXPANSIONS: dict[str, tuple[int, str]] = {
         "kisha, andika tena herufi hizo kwa nafasi na ujaze mstari.",
     ),
     "pg068_n0005": (68, trace_instruction("ya konsonanti", "D", 6, 1, 4, 5)),
+    "pg068_n0009": (68, write_instruction("ya konsonanti", "D", 6, 1, 4, 5)),
     "pg069_n0019": (69, trace_instruction("ya konsonanti", "N", 6, 1, 4, 5)),
     "pg070_n0002": (70, write_instruction("ya konsonanti", "N", 6, 1, 4, 5)),
     "pg072_n0015": (72, trace_instruction("ya konsonanti", "L", 6, 1, 2, 3)),
+    "pg072_n0019": (72, write_instruction("ya konsonanti", "L", 6, 1, 2, 3)),
     "pg074_n0005": (74, trace_instruction("ya konsonanti", "T", 6, 2, 3, 4, 5)),
+    "pg074_n0009": (74, write_instruction("ya konsonanti", "T", 6, 2, 3, 4, 5)),
     "pg075_n0023": (75, trace_instruction("ya konsonanti", "P", 6, 1, 2, 3, 4)),
     "pg076_n0002": (76, write_instruction("ya konsonanti", "P", 6, 1, 2, 3, 4)),
     "pg077_n0013": (77, trace_instruction("ya konsonanti", "S", 6, 2, 3, 4)),

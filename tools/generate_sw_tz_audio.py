@@ -37,6 +37,7 @@ NUMBER_WORDS = {
     19: "kumi na tisa", 20: "ishirini",
 }
 LETTER_NAMES = {
+    "a": "a", "e": "e", "i": "i", "o": "o", "u": "u",
     "b": "be", "m": "me", "k": "ke", "d": "de", "n": "ne",
     "l": "le", "t": "te", "p": "pe", "s": "se", "j": "je",
     "f": "fe", "g": "ge", "y": "ye", "z": "ze", "h": "he",
@@ -115,14 +116,33 @@ def exercise_grapheme(value: str):
     return None
 
 
+def letter_case(value: str) -> str:
+    letters = re.sub(r"[^A-Za-z]", "", value)
+    return "kubwa" if letters and letters.isupper() else "ndogo"
+
+
+def uppercase_lowercase_pair(value: str):
+    compact = re.sub(r"\s+", "", value)
+    match = re.fullmatch(r"([A-Z])([a-z])", compact)
+    if match and match.group(1).lower() == match.group(2):
+        return match.group(1).lower()
+    digraph = re.fullmatch(r"(Ch)(ch)", compact)
+    if digraph:
+        return "ch"
+    return None
+
+
 def is_answer_field(key: str) -> bool:
     return "_ans_item-" in key
 
 
 def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
     """Return child-friendly Tanzanian Swahili speech without changing display text."""
+    original_visible = visible
+    used_title_override = False
     if key in overrides:
         visible = overrides[key]
+        used_title_override = visible.startswith("Ninaandika herufi")
     # Easy-read variants must teach the same pronunciation as their standard
     # tracks, even when their simplified visible text omits the final letter.
     elif key.endswith("_easy_read"):
@@ -133,8 +153,13 @@ def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
         has_visible_number = re.search(r"(?<![\w-])\d+(?![\w-])", visible)
         if standard_key in overrides and not has_visible_number:
             visible = overrides[standard_key]
+            used_title_override = visible.startswith("Ninaandika herufi")
 
     text = visible.strip()
+    if used_title_override and not re.search(r"\b(?:kubwa|ndogo)\s*[.]?$", text):
+        original_letter = re.search(r"([A-Za-z]{1,2})\s*[.]?\s*$", original_visible)
+        if original_letter:
+            text = text.rstrip(". ") + f" {letter_case(original_letter.group(1))}."
     text = re.sub(r"\bPAH\b", "", text, flags=re.IGNORECASE)
 
     # ISBN hyphens are visual separators, not spoken subtraction signs. Read
@@ -168,10 +193,15 @@ def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
         pronunciation = LETTER_NAMES.get(letter, letter)
         return ", ".join([pronunciation] * min(len(compact), 6))
 
+    paired_grapheme = uppercase_lowercase_pair(compact)
+    if paired_grapheme:
+        pronunciation = LETTER_NAMES.get(paired_grapheme, paired_grapheme)
+        return f"Herufi {pronunciation} kubwa, {pronunciation} ndogo"
+
     grapheme = exercise_grapheme(compact)
     if grapheme:
         pronunciation = LETTER_NAMES.get(grapheme, grapheme)
-        return f"Herufi {pronunciation}"
+        return f"Herufi {pronunciation} {letter_case(text)}"
 
     standalone_number = re.fullmatch(r"\d{1,2}", compact)
     if standalone_number:
@@ -203,8 +233,8 @@ def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
     # implicit vowel e. This remains separate from visible spelling.
     for grapheme in sorted(LETTER_NAMES, key=len, reverse=True):
         compact = re.sub(
-            rf"(?<![A-Za-z]){re.escape(grapheme)}(?![A-Za-z])",
-            LETTER_NAMES[grapheme],
+            rf"(?<![A-Za-z])({re.escape(grapheme)})(?![A-Za-z])(?:\s+(kubwa|ndogo))?",
+            lambda match, name=LETTER_NAMES[grapheme]: f"{name} {match.group(2) or letter_case(match.group(1))}",
             compact,
             flags=re.IGNORECASE,
         )
@@ -259,7 +289,7 @@ async def run(args: argparse.Namespace) -> None:
         for key, value in texts.items():
             grapheme = exercise_grapheme(value)
             if grapheme and not is_answer_field(key):
-                mappings[key] = f"exercise-letter-{grapheme}.mp3"
+                mappings[key] = f"exercise-letter-{grapheme}-{letter_case(value)}.mp3"
                 exercise_letter_keys.add(key)
 
     for lang in TARGET_LANGS:
@@ -309,6 +339,35 @@ async def run(args: argparse.Namespace) -> None:
             key
             for key, value in texts.items()
             if key.startswith("pg111_") and value.strip() and not is_answer_field(key)
+        )
+    if args.image_descriptions:
+        selected.update(
+            key
+            for key in texts
+            if re.fullmatch(r"pg\d{3}_im.+", key)
+        )
+    if args.letter_case:
+        graphemes = "|".join(sorted((re.escape(item) for item in LETTER_NAMES), key=len, reverse=True))
+        case_pattern = re.compile(rf"(?<![A-Za-z])(?:{graphemes})(?![A-Za-z])", re.IGNORECASE)
+        selected.update(
+            key for key, value in texts.items()
+            if case_pattern.search(value) and value.strip() and not is_answer_field(key)
+        )
+    if args.letter_pairs:
+        selected.update(
+            key for key, value in texts.items()
+            if uppercase_lowercase_pair(value) and value.strip() and not is_answer_field(key)
+        )
+    if args.case_exercises:
+        selected.update(
+            key for key, speech in overrides.items()
+            if "imeandikwa kwa herufi" in speech and key in texts
+        )
+    if args.page is not None:
+        page_prefix = f"pg{args.page:03d}_"
+        selected.update(
+            key for key, value in texts.items()
+            if key.startswith(page_prefix) and value.strip() and not is_answer_field(key)
         )
     if selected:
         jobs = [job for job in jobs if job[0] in selected]
@@ -387,9 +446,34 @@ def main() -> None:
         help="generate shared Herufi-a, Herufi-be, and related exercise tracks",
     )
     parser.add_argument(
+        "--letter-case",
+        action="store_true",
+        help="regenerate every track containing standalone letters with kubwa/ndogo speech",
+    )
+    parser.add_argument(
+        "--letter-pairs",
+        action="store_true",
+        help="regenerate Aa, Bb, Chch, and similar uppercase/lowercase pair tracks",
+    )
+    parser.add_argument(
+        "--case-exercises",
+        action="store_true",
+        help="regenerate reading-only lowercase/uppercase exercise explanations",
+    )
+    parser.add_argument(
         "--review-corrections",
         action="store_true",
         help="generate every Joleen review correction and repaired page 111 track",
+    )
+    parser.add_argument(
+        "--image-descriptions",
+        action="store_true",
+        help="regenerate every diagram, drawing, and embedded-image description track",
+    )
+    parser.add_argument(
+        "--page",
+        type=int,
+        help="regenerate every non-empty narration track belonging to one page number",
     )
     parser.add_argument("--limit", type=int, help="generate only the first N tracks for testing")
     parser.add_argument("--dry-run", action="store_true")
