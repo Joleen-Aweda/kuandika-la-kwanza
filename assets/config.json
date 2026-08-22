@@ -1,6 +1,6 @@
 {
   "title": "Kuandika",
-  "bundleVersion": "1",
+  "bundleVersion": "2",
   "languages": {
     "available": [
       "sw",
@@ -9,7 +9,7 @@
     "default": "sw"
   },
   "features": {
-    "signLanguage": false,
+    "signLanguage": true,
     "easyRead": true,
     "glossary": true,
     "eli5": false,
