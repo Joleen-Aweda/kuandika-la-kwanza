@@ -7,7 +7,7 @@
   padding: 0 0 clamp(6rem, 12vw, 9rem) !important;
   border: 0 !important;
   border-radius: 0 !important;
-  background: #edf2ee !important;
+  background: #fff !important;
   box-shadow: none !important;
 }
 
@@ -18,7 +18,7 @@
   margin: 0 auto;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 12px 38px rgb(15 23 42 / 18%);
+  box-shadow: none;
   isolation: isolate;
   container-type: inline-size;
 }
@@ -26,6 +26,31 @@
 .exact-page-stage.source-page-cropped > .source-facsimile-page {
   height: auto !important;
   transform: translateY(-8.59375%);
+}
+
+/* Stop the visible source page above the publisher footer strip. Navigation
+   keeps its own page counter; only the printed PDF footer is removed. */
+.exact-page-stage.source-page-cropped {
+  aspect-ratio: 930 / 1045 !important;
+}
+
+/* Replace the scanned pale-green paper edges with a clean white sheet while
+   preserving the complete printed lesson area in the centre. */
+.exact-page-stage.source-page-cropped::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    #fff 0,
+    #fff 12.5%,
+    transparent 12.5%,
+    transparent 87.5%,
+    #fff 87.5%,
+    #fff 100%
+  );
 }
 
 .exact-page-stage.source-page-extended {
@@ -41,6 +66,8 @@
   object-fit: contain;
   user-select: none;
   -webkit-user-drag: none;
+  /* Lift the pale scanned-paper tint to white while retaining ink and colour. */
+  filter: brightness(1.1) contrast(1.08);
 }
 
 /* Keep every converted text node readable by assistive technology without
@@ -117,6 +144,15 @@
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
+}
+
+/* The facsimile must show only what is printed in the source PDF. Keep the
+   expanded semantic wording in .source-semantic-copy for read-aloud, but do
+   not paint correction text or replacement wording over the source page. */
+.source-text-correction-overlay,
+.source-text-correction-layer,
+.source-text-correction-image {
+  display: none !important;
 }
 
 .toc-link-layer {
