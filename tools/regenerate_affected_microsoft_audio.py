@@ -13,7 +13,7 @@ from pathlib import Path
 
 import edge_tts
 
-from generate_sw_tz_audio import spoken_text
+from generate_sw_tz_audio import CELL_BOARD_DRAWINGS, CELL_BOARD_LETTERS, spoken_text
 from apply_instruction_expansions import EXPANSIONS
 
 
@@ -42,8 +42,17 @@ async def main(args: argparse.Namespace) -> None:
     mappings = json.loads((source / "audios.json").read_text(encoding="utf-8"))
     overrides = json.loads((ROOT / "tools/sw_tz_pronunciation_overrides.json").read_text(encoding="utf-8"))
     keys = set() if (
-        args.exercise_ordinals or args.image_descriptions or args.lesson_ordinals
+        args.keys or args.cell_board or args.exercise_ordinals
+        or args.image_descriptions or args.lesson_ordinals
     ) else set(EXPLICIT_KEYS)
+    keys.update(args.keys)
+    if args.cell_board:
+        standard_keys = set(CELL_BOARD_LETTERS) | set(CELL_BOARD_DRAWINGS)
+        keys.update(key for key in standard_keys if key in mappings)
+        keys.update(
+            f"{key}_easy_read" for key in standard_keys
+            if f"{key}_easy_read" in mappings
+        )
     if args.all_reviewed:
         keys.update(EXPANSIONS)
         keys.update(
@@ -101,7 +110,10 @@ async def main(args: argparse.Namespace) -> None:
             )
             and key in mappings
         )
-    if not args.exercise_ordinals and not args.image_descriptions and not args.lesson_ordinals:
+    if not (
+        args.keys or args.cell_board or args.exercise_ordinals
+        or args.image_descriptions or args.lesson_ordinals
+    ):
         keys.update(
             key for key, value in texts.items()
             if re.fullmatch(r"([A-Za-z])\1{2,}", str(value).strip(), flags=re.IGNORECASE)
@@ -164,8 +176,19 @@ async def main(args: argparse.Namespace) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--keys",
+        nargs="*",
+        default=[],
+        help="Regenerate only the listed text IDs.",
+    )
     parser.add_argument("--cache-dir", type=Path, default=Path("/private/tmp/kuandika-corrected-rehema"))
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument(
+        "--cell-board",
+        action="store_true",
+        help="Regenerate Spar-wheel instructions with cell-board narration.",
+    )
     parser.add_argument(
         "--all-reviewed",
         action="store_true",

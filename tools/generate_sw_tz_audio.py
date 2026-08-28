@@ -53,6 +53,28 @@ SPOKEN_WORD_OVERRIDES = {
     # visible textbook text remains unchanged.
     "pili": "pi-li",
 }
+
+# Narration-only replacements requested for the tactile cell board. Visible
+# textbook wording remains untouched. Easy-read IDs inherit the same speech.
+CELL_BOARD_LETTERS = {
+    "pg011_n0014": "a",
+    "pg012_n0005": "e",
+    "pg012_n0034": "i",
+    "pg012_auto_tx007": "e",
+    "pg013_n0028": "o",
+    "pg013_auto_tx007": "o",
+    "pg014_n0006": "u",
+    "pg017_n0013": "b",
+    "pg019_n0008": "m",
+    "pg020_n0030": "k",
+    "pg022_n0019": "d",
+    "pg024_n0015": "n",
+    "pg027_n0008": "l",
+    "pg030_n0026": "p",
+    "pg032_n0025": "s",
+    "pg049_n0006": "w",
+}
+CELL_BOARD_DRAWINGS = {"pg008_n0005", "pg010_n0005"}
 YEAR_SPEECH = {
     "2016": "mwaka elfu mbili na kumi na sita",
     "2018": "mwaka elfu mbili na kumi na nane",
@@ -139,6 +161,12 @@ def is_answer_field(key: str) -> bool:
 def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
     """Return child-friendly Tanzanian Swahili speech without changing display text."""
     original_visible = visible
+    standard_key = key.removesuffix("_easy_read")
+    if standard_key in CELL_BOARD_LETTERS:
+        letter = CELL_BOARD_LETTERS[standard_key]
+        return f"Umba herufi {letter} kwa kutumia kibao cha seli, cell board."
+    if standard_key in CELL_BOARD_DRAWINGS:
+        return "Umba michoro kwa kutumia kibao cha seli, cell board."
     used_title_override = False
     if key in overrides:
         visible = overrides[key]
@@ -156,6 +184,7 @@ def spoken_text(key: str, visible: str, overrides: dict[str, str]) -> str:
             used_title_override = visible.startswith("Ninaandika herufi")
 
     text = visible.strip()
+    text = re.sub(r"\bkamusi\b", "farahasa", text, flags=re.IGNORECASE)
     if used_title_override and not re.search(r"\b(?:kubwa|ndogo)\s*[.]?$", text):
         original_letter = re.search(r"([A-Za-z]{1,2})\s*[.]?\s*$", original_visible)
         if original_letter:
