@@ -15,6 +15,10 @@
   <resources>
     <resource identifier="RESOURCE_1" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="index.html" />
+      <file href="pg001_sec001.html" />
+      <file href="back-cover.html" />
+      <file href="images/kuandika-front-cover.png" />
+      <file href="images/kuandika-back-cover.png" />
       <file href="assets/base.bundle.local.js" />
       <file href="assets/base.bundle.min.js" />
       <file href="assets/config.json" />
