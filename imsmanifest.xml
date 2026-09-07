@@ -264,6 +264,27 @@
       <file href="pg118_sec001.html" />
       <file href="pg119_sec001.html" />
       <file href="pg120_sec001.html" />
-    </resource>
+    
+      <file href="assets/interface_translations/sw-TZ/interface_translations.json" />
+      <file href="assets/interface_translations/sw/interface_translations.json" />
+      <file href="assets/media-playback-independence.js" />
+      <file href="assets/sign-language-video.css" />
+      <file href="assets/sign-language-video.js" />
+      <file href="content/i18n/sw-TZ/audios.json" />
+      <file href="content/i18n/sw-TZ/glossary.json" />
+      <file href="content/i18n/sw-TZ/images.json" />
+      <file href="content/i18n/sw-TZ/texts.json" />
+      <file href="content/i18n/sw-TZ/timecode/timecode_output.json" />
+      <file href="content/i18n/sw-TZ/videos.json" />
+      <file href="content/i18n/sw/audios.json" />
+      <file href="content/i18n/sw/glossary.json" />
+      <file href="content/i18n/sw/images.json" />
+      <file href="content/i18n/sw/texts.json" />
+      <file href="content/i18n/sw/timecode/timecode_output.json" />
+      <file href="content/i18n/sw/video/page_0.mp4" />
+      <file href="content/i18n/sw/video/page_122.mp4" />
+      <file href="content/navigation/nav.html" />
+      <file href="content/toc.json" />
+</resource>
   </resources>
 </manifest>
