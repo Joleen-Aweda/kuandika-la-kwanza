@@ -20,7 +20,6 @@
       <file href="images/kuandika-front-cover.png" />
       <file href="images/kuandika-back-cover.png" />
       <file href="assets/base.bundle.local.js" />
-      <file href="assets/base.bundle.min.js" />
       <file href="assets/config.json" />
       <file href="assets/offline-preloader.js" />
       <file href="content/i18n/sw/video/page_1.mp4" />
@@ -285,6 +284,10 @@
       <file href="content/i18n/sw/video/page_122.mp4" />
       <file href="content/navigation/nav.html" />
       <file href="content/toc.json" />
+      <file href="assets/reader-toolbar.css" />
+      <file href="assets/mobile-sheet-drag.css" />
+      <file href="assets/mobile-sheet-drag.js" />
+      <file href="assets/reader-toolbar-overrides.css" />
 </resource>
   </resources>
 </manifest>

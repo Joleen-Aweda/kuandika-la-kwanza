@@ -1,0 +1,45 @@
+/* Kuandika adaptations for the shared responsive Writing reader. */
+@media (max-width: 767.98px) {
+  #nav-container [role="group"][aria-label="Vidhibiti vya kusoma"] {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+    padding-left: max(0.5rem, env(safe-area-inset-left));
+    padding-right: max(0.5rem, env(safe-area-inset-right));
+  }
+
+  /* Keep all utility tiles reachable on short landscape screens. */
+  #interface-container [data-slot="sheet-content"][data-side="bottom"]:not([data-dock-panel]) {
+    max-height: calc(100dvh - 0.5rem - env(safe-area-inset-top));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
+@media (max-width: 399.98px) {
+  /* Swahili speed labels need more room than the reference's single row. */
+  #interface-container [role="group"][aria-label="Vidhibiti vya kusoma kwa sauti"] {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-items: center;
+    width: calc(100vw - 2rem);
+    max-width: 22rem;
+    gap: 0.25rem;
+  }
+
+  #interface-container [role="group"][aria-label="Vidhibiti vya kusoma kwa sauti"] > [data-slot="dropdown-menu-trigger"] {
+    grid-column: span 3;
+    justify-self: stretch;
+    min-width: 0;
+  }
+
+  #interface-container [role="group"][aria-label="Vidhibiti vya kusoma kwa sauti"] > button {
+    min-height: 44px;
+  }
+
+  #interface-container [role="group"][aria-label="Vidhibiti vya kusoma kwa sauti"] > [data-slot="popover-trigger"] {
+    min-width: 44px;
+  }
+
+  #interface-container div:has(> [role="group"][aria-label="Vidhibiti vya kusoma kwa sauti"]) {
+    border-radius: 1rem;
+  }
+}

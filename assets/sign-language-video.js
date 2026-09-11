@@ -3,16 +3,28 @@
 
   var VIDEO_SELECTOR = 'video[src*="/video/"]';
   var enhancedHandles = new WeakSet();
+  var observedControls = new WeakSet();
   var scheduled = false;
 
   function viewportSize() {
     var viewport = window.visualViewport;
-    return {
+    var size = {
       left: viewport ? viewport.offsetLeft : 0,
       top: viewport ? viewport.offsetTop : 0,
       width: viewport ? viewport.width : window.innerWidth,
       height: viewport ? viewport.height : window.innerHeight
     };
+    // Leave the dock and floating read-aloud controls unobstructed at every size.
+    Array.prototype.forEach.call(document.querySelectorAll(
+      '#nav-container > [role="group"], ' +
+      '#interface-container [role="group"][aria-label="Vidhibiti vya kusoma kwa sauti"]'
+    ), function (controls) {
+      var rect = controls.getBoundingClientRect();
+      if (rect.width && rect.height && rect.top > size.top) {
+        size.height = Math.min(size.height, rect.top - size.top - 8);
+      }
+    });
+    return size;
   }
 
   function clamp(value, minimum, maximum) {
@@ -34,8 +46,9 @@
   function keepPlayerOnScreen(player) {
     window.requestAnimationFrame(function () {
       if (!player.isConnected) return;
-      var rect = player.getBoundingClientRect();
       var size = viewportSize();
+      player.style.setProperty("--sign-language-available-height", size.height + "px");
+      var rect = player.getBoundingClientRect();
       var fullyVisible = rect.left >= size.left && rect.top >= size.top &&
         rect.right <= size.left + size.width && rect.bottom <= size.top + size.height;
       if (!fullyVisible) movePlayer(player, rect.left, rect.top);
@@ -97,13 +110,31 @@
   function install() {
     scheduled = false;
     revealAuthoredCoverControls();
+    Array.prototype.forEach.call(document.querySelectorAll(
+      '#interface-container [role="group"][aria-label="Vidhibiti vya kusoma kwa sauti"]'
+    ), function (controls) {
+      var positioner = controls.parentElement;
+      while (positioner && window.getComputedStyle(positioner).position !== "fixed") {
+        positioner = positioner.parentElement;
+      }
+      if (positioner && !observedControls.has(positioner)) {
+        observedControls.add(positioner);
+        // Popovers calculate their anchored position after mounting.
+        new MutationObserver(scheduleInstall).observe(positioner, {
+          attributes: true, attributeFilter: ["style"]
+        });
+      }
+    });
     Array.prototype.forEach.call(document.querySelectorAll(VIDEO_SELECTOR), function (video) {
       var player = video.parentElement;
       if (!player || window.getComputedStyle(player).position !== "fixed") return;
       var handle = Array.prototype.find.call(player.children, function (child) {
         return child.getAttribute && child.getAttribute("role") === "button";
       });
-      if (handle) enhanceHandle(handle, player);
+      if (handle) {
+        enhanceHandle(handle, player);
+        keepPlayerOnScreen(player);
+      }
     });
   }
   function scheduleInstall() {
@@ -119,6 +150,7 @@
     attributeFilter: ["data-cover-hidden-sign-language"]
   });
   window.addEventListener("resize", scheduleInstall);
+  window.addEventListener("adt:dock-resize", scheduleInstall);
   window.addEventListener("orientationchange", scheduleInstall);
   if (window.visualViewport) window.visualViewport.addEventListener("resize", scheduleInstall);
   if (document.readyState === "loading") {

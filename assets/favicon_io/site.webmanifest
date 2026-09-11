@@ -1,6 +1,7 @@
 {
-    "name": "Cuaderno para leer y escribir",
-    "short_name": "Cuaderno",
+    "name": "Kuandika — Kitabu cha Mwanafunzi Darasa la Kwanza",
+    "short_name": "Kuandika",
+    "lang": "sw",
     "icons": [
         {
             "src": "./android-chrome-192x192.png",

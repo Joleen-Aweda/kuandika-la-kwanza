@@ -3,7 +3,7 @@
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  z-index: 59 !important;
+  z-index: 49 !important;
   max-width: calc(100vw - 2rem) !important;
 }
 [data-sign-language-player] video {
@@ -20,10 +20,10 @@
 @media (max-width: 767.98px) {
   [data-sign-language-player] {
     max-width: calc(100vw - 1rem) !important;
-    max-height: calc(100dvh - 4.5rem - env(safe-area-inset-bottom)) !important;
+    max-height: var(--sign-language-available-height, calc(100dvh - 4.5rem - env(safe-area-inset-bottom))) !important;
   }
   [data-sign-language-player] video {
-    max-height: calc(100dvh - 7.25rem - env(safe-area-inset-bottom)) !important;
+    max-height: calc(var(--sign-language-available-height, 100dvh - 3rem - env(safe-area-inset-bottom)) - 44px) !important;
   }
   [data-sign-language-drag-handle] { min-height: 44px !important; }
 }
