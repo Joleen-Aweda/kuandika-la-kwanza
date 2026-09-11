@@ -19,7 +19,12 @@ def main() -> None:
     pages_path = ROOT / "content/pages.json"
     pages = json.loads(pages_path.read_text(encoding="utf-8"))
     pages = [item for item in pages if item.get("section_id") != "pg002_sec001"]
-    pages.insert(1, {
+    pg001_index = next(
+        index
+        for index, item in enumerate(pages)
+        if item.get("section_id") == "pg001_sec001"
+    )
+    pages.insert(pg001_index + 1, {
         "section_id": "pg002_sec001",
         "href": "pg002_sec001.html",
         "page_number": 2,
@@ -36,7 +41,12 @@ def main() -> None:
     toc_path = ROOT / "content/toc.json"
     toc = json.loads(toc_path.read_text(encoding="utf-8"))
     toc = [item for item in toc if item.get("section_id") != "pg002_sec001"]
-    toc.insert(1, {
+    pg001_index = next(
+        index
+        for index, item in enumerate(toc)
+        if item.get("section_id") == "pg001_sec001"
+    )
+    toc.insert(pg001_index + 1, {
         "section_id": "pg002_sec001",
         "href": "pg002_sec001.html",
         "title": "Taarifa za uchapishaji",
